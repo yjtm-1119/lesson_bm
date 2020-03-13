@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        document.addEventListener('click',function(e){
+            console.log(e.clientX);//距离可视区左边的距离
+            console.log(e.clientY);//距离可视区上边的距离
+            console.log(e.pageX);//距离页面左边的距离
+            console.log(e.pageY);//距离页面上边的距离
+            console.log(e.screenX);//距离电脑屏幕左边的距离
+            console.log(e.screenY);//距离电脑屏幕上边的距离
+        })
+    </script>
+</body>
+</html>

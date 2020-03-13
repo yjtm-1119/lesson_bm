@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    .box {
+        width: 250px;
+        margin: 100px auto;
+    }
+
+    .box li {
+        float: left;
+        width: 24px;
+        height: 24px;
+        background-color: pink;
+        margin: 15px;
+        background: url(images/sprite.png) no-repeat;
+    }
+</style>
+</head>
+
+<body>
+
+    <!-- <div id ="time">2019-9-9</div>
+    <script>
+        var time = document.getElementById('time');
+        console.log(time);
+    </script> -->
+    <!-- 
+    <ul>
+        <li>知否知否，应是等你好久11</li>
+        <li>知否知否，应是等你好久11</li>
+        <li>知否知否，应是等你好久11</li>
+        <li>知否知否，应是等你好久11</li>
+
+    </ul>
+    <ol id="ol">
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+        <li>生僻字</li>
+
+    </ol>
+ 
+    <script>
+        var lis = document.getElementsByTagName('li');
+        //console.log(lis);
+        for (var i =0;i<lis.length;i++){
+            console.log(lis[i]);
+        } 
+
+        var ol = document.getElementById('ol');
+        console.log(ol.getElementsByTagName('li'));
+    </script> -->
+    <!-- 
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <div id="nav">
+        <ul>
+            <li>首页</li>
+            <li>产品</li>
+        </ul>
+    </div>
+    <script>
+        //var boxs = document.getElementsByClassName('box');
+        var firstbox = document.querySelector('.box');//类选择器用.  
+        console.log(firstbox);
+        var nav = document.querySelector('#nav');//id选择器用#
+        console.log(nav);
+        var li = document.querySelector('li');
+        console.log(li);
+        var allbox = document.querySelectorAll('.box');
+        console.log(allbox);
+    </script> -->
+
+
+    <!-- <script>
+        var bodyele = document.body;
+        console.log(bodyele);
+        console.dir(bodyele);
+        var htmlele = document.documentElement;
+        console.log(htmlele);
+    </script> -->
+    <!-- 
+    <button id = "btn">唐伯虎</button>
+    <script>
+        var btn = document.getElementById('btn');//获取事件源
+        console.log(btn);
+        btn.onclick = function(){ //注册事件 (绑定事件)
+            alert('点秋香');
+        }
+    </script> -->
+
+    <!-- <div>123</div>
+    <script>
+        var a = document.querySelector('div');
+        a.onclick = function () {
+            console.log('我被选中了');
+        }
+    </script> -->
+
+    <!-- <button id='btn'>显示当前系统时间</button>
+    <div id='time'>某个时间</div>
+    <p>某个时间</p>
+    <script>
+        var btn = document.querySelector('#btn');
+        var time = document.querySelector('#time');
+        btn.onclick = function () {
+            //time.innerText = '2020-02-02';
+            time.innerText = getDate();
+        }
+        function getDate() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var dates = date.getDate();
+            var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+            var day = date.getDay();
+            return '今天是:' + year + '年' + month + '月' + dates + '日' + arr[day];
+        }
+        var p = document.querySelector('p');
+        p.innerText = getDate();
+    </script> -->
+
+    <!-- <button id="ldh">刘德华</button>
+    <button id="zxy">张学友</button> <br>
+    <img src="images/ldh.jpg" alt="" title="刘德华">
+    <script>
+        var ldh = document.getElementById('ldh');
+        var zxy = document.getElementById('zxy');
+        var img = document.querySelector('img');
+        zxy.onclick = function () {
+            img.src = "images/zxy.jpg";
+            img.title="张学友";
+        }
+        ldh.onclick = function () {
+            img.src = "images/ldh.jpg";
+            img.title = "刘德华";
+        }
+    </script> -->
+
+    <!-- <img src="images/s.gif" alt="">
+    <div>上午好</div>
+    <script>
+        var img = document.querySelector('img');
+        var div = document.querySelector('div');
+        var date = new Date();
+        var h = date.getHours();
+        if (h < 12) {
+            img.src = "images/s.gif";
+            div.innerHTML = '亲，上午好，好好学习哦';
+        } else if (h < 18) {
+            img.src = "images/x.gif";
+            div.innerHTML = '亲，下午好，好好学习哦';
+        } else {
+            img.src = "images/w.gif";
+            div.innerHTML = '亲，晚上好，好好学习哦';
+        }
+    </script> -->
+    <!-- 
+    <button>按钮</button>
+    <input type="text " value = "输入内容">
+    <script>
+        var btn = document.querySelector('button');
+        var input = document.querySelector('input');
+        btn.onclick =function(){
+            input.innerHTML= '点击了';
+            input.value='被点击了';
+            this.disabled=true;//this指向的是事件函数的调用者
+        }
+    </script> -->
+    <!-- 
+    <div class="box">
+        <label for="">
+            <img src="images/close.png" alt="" id="eye">
+        </label>
+        <input type="password" name="" id="pwd">
+    </div>
+    <script>
+        var eye = document.getElementById('eye');
+        var pwd = document.getElementById('pwd');
+        var flag = 0;
+        eye.onclick = function () {
+            if (flag == 0) {
+                pwd.type = 'text';
+                eye.src = 'images/open.png';
+                flag = 1;
+            } else {
+                pwd.type = 'password';
+                eye.src = 'images/close.png';
+                flag = 0;
+            }
+        }
+    </script> -->
+
+
+    <!-- <div class="box">
+    淘宝二维码
+    <img src="images/tao.png" alt="">
+    <i class="close-btn">×</i>
+</div>
+<script>
+    var btn = document.querySelector('.close-btn');
+    var box = document.querySelector('.box');
+    btn.onclick = function () {
+        box.style.display = 'none';
+    }
+</script> -->
+
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script>
+        var lis = document.querySelectorAll('li');
+        for (var i = 0; i < lis.length; i++) {
+            var index = i * 44;
+            lis[i].style.backgroundPosition = '0 -' + index + 'px';
+        }
+    </script>
+</body>
+
+</html>

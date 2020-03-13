@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id ="demo" data-index = "1"class ="p"></div>
+    <script>
+        var div = document.querySelector('div');
+        console.log(div.id);//获取内置属性值
+        console.log(div.getAttribute('id'));//可以获取自定义属性
+        console.log(div.getAttribute('data-index'));
+        div.id = 'test';
+        console.log(div.id);
+        div.setAttribute('id','ttt');
+        console.log(div.getAttribute('id'));
+        div.setAttribute('class','footer'); 
+        console.log(div.getAttribute('class'));
+    </script>
+</body>
+</html>

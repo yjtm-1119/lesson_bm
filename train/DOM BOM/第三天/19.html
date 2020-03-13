@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            position: absolute;
+            top: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/angel.gif" alt="">
+    <script>
+        //核心原理  每次鼠标移动，我们都会获得最新的鼠标坐标，并把这个坐标作为图片的top 和left 值图片就会跟随鼠标了
+        var pic = document.querySelector('img');
+        document.addEventListener('mousemove', function (e) {
+            var x = e.pageX;
+            var y = e.pageY;
+            pic.style.left = x -48+ 'px';
+            pic.style.top = y -40+ 'px';
+            sy
+        })
+    </script>
+</body>
+
+</html>

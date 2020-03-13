@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1111</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul');
+        var lili = ul.children[0].cloneNode();//括号参数为空或者里面是false 是浅拷贝，只复制标签，不复制内容，参数为true 复制标签和内容
+        ul.appendChild(lili);
+    </script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // var computer = {
+    //     color: 'blue',
+    //     weight: '10',
+    //     pinpai: 'dell',
+    //     aihao: function(){
+    //         console.log('我会打篮球');
+    //     }
+    // }
+    // computer.aihao();
+    // var obj = new Object();
+    // obj.color = blue;
+    // obj.weight =10 ;
+    // obj.pinpai = dell;
+    // obj.aihao = function(){
+    //     console.log('我会打篮球');
+    // }
+
+    // function Star(name,sex){
+    //     this.name=name;
+    //     this.sex=sex
+    // }
+    // var ldh = new Star('刘德华','男');
+    // console.log(ldh.name)
+
+    // function Button(wide, high, backcolor) {
+    //     this.wide = wide;
+    //     this.high = high;
+    //     this.backcolor=backcolor;
+    //     this.click = function () {
+    //         console.log('点击了一下按钮');
+    //     }
+    // }
+    // var anniu = new Button('15', '12','黑色');
+    // console.log(anniu.wide);
+    // console.log(anniu.high);
+    // console.log(anniu.backcolor);
+    // anniu.click();
+
+    // function reverse(arr) {
+    //     var newArr = [];
+    //     for (var i = arr.length - 1; i >= 0; i--) {
+    //         newArr[newArr.length] = arr[i];
+    //     }
+    //     return newArr
+    // }
+    // var arr1 = reverse(['刘德华', '刘亦菲', '马云', '马化腾']);
+    // console.log(arr1);
+
+    // function sort(arr) {
+    //     for (var i = 0; i < arr.length - 1; i++) {
+    //         for (var j = 0; j < arr.length - i - 1; j++) {
+    //             if (arr[j] > arr[j + 1]) {
+    //                 var temp = arr[j];
+    //                 arr[j] = arr[j + 1];
+    //                 arr[j + 1] = temp;
+    //             }
+    //         }
+    //     }
+    //     return arr;
+    // }
+    // var arr1 = sort([2, 5, 3, 9, 1]);
+    // console.log(arr1);
+
+    // var str = prompt("欢迎使用简易计算器\n1.加法运算\n2.减法运算\n3.乘法运算\n除法运算\n5.退出：\n请输入您的选项");
+    // var str1 = prompt("请输入第一个数");
+    // var str2 = prompt("请输入第二个数");
+    // var sum;
+    //     if(str==1){
+    //         sum = parseInt(str1)+parseInt(str2);
+    //     }else if(str==2){
+    //         sum = parseInt(str1)-parseInt(str2);
+    //     }else if(str==3){
+    //         sum = parseInt(str1)*parseInt(str2);
+    //     }else if(str==4){
+    //         sum = parseInt(str1)/parseInt(str2);
+    //     }else if(str==5){
+
+    //     }else{
+    //         alert("输入错误！");
+    //     }
+    //     alert(sum);
+
+
+    // function countDown(time) {
+    //     var nowTime = +new Date();//返回的是当前时间的总毫秒数 
+    //     var inputTime = +new Date(time);//返回的是用户当前输入的总毫秒数
+    //     var times = (inputTime - nowTime) / 1000;//times是剩余时间总数
+    //     var d = parseInt(times / 60 / 60 / 24);//天
+    //     d = d < 10 ? '0' + d : d;
+    //     var h = parseInt(times / 60 / 60 % 24);//时
+    //     h = h < 10 ? '0' + h : h;
+    //     var m = parseInt(times / 60 % 60);//分
+    //     m = m < 10 ? '0' + m : m;
+    //     var s = parseInt(times % 60);//秒
+    //     s = s < 10 ? '0' + s : s;
+    //     return d + '天' + h + '时' + m + '分' + s + '秒';
+    // }
+    // console.log(countDown('2020-3-2 16:00:00'));
+
+
+    // var arr =[1,2,3];
+    // arr.push(4);//push在数组最后添加新元素
+    // console.log(arr.push(4,'pink'));//输出的是新数组的长度
+    // console.log(arr);//输出的是新数组
+    // //unshift在数组开头添加新元素
+    // console.log(arr.unshift('red','purple'));
+    // console.log(arr);
+    // //pop删除数组最后一个元素
+    // console.log(arr.pop());
+    // console.log(arr);
+    // //shift删除数组第一个元素
+    // console.log(arr.shift());
+    // console.log(arr);
+
+
+
+    //冒泡排序
+    // var arr1 = [13, 2, 5, 15, 7];
+    // arr1.sort(function (a, b) {
+    //     return a - b;//升序排列
+    //     //return b-a 降序排列
+    // });
+    // console.log(arr1);
+    
+    //返回数组索引号
+    //  var arr = ['red','green','blue','pink'];
+    //  console.log(arr.indexOf('blue'));//只返回第一个满足条件的索引号 如果找不到满足条件的 返回的是-1
+    //  console.log(arr.lastIndexOf('blue'));//从数组最后开始查找，如果找不到满足条件的，返回的是-1
+
+    //数组去重
+    //核心算法：我们遍历旧数组，然后拿着旧数组元素去查询新数组，
+    //如果该元素在新数组中没有出现过，我们就添加，否则不添加
+    //怎么知道该元素在新数组中有没有？利用indexOf来如果返回是-1就说明新数组中没有该元素
+    // function unique(arr){
+    //     var newArr =[];
+    //     for(i=0;i<arr.length;i++){
+    //         if(newArr.indexOf(arr[i])=== -1){
+    //             newArr.push(arr[i]);
+    //         }
+    //     }
+    //     return newArr;
+    // }
+    // var demo = unique(['c','a','z','a','x','a','x','c','b']);
+    // console.log(demo);
+
+
+//
+
+
+</script>
+
+<body>
+
+</body>
+
+</html>

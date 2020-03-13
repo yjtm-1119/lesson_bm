@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>123</div>
+    <a href="http://www.baidu.com">百度</a>
+    <form action="http://www.baidu.com">
+        <input type="submit" value="提交" name="sub">
+    </form>
+    <script>
+        var div = document.querySelector('div');
+        div.addEventListener('click', fn)
+        div.addEventListener('mouseover', fn)
+        div.addEventListener('mouseout', fn)
+        function fn(e) {
+            console.log(e.type);
+        }
+        //让链接不跳转，阻止默认行为
+        var a = document.querySelector('a');
+        a.addEventListener('click',function(e){
+            e.preventDefault();//dom标准写法 低版本浏览器不识别
+        })
+        a.onclick = function(e){
+            e.preventDefault();
+            e.returnValue;//低版本用法
+            //还可以使用return false 阻止默认行为  但是return后面的代码不执行  而且只限于传统的注册方法
+        }
+    </script>
+</body>
+
+</html>

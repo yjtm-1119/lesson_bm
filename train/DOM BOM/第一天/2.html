@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <!-- <input type="text" value="手机">
+    <script>
+        var text = document.querySelector('input');
+        text.onfocus = function () {
+            if (this.value === '手机') {
+                this.value = ""
+                this.style.color = '#333'
+
+            }
+        }
+        text.onblur = function () {
+            if (this.value === "") {
+                this.value = "手机";
+                this.style.color = '#999'
+            }
+        }
+    </script> -->
+
+    <!-- <div class="register">
+        <input type="password" class="ipt">
+        <p class="message">请输入6~16位密码</p>
+    </div>
+    <script>
+        var ipt =document.querySelector('.ipt');
+        var message = document.querySelector('.message');
+        ipt.onblur = function(){
+            if(this.value.length <6||this.value.length>16){
+                message.className = 'message wrong';
+                message.innerHTML = '您输入的位数不对要求6~16位';
+            }else{
+                message.className = 'message right';
+            message.innerHTML = '输入正确';
+            }
+        }
+    </script> -->
+
+    <button>开关灯</button>
+    <script>
+        var btn = document.querySelector('button');
+        var flag = 0;
+        btn.onclick = function () {
+            if (flag == 0) {
+                document.body.style.backgroundColor = "black";
+                flag = 1;
+            } else {
+                document.body.style.backgroundColor = "#fff";
+                flag = 0;
+            } 
+        }
+    </script>
+
+</body>
+
+</html>
