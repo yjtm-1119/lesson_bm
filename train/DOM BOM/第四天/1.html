@@ -6,6 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        // document.onkeyup = function(){
+        //     console.log('我弹起了');
+        // }
+        document.addEventListener('keydown',function(){
+            console.log('我按下了down');
+            
+        })
+        document.addEventListener('keypress',function(){
+            console.log('我按下了press');
+            
+        })
+        //同时按下 但是先执行的是keydown 再执行keypress  最后才是keyup
+    </script>
 </body>
 </html>
