@@ -16,11 +16,22 @@
 
 <body>
     <script>
-        window.addEventListener('resize', function () {
-            console.log('变化了');
+        window.addEventListener('load', function () {
+            var div = document.querySelector('div');
+            window.addEventListener('resize', function () {
+                console.log(window.innerWidth);
+                console.log('变化了');
+                if (window.innerWidth <= 500) {
+                    div.style.display = 'none';
+                }else {
+                    div.style.display = 'block';
+                }
 
+            })
         })
+
     </script>
+    <div></div>
 </body>
 
 </html>

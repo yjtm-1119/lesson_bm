@@ -6,6 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        // setTimeout(function(){
+        //     alert(11);
+        //     console.log('时间到了');
+        // },2000)
+        function callback(){
+            console.log('爆炸了');
+        }
+        var time1 = setTimeout(callback,3000);
+        var time2 = setTimeout(callback,5000);
+        //setTimeout('callback()',3000);这一调用函数写法不提倡
+    </script>
 </body>
 </html>

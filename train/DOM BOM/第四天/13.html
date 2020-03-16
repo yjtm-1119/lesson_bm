@@ -6,6 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button class="begin">开启定时器</button>
+    <button class="stop">停止定时器</button>
+    <script>
+        var begin = document.querySelector('.begin');
+        var stop = document.querySelector('.stop');
+        var timer = null;
+        begin.addEventListener('click',function(){
+            timer = setInterval(function(){
+                console.log('你好！');
+                
+            },1000)
+        })
+        stop.addEventListener('click',function(){
+            clearInterval(timer);
+        })
+    </script>
 </body>
 </html>
