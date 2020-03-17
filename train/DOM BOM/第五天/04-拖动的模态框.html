@@ -12,7 +12,7 @@
             font-size: 24px;
             line-height: 30px;
         }
-        
+
         ul,
         li,
         ol,
@@ -32,7 +32,7 @@
             padding: 0px;
             margin: 0px;
         }
-        
+
         .login {
             display: none;
             width: 512px;
@@ -46,7 +46,7 @@
             z-index: 9999;
             transform: translate(-50%, -50%);
         }
-        
+
         .login-title {
             width: 100%;
             margin: 10px 0px 0px 0px;
@@ -57,11 +57,11 @@
             position: relative;
             cursor: move;
         }
-        
+
         .login-input-content {
             margin-top: 20px;
         }
-        
+
         .login-button {
             width: 50%;
             margin: 30px auto 0px auto;
@@ -70,7 +70,7 @@
             border: #ebebeb 1px solid;
             text-align: center;
         }
-        
+
         .login-bg {
             display: none;
             width: 100%;
@@ -80,16 +80,16 @@
             left: 0px;
             background: rgba(0, 0, 0, .3);
         }
-        
+
         a {
             text-decoration: none;
             color: #000000;
         }
-        
+
         .login-button a {
             display: block;
         }
-        
+
         .login-input input.list-input {
             float: left;
             line-height: 35px;
@@ -98,12 +98,12 @@
             border: #ebebeb 1px solid;
             text-indent: 5px;
         }
-        
+
         .login-input {
             overflow: hidden;
             margin: 0px 0px 20px 0px;
         }
-        
+
         .login-input label {
             float: left;
             width: 90px;
@@ -113,7 +113,7 @@
             height: 35px;
             font-size: 14px;
         }
-        
+
         .login-title span {
             position: absolute;
             font-size: 12px;
@@ -156,18 +156,18 @@
         var closeBtn = document.querySelector('#closeBtn');
         var title = document.querySelector('#title');
         // 2. 点击弹出层这个链接 link  让mask 和login 显示出来
-        link.addEventListener('click', function() {
-                mask.style.display = 'block';
-                login.style.display = 'block';
-            })
-            // 3. 点击 closeBtn 就隐藏 mask 和 login 
-        closeBtn.addEventListener('click', function() {
-                mask.style.display = 'none';
-                login.style.display = 'none';
-            })
-            // 4. 开始拖拽
-            // (1) 当我们鼠标按下， 就获得鼠标在盒子内的坐标
-        title.addEventListener('mousedown', function(e) {
+        link.addEventListener('click', function () {
+            mask.style.display = 'block';
+            login.style.display = 'block';
+        })
+        // 3. 点击 closeBtn 就隐藏 mask 和 login 
+        closeBtn.addEventListener('click', function () {
+            mask.style.display = 'none';
+            login.style.display = 'none';
+        })
+        // 4. 开始拖拽
+        // (1) 当我们鼠标按下， 就获得鼠标在盒子内的坐标
+        title.addEventListener('mousedown', function (e) {
             var x = e.pageX - login.offsetLeft;
             var y = e.pageY - login.offsetTop;
             // (2) 鼠标移动的时候，把鼠标在页面中的坐标，减去 鼠标在盒子内的坐标就是模态框的left和top值
@@ -178,7 +178,7 @@
                 login.style.top = e.pageY - y + 'px';
             }
             // (3) 鼠标弹起，就让鼠标移动事件移除
-            document.addEventListener('mouseup', function() {
+            document.addEventListener('mouseup', function () {
                 document.removeEventListener('mousemove', move);
             })
         })
