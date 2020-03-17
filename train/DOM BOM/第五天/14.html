@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 200px;
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <span>夏雨荷</span>
+    <script>
+        //obj目标对象  target目标位置
+        var div = document.querySelector('div');
+        var span = document.querySelector('span');
+        function animate(obj, target) {
+            var timer = setInterval(function () {
+                if (obj.offsetLeft >= target) {
+                    clearInterval(timer);
+                } else {
+                    obj.style.left = obj.offsetLeft + 2 + 'px';
+                }
+            }, 15)
+        }
+        animate(div,400);
+        animate(span,400);
+    </script>
+</body>
+
+</html>

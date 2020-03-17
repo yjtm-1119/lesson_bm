@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 200px;
+            display: block;
+            width: 150px;
+            height: 150px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点击夏雨荷才走</button>
+    <div></div>
+    <span>夏雨荷</span>
+    <script>
+        // var obj ={};
+        // obj.name = 'xujianhao';
+        //obj目标对象  target目标位置
+        //obj.name给不同的元素指定了不同的定时器
+        var div = document.querySelector('div');
+        var span = document.querySelector('span');
+        var btn = document.querySelector('button');
+        function animate(obj, target) {
+            //先进行清除以前的定时器，再开启新的定时器，保证只有一个定时器运行
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                if (obj.offsetLeft >= target) {
+                    clearInterval(obj.timer);
+                } else {
+                    obj.style.left = obj.offsetLeft + 2 + 'px';
+                }
+            }, 15)
+        }
+        animate(div, 400);
+        btn.addEventListener('click',function(){
+             animate(span,500);
+        })
+    </script>
+</body>
+
+</html>
