@@ -1,20 +1,20 @@
-window.addEventListener('load', function() {
+window.addEventListener('load', function () {
     // 1. 获取元素
     var arrow_l = document.querySelector('.arrow-l');
     var arrow_r = document.querySelector('.arrow-r');
     var focus = document.querySelector('.focus');
     var focusWidth = focus.offsetWidth;
     // 2. 鼠标经过focus 就显示隐藏左右按钮
-    focus.addEventListener('mouseenter', function() {
+    focus.addEventListener('mouseenter', function () {
         arrow_l.style.display = 'block';
         arrow_r.style.display = 'block';
         clearInterval(timer);
         timer = null; // 清除定时器变量
     });
-    focus.addEventListener('mouseleave', function() {
+    focus.addEventListener('mouseleave', function () {
         arrow_l.style.display = 'none';
         arrow_r.style.display = 'none';
-        timer = setInterval(function() {
+        timer = setInterval(function () {
             //手动调用点击事件
             arrow_r.click();
         }, 2000);
@@ -31,7 +31,7 @@ window.addEventListener('load', function() {
         // 把小li插入到ol 里面
         ol.appendChild(li);
         // 4. 小圆圈的排他思想 我们可以直接在生成小圆圈的同时直接绑定点击事件
-        li.addEventListener('click', function() {
+        li.addEventListener('click', function () {
             // 干掉所有人 把所有的小li 清除 current 类名
             for (var i = 0; i < ol.children.length; i++) {
                 ol.children[i].className = '';
@@ -64,7 +64,7 @@ window.addEventListener('load', function() {
     var circle = 0;
     // flag 节流阀
     var flag = true;
-    arrow_r.addEventListener('click', function() {
+    arrow_r.addEventListener('click', function () {
         if (flag) {
             flag = false; // 关闭节流阀
             // 如果走到了最后复制的一张图片，此时 我们的ul 要快速复原 left 改为 0
@@ -73,8 +73,9 @@ window.addEventListener('load', function() {
                 num = 0;
             }
             num++;
-            animate(ul, -num * focusWidth, function() {
+            animate(ul, -num * focusWidth, function () {
                 flag = true; // 打开节流阀
+                //回调函数其实就是在定时器事件结束后要做的事情
             });
             // 8. 点击右侧按钮，小圆圈跟随一起变化 可以再声明一个变量控制小圆圈的播放
             circle++;
@@ -88,7 +89,7 @@ window.addEventListener('load', function() {
     });
 
     // 9. 左侧按钮做法
-    arrow_l.addEventListener('click', function() {
+    arrow_l.addEventListener('click', function () {
         if (flag) {
             flag = false;
             if (num == 0) {
@@ -97,7 +98,7 @@ window.addEventListener('load', function() {
 
             }
             num--;
-            animate(ul, -num * focusWidth, function() {
+            animate(ul, -num * focusWidth, function () {
                 flag = true;
             });
             // 点击左侧按钮，小圆圈跟随一起变化 可以再声明一个变量控制小圆圈的播放
@@ -121,7 +122,7 @@ window.addEventListener('load', function() {
         ol.children[circle].className = 'current';
     }
     // 10. 自动播放轮播图
-    var timer = setInterval(function() {
+    var timer = setInterval(function () {
         //手动调用点击事件
         arrow_r.click();
     }, 2000);
