@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script>
+        class Father {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+            sum() {
+                console.log(this.x + this.y);
+            }
+        }
+        class Son extends Father {
+            constructor(x, y) {
+                super(x, y);
+                this.x = x;
+                this.y = y;
+            }
+            jianfa() {
+                console.log(this.x - this.y);
+
+            }
+        }
+        var son = new Son(5, 5);
+        son.sum();
+        son.jianfa();
+    </script>
 </body>
+
 </html>

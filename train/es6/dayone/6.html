@@ -6,6 +6,33 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button>点击</button>
+    <script>
+        var that;
+        class Star{
+            constructor(name,age){
+                that = this
+                this.name =name;
+                this.age =age;
+                //this.sing();
+                this.btn =document.querySelector('button');
+                this.btn.onclick = this.sing;
+            }
+            sing(){
+                //这个sing方法里的this指向的是btn这个按钮，因为这个按钮调用了这个函数
+                //console.log('hi');
+                console.log(that.name);
+                //这个that 里存储的是constructor里的this
+                
+            }
+            // dance(){
+            //     console.log(this);
+                
+            // }
+        }
+        var ldh = new Star('刘德华');
+        //ldh.sing();
+        //ldh.dance();
+    </script>
 </body>
 </html>
