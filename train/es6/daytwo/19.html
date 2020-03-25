@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text"><button>点击</button>
+    <div></div>
+    <script>
+        var input = document.querySelector('input');
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        btn.addEventListener('click', function () {
+            var a = input.value.trim();
+            if (a === '') {
+                alert('请输入内容');
+            } else {
+                console.log(a);
+                console.log(a.length);
+                div.innerHTML = a;
+            }
+        })
+         var str = '   andy   ';
+         var newStr = str.trim();
+        // console.log(newStr);
+        // console.log(str.trim());
+
+    </script>
+</body>
+
+</html>

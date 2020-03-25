@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Father(uname, age) {
+            this.uname = uname;
+            this.age = age;
+        }
+        Father.prototype.money = function () {
+            console.log(11111);
+        }
+        function Son(uname, age, score) {
+            // this.uname = uname;
+            // this.age = age;
+            Father.call(this, uname, age);
+            this.score = score;
+        }
+        //Son.prototype = Father.prototype;//这样直接赋值会有问题，如果修改了子原型对象，父原型对象也会跟着一起变化
+        Son.prototype = new Father();//new了相当于创建了一个实例对象，再赋值给Son原型对象，此时Son的原型对象指向的是Father的实例对象，Father的实例对象又可以访问Father的原型对象，可以得到money()
+        //这里利用对象的形式修改了原型对象 要利用constructor指回原来的原型对象
+        Son.prototype.constroctor = Son;
+        Son.prototype.exam = function () {
+            console.log(考试);
+
+        }
+        var son = new Son('刘德华', 12, 96);
+        console.log(son);
+        console.log(Father.prototype);
+        console.log(Son.prototype.constroctor);
+        
+
+    </script>
+</body>
+
+</html>

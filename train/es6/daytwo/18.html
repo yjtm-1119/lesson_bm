@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var arr = ['red', 'green', 'blue', 'pink'];
+        // arr.forEach(function (value) {
+        //     if (value === 'green') {
+        //         console.log('找到了该元素');
+        //         return true;//无法终止循环
+        //     }
+        //     console.log(11);
+            
+
+        // })
+        // var arr = ['red', 'green', 'blue', 'pink'];
+        // arr.some(function (value) {
+        //     if (value === 'green') {
+        //         console.log('找到了该元素');
+        //         return true;//some 里面遇到return true 会终止遍历，迭代效率更高
+        //     }
+        //     console.log(11);
+            
+
+        // })
+        var arr = ['red', 'green', 'blue', 'pink'];
+        arr.filter(function (value) {
+            if (value === 'green') {
+                console.log('找到了该元素');
+                return true;//无法终止循环
+            }
+            console.log(11);
+            
+
+        })
+    </script>
+</body>
+
+</html>

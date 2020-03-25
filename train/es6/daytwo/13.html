@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // (1) 构造函数有原型对象prototype 
+        // (2) 构造函数原型对象prototype 里面有constructor 指向构造函数本身
+        // (3) 构造函数可以通过原型对象添加方法
+        // (4) 构造函数创建的实例对象有__proto__ 原型指向 构造函数的原型对象
+        class Star{
+
+        }
+        //console.log(typeof Star);//类的本质其实就是一个function
+        console.log(Star.prototype);
+        console.log(Star.prototype.constructor);
+        Star.prototype.hi = function(){
+            console.log('hello');
+            
+        }
+        var a = new Star();
+        console.dir(a);
+
+        a.hi();
+        console.log(a.__proto__ === Star.prototype);
+        
+        
+        
+    </script>
+</body>
+</html>

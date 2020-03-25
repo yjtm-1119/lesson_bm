@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 400px;
+            border: 1px solid #000;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        td,
+        th {
+            border: 1px solid #000;
+            text-align: center;
+        }
+
+        input {
+            width: 50px;
+        }
+
+        .search {
+            width: 600px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search">
+        按照价格查询: <input type="text" class="start"> - <input type="text" class="end"> <button
+            class="search-price">搜索</button> 按照商品名称查询: <input type="text" class="product"> <button
+            class="search-pro">查询</button>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>产品名称</th>
+                <th>价格</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+        </tbody>
+    </table>
+    <script>
+        var data = [{
+            id: 1,
+            pname: '小米',
+            price: 3999
+        }, {
+            id: 2,
+            pname: 'oppo',
+            price: 999
+        }, {
+            id: 3,
+            pname: '荣耀',
+            price: 1299
+        }, {
+            id: 4,
+            pname: '华为',
+            price: 1999
+        },{
+            id: 5,
+            pname: '小米',
+            price: 3999
+        }];
+        var tbody = document.querySelector('tbody');
+        var start = document.querySelector('.start');
+        var end = document.querySelector('.end');
+        var btn1 = document.querySelector('.search-price');
+        var btn2 = document.querySelector('.search-pro');
+        var product = document.querySelector('.product');
+        setData(data);
+        function setData(mydata){
+            mydata.forEach(function (value, index) {
+            // console.log(value);
+            var tr = document.createElement('tr');
+            tr.innerHTML = '<td>' + value.id + '</td><td>' + value.pname + '</td><td>' + value.price + '</td>';
+            tbody.appendChild(tr);
+        });
+        }
+        btn1.addEventListener('click', function () {
+            tbody.innerHTML = '';
+            var newData = data.filter(function (value) {
+                return value.price >= start.value && value.price <= end.value
+                
+            });
+            //console.log(newData);
+             setData(newData);
+        })
+        // btn2.addEventListener('click',function(){
+        //     tbody.innerHTML = '';
+        //     var newData1 = data.filter(function(value){
+        //         return value.pname === product.value;
+        //     })
+        //     setData(newData1);
+        // })
+        //查询唯一的元素用some 更好 效率更高
+        btn2.addEventListener('click',function(){
+            var arr = [];
+            tbody.innerHTML = '';
+            data.some(function(value){
+                if(value.pname === product.value){
+                    console.log(value);
+                    arr.push(value);
+                    return true;//这里必须写true 说明找到了元素
+                    //如果不写return true 查找将会继续下去  
+                }
+            });
+            setData(arr);
+        })
+    </script>
+</body>
+
+</html>
