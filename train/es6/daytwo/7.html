@@ -6,6 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        function Star(uname,age){
+            this.uname= uname;
+            this.age = age;
+        }
+        Star.prototype.sing= function(){
+            console.log('我会唱歌');
+        }
+        //Star.prototype.sex = '男';
+        Object.prototype.sex = '女';
+        var ldh = new Star('刘德华',22);
+        //ldh.sex = '男';
+        // console.log(ldh.sex);
+        // console.log(Object.prototype);
+        console.log(ldh.toString());
+        
+    </script>
 </body>
 </html>

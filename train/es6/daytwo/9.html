@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script>
+        console.log(Array.prototype);
+        Array.prototype.sum = function () {
+            var sum = 0;
+            for (var i = 0; i < this.length; i++) {
+                sum += this[i];
+            }
+            return sum;
+        }
+        var arr= [2,3,5];
+        console.log(arr.sum());
+        console.log(Array.prototype);
+        var arr1 = [22,33,44];
+        console.log(arr1.sum());
+        
+    </script>
 </body>
+
 </html>

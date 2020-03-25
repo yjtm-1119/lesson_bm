@@ -6,6 +6,19 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        function fn(a,b){
+            console.log(a+b);
+            console.log('qd');
+            console.log(this);
+            
+        }
+        //window.fn();   this 指向的是window
+        var o = {
+            name:'andy'
+        };
+        //fn.call();
+        fn.call(o,1,2);
+    </script>
 </body>
 </html>

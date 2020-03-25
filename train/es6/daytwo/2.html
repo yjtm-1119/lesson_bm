@@ -6,6 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        function Star (uname,age){ 
+            //this添加的成员是实例成员，只能通过实例化的对象来访问
+            this.uname =name;
+            this.age = age;
+            this.sing = function(){
+                console.log('我会唱歌');
+            }
+        }
+        var ldh = new Star('刘德华',19);
+        var zxy = new Star('张学友',20);
+       ldh.sing();
+       zxy.sing();
+       Star.sex = '男';//在构造函数本身添加的成员 ，只能通过构造函数访问，不能通过对象访问，是静态成员
+       
+    </script>
 </body>
 </html>

@@ -10,17 +10,26 @@
 
 <body>
     <script>
-        // 正则表达式在js中的使用
+        // 1. 构造函数的问题. 
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+            // this.sing = function() {
+            //     console.log('我会唱歌');
 
-        // 1. 利用 RegExp对象来创建 正则表达式
-        var regexp = new RegExp(/123/);
-        console.log(regexp);
-
-        // 2. 利用字面量创建 正则表达式
-        var rg = /123/;
-        // 3.test 方法用来检测字符串是否符合正则表达式要求的规范
-        console.log(rg.test(123));
-        console.log(rg.test('abc'));
+            // }
+        }
+        Star.prototype.sing=function(){
+            console.log('我会唱歌');
+            
+        }
+        var ldh = new Star('刘德华', 18);
+        var zxy = new Star('张学友', 19);
+        //console.log(ldh.sing === zxy.sing);
+        // console.dir(Star);
+        ldh.sing();
+        zxy.sing();
+        // 2. 一般情况下,我们的公共属性定义到构造函数里面, 公共的方法我们放到原型对象身上
     </script>
 </body>
 

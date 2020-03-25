@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script>
+        function Star(uname, age) {
+            this.uname = uname;
+            this.age = age;
+        }
+        //手动调用constructor 这个属性指回原来的构造函数
+        // Star.prototype.sing = function () {
+        //     console.log('我会唱歌');
+        // }
+        // Star.prototype.movie = function () {
+        //     console.log('我会演电影');
+        // }
+        Star.prototype = {
+            constructor:Star,
+            sing: function(){
+                console.log('我会唱歌'); 
+            },
+            movie:function(){
+                console.log('我会演电影');
+            }
+            //赋值操作之后会覆盖原来的构造函数
+        }
+        var ldh = new Star('刘德华', 20);
+        var zxy = new Star('张学友', 22);
+        // ldh.sing();
+        // console.log(ldh); 
+        // console.log(Star.prototype);
+        // console.log(ldh.__proto__);
+        console.log(Star.prototype.constructor);
+        console.log(ldh.__proto__.constructor);
+
+
+
+    </script>
 </body>
+
 </html>
