@@ -6,6 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        function fn(){
+            var num = 10;
+            function fun(){
+                console.log(num);       
+            }
+            return fun;
+        }
+        var f = fn();
+        f();//fn外面的作用域访问了fn里面的局部变量
+        // 类似于 
+        // var f = function fun(){
+        //     console.log(num);
+            
+        // }
+
+    </script>
 </body>
 </html>

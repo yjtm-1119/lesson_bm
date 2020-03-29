@@ -6,6 +6,30 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <ul class="nav">
+        <li>榴莲</li>
+        <li>臭豆腐</li>
+        <li>鲱鱼罐头</li>
+        <li>大猪蹄子</li>
+    </ul>
+    <script>
+         var lis = document.querySelector('.nav').querySelectorAll('li');
+        // for(var i=0;i<lis.length;i++){
+        //     lis[i].index = i;
+        //     lis[i].onclick = function(){
+        //         //console.log(i);
+        //         console.log(this.index);
+        //     }
+        // }
+        for(var i=0;i<lis.length;i++){
+            (function(i){
+                //console.log(i);
+                lis[i].onclick = function(){
+                    console.log(i);
+                    
+                }
+            })(i);
+        }
+    </script>
 </body>
 </html>

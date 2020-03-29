@@ -1,7 +1,7 @@
-var that;
+// var that;
 class Tab {
     constructor(id) {
-        that = this;
+        //that = this;
         this.main = document.querySelector(id);
         this.add = this.main.querySelector('.tabadd');
         this.ul = this.main.querySelector('.firstnav ul:first-child');
@@ -11,11 +11,11 @@ class Tab {
     init() {
         this.updateNode();
         // init 初始化操作让相关的元素绑定事件
-        this.add.onclick = this.addTab;
+        this.add.onclick = this.addTab.bind(this.add,this);
         for (var i = 0; i < this.lis.length; i++) {
             this.lis[i].index = i;
-            this.lis[i].onclick = this.toggleTab;
-            this.delete[i].onclick = this.deleteTab;
+            this.lis[i].onclick = this.toggleTab.bind(this.lis[i],this);
+            this.delete[i].onclick = this.deleteTab.bind(this.delete[i],this);
             this.spans[i].ondblclick = this.editTab;
             this.sections[i].ondblclick =this.editTab;
         }
@@ -30,7 +30,7 @@ class Tab {
         this.spans = this.main.querySelectorAll('.firstnav li span:first-child');
     }
     //1.切换功能
-    toggleTab() {
+    toggleTab(that) {
         //因为toggleTab是由lis[i].onclick调用的 ，所以函数里面的this都是指向lis的   
         //console.log(this.index);
         that.clearClass();
@@ -44,7 +44,7 @@ class Tab {
         }
     }
     //2.添加功能
-    addTab() {
+    addTab(that) {
         that.clearClass();
         //(1)创建li元素和section元素
         var random = Math.random();
@@ -56,7 +56,7 @@ class Tab {
         that.init();
     }
     //3.删除功能
-    deleteTab(e) {
+    deleteTab(that,e) {
         e.stopPropagation();//阻止冒泡，防止触发li的切换点击事件
         var index = this.parentNode.index;
         //console.log(index);

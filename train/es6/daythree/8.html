@@ -6,6 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        'use strict'
+        // num = 10;
+        // console.log(num);
+        var num =10;
+        console.log(num);
+        //delete num;
+        function fn(){
+            console.log(this);
+        }
+        fn();
+        function Star(){
+            this.sex = '男';
+        }
+        //Star();
+        //console.log(window.sex);
+        new ldh = new Star();
+        setTimeout(function(){
+            console.log(this);//还是指向window 
+            
+        },22);
+        function fn(a,a){
+            console.log(a+a);
+            //相当于先a=1 再a=2将a=1覆盖所以结果为4
+        }
+        fn(1,2);
+    </script>
 </body>
 </html>
