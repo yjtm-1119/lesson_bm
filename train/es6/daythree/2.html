@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script>
+        //1.普通函数
+        function fn() {
+            console.log(11);
+        }
+        fn();
+        //2.对象的方法
+        var o = {
+            sayHi() {
+                console.log(11);
+            }
+        }
+        o.sayHi();
+        //3.构造函数
+        function Star(){};
+        new Star();
+        //4.绑定事件函数
+        btn.onclick = function () { };
+        //5.定时器函数
+        setInterval(function () { }, 2000)
+            //6.立即执行函数
+            (function () {
+                console.log(1111);
+
+            })()
+    </script>
 </body>
+
 </html>

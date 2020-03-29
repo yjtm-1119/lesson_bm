@@ -6,6 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        var o = {
+            name:'andy'
+        }
+        function fn(a,b){
+            console.log(this);
+            console.log(a+b);
+        };
+        var f =fn.bind(o,1,2);
+        f();
+    </script>
 </body>
 </html>

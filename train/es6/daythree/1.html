@@ -6,6 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        //创建函数的三种方式
+        //1.自定义函数(命名函数)
+        function fn();
+        //2.函数表达式(匿名函数);
+        var fun = function(){};
+        //3.利用new Function('参数1','参数2','函数体')
+        var f = new Function('a','b','console.log(a+b)');
+        f(1,2);
+        //使用很少，但是可以证明所有函数都是Function的实例对象，即所有函数都是对象
+        
+    </script>
 </body>
 </html>

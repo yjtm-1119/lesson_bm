@@ -6,6 +6,48 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.普通函数
+        function fn() {
+            console.log('普通函数的this:'+this);//this指向window
+        }
+        fn();
+        
+        //2.对象的方法
+        var o = {
+            sayHi() {
+                console.log('对象方法的this:'+this);//this指向对象
+            }
+        }
+        o.sayHi();
+        //3.构造函数
+        function Star(){};
+        Star.prototype.sing = function(){};//原型对象this执行实例对象
+        var ldh = new Star();//构造函数this执行实例对象
+        //4.绑定事件函数
+        var btn = document.querySelector('button');
+        btn.onclick = function () {
+            console.log('绑定事件函数的this:'+this);//this指向btn
+        };
+        //5.定时器函数
+        setInterval(function () { }, 2000)//this指向window
+            //6.立即执行函数
+            (function () {
+                console.log(1111);//this指向window
+            })()
+    </script>
+</body>
+
+</html>
 </body>
 </html>

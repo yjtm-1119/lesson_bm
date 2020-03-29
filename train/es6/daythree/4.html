@@ -6,6 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        // var o = {
+        //     name:'andy'
+        // }
+        // function fn(){
+        //     console.log(this); 
+        // };
+        // fn.call(o);
+        //call的主要作用是实现继承
+        function Father(uname,age,sex){
+            this.uname= name;
+            this.age = age;
+            this.sex = sex;
+        }
+        function Son(uname,age,sex){
+            Father.call(this,uname,age,sex);
+        }
+        var son = new Son('ldh',18,'男');
+        console.log(son);
+        
+    </script>
 </body>
 </html>

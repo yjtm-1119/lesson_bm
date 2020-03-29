@@ -6,6 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        var o = {
+            name:'andy'
+        }
+        function fn(arr){
+            console.log(this); 
+            console.log(arr);
+            
+        };
+        fn.apply(o,['pink']);//参数必须是数组形式
+        //apply主要应用  利用apple借助于数学内置对象求最大值
+        var arr = [12,3,4,52,31];
+        //var a = Math.max.apply(null,arr);
+        var a = Math.max.apply(Math,arr);//Math调用max方法将this 指向Math
+        console.log(a);
+        
+
+    </script>
 </body>
 </html>
