@@ -6,6 +6,38 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        var rg = /[abc]/;//只要有abc中任意一个就匹配
+        console.log(rg.test('andy'));
+        console.log(rg.test('boy'));
+        console.log(rg.test('candy'));
+        var reg = /^[abc]$/;//只能是a b c  才返回true
+        console.log(reg.test('aa'));
+        console.log(reg.test('a'));
+        console.log(reg.test('b'));
+        console.log(reg.test('c'));
+        console.log(reg.test('abc'));
+        console.log('---------------');
+        var rg1 = /^[a-z]$/;//26个字母任意一个都是返回true
+        console.log(rg1.test('b'));
+        console.log(rg1.test('d'));
+        console.log(rg1.test('y'));
+        console.log(rg1.test('ass'));
+        //字符组合
+        var reg2 = /^[a-zA-Z0-9_-]$/;
+        console.log(reg2.test('a'));
+        console.log(reg2.test('B'));
+        console.log(reg2.test('P'));
+        console.log(reg2.test('6'));
+        console.log(reg2.test('?'));
+        console.log(reg2.test('-'));
+        var reg3 = /^[^a-zA-Z0-9_-]$/;
+        console.log(reg3.test('a'));
+        console.log(reg3.test('B'));
+        console.log(reg3.test('P'));
+        console.log(reg3.test('6'));
+        console.log(reg3.test('?'));
+        console.log(reg3.test('-'));
+    </script>
 </body>
 </html>

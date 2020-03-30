@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        span {
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        .right {
+            color: green;
+        }
+        
+        .wrong {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    
+    <input type="text" class="uname"> <span>请输入用户名</span>
+    <script>
+        // var reg = /^[a-zA-Z0-9-_]$/
+        // console.log(reg.test('a'));
+        // console.log(reg.test('8'));
+        // console.log(reg.test('18'));
+        // console.log(reg.test('aaa'));
+
+        var reg = /^[a-zA-Z0-9-_]{3,8}$/
+        // console.log(reg.test('a'));
+        // console.log(reg.test('8'));
+        // console.log(reg.test('18'));
+        // console.log(reg.test('aaa'));
+        // console.log(reg.test('xjh1998'));
+        // console.log(reg.test('andy111'));
+        var uname =document.querySelector('.uname');
+        var span = document.querySelector('span');
+        uname.onblur=function(){
+            if(reg.test(this.value)){
+                //console.log('正确的');
+                span.className = 'right';
+                span.innerHTML = '格式输入正确';
+            }else{
+                //console.log('错误的');
+                span.className = 'wrong';
+                span.innerHTML = '格式输入错误';
+            }
+        }
+        
+    </script>
 </body>
 </html>

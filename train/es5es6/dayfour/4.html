@@ -6,6 +6,48 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        // var reg = /^a*$/;
+        // //*相当于>=0 可以出现0次或更多次;
+        // console.log(reg.test(''));
+        // console.log(reg.test('a'));
+        // console.log(reg.test(''));
+
+        // var reg = /^a+$/;
+        // //+相当于>=1 可以出现1次或更多次;
+        // console.log(reg.test(''));
+        // console.log(reg.test('a'));
+        // console.log(reg.test('aaa'));
+
+        // var reg = /^a?$/;
+        // //?相当于1||0 可以出现0次或1次;
+        // console.log(reg.test(''));
+        // console.log(reg.test('a'));
+        // console.log(reg.test('aaa'));
+
+        // var reg = /^a{2}$/;
+        // //{2}就是重复2次
+        // console.log(reg.test(''));
+        // console.log(reg.test('a'));
+        // console.log(reg.test('aa'));
+
+        // var reg = /^a{2,}$/;
+        // //{2,}就是重复>=2次
+        // console.log(reg.test(''));
+        // console.log(reg.test('a'));
+        // console.log(reg.test('aa'));
+        // console.log(reg.test('aaaa'));
+
+        var reg = /^a{2,5}$/;
+        //{2,5}就是重复2-5次
+        console.log(reg.test(''));
+        console.log(reg.test('a'));
+        console.log(reg.test('aa'));
+        console.log(reg.test('aaaa'));
+        console.log(reg.test('aaaaa'));
+        console.log(reg.test('aaaaaaa'));
+        
+        
+    </script>
 </body>
 </html>

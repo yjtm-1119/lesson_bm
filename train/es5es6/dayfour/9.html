@@ -6,6 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <textarea name="" id="message"></textarea>
+    <button>提交</button>
+    <div></div>
+    <script>
+        var str ='andy和bady';
+        //var newStr = str.replace('andy','red');
+        var newStr = str.replace(/andy/,'boy');
+        console.log(newStr);
+        var text = document.querySelector('textarea');
+        var btn = document.querySelector('button');
+        var div = document.querySelector('div');
+        btn.onclick = function(){
+            div.innerHTML = text.value.replace(/激情|gay/g,'****');
+        }
+    </script>
 </body>
 </html>

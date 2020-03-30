@@ -6,6 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        var rg = /abc/;
+        console.log(rg.test('abc'));
+        console.log(rg.test('abcd'));
+        console.log(rg.test('aabcd'));
+        console.log('-----------------------');
+        var reg = /^abc/;
+        console.log(reg.test('abc'));
+        console.log(reg.test('abcd'));
+        console.log(reg.test('aabcd'));
+        console.log('-----------------------');
+        var rg1 = /^abc$/
+        console.log(rg1.test('abc'));
+        console.log(rg1.test('abcd'));
+        console.log(rg1.test('aabcd'));
+        
+    </script>
 </body>
 </html>
