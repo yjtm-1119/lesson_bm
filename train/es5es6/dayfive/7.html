@@ -6,6 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <script>
+        // const obj ={name: 'zhangsan'};
+        // function fn(){
+        //     console.log(this);
+        //     return ()=>{
+        //         console.log(this);
+                
+        //     }
+        // }   
+        // const resfn = fn.call(obj);
+        // resfn();
+        var age = 100;
+        var obj = {
+            age:20,
+            say:()=>{
+                console.log(this.age);//这里的this指向window  因为箭头函数在obj对象中，但是obj对象不产生作用域 
+                
+            }
+        }
+        obj.say();
+    </script>
 </body>
 </html>

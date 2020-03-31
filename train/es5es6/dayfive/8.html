@@ -27,12 +27,27 @@
         // }
         // fn(...arr);
         
-        function fn(a,b,...args){
-            console.log(a);
-            console.log(b);
-            console.log(...args);
-        }
-        fn(1,2,3,4,5,6,7);
+        // function fn(a,b,...args){
+        //     console.log(a);
+        //     console.log(b);
+        //     console.log(...args);
+        // }
+        // fn(1,2,3,4,5,6,7);
+        // const sum  = (...args)=>{
+        //     let total = 0;
+        //     args.forEach(item => total+=item);
+        //     return total;
+        // };
+        // console.log(sum(10));
+        // console.log(sum(10,20,30,40));
+
+        let ary1 = ['张三','李四','王五'];
+        let [s1,...s2] = ary1;
+        console.log(s1);
+        console.log(s2);
+        
+        
+        
 
         
         

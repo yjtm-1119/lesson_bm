@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <script>
+        // let arr = ['a','b','c'];
+        // console.log(...arr);
+        //  console.log(...arr) ===console.log('a','b','c')
+        // let arr1 = [1,2,3];
+        // let arr2= [4,5,6];
+        // let arr3 = [...arr1,...arr2];
+        // console.log(arr3);
+        //方法2
+        // arr1.push(...arr2);
+        // console.log(arr1);
+        // let arr3 = arr1.push(...arr2);
+        // console.log(arr3);
+
+        var divs = document.querySelectorAll('div');
+        console.log(divs);
+        const  arr = [...divs];
+        console.log(arr);
+        arr.push('a');
+        console.log(arr);
+        
+    </script>
 </body>
+
 </html>
