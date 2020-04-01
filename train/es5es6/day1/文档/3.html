@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="aa" />
+    <input type="button" value="bb" />
+    <input type="button" value="cc" />
+    <input type="button" value="dd" />
+    ​
+    <script>
+//          {
+//         var a = 1;
+//     }
+// ​
+//     console.log(a);   //这里的 a，指的是 区块 里的 a
+
+//         var a = 1;
+//     {
+//         var a = 2;
+//     }
+// ​
+//     console.log(a);   //这里的 a，指的是 区块 里的 a
+
+// var a = 2;
+//     {
+//         let a = 3;
+//     }
+// ​
+//     console.log(a);
+
+// for (var i = 0; i < 10; i++) {
+//     console.log('循环体中:' + i); // 每循环一次，就会在 { } 所在的块级作用域中，重新定义一个新的 i
+// }
+// ​
+// console.log('循环体外:' + i);
+
+// for (let i = 0; i < 10; i++) {
+//     console.log('循环体中:' + i);
+// }
+// ​
+// console.log('循环体外:' + i);
+
+// var myBtn = document.getElementsByTagName("input");
+// ​
+//       for (var i = 0; i < myBtn.length; i++) {
+//         myBtn[i].onclick = function() {
+//           alert(i);
+//         };
+//       }
+// ​
+// var i = 0;
+//     myBtn[0].onclick = function() {
+//     alert(i);
+//     };
+//     i++;
+// ​
+//     myBtn[1].onclick = function() {
+//     alert(i);
+//     };
+//     i++;
+// ​
+//     myBtn[2].onclick = function() {
+//     alert(i);
+//     };
+//     i++;
+// ​
+//     myBtn[3].onclick = function() {
+//     alert(i);
+//     };
+//     i++;  // 到这里，i 的值已经是4了。因此，当我们点击按钮时，i的值一直都是4
+
+
+// var myBtn = document.getElementsByTagName("input");
+// ​
+//       for (let i = 0; i < myBtn.length; i++) {
+//         myBtn[i].onclick = function() {
+//           alert(i);
+//         };
+//       }
+
+// var name = 'smyhvae';
+//     var age = '26';
+//     console.log('name:'+name+',age:'+age);   //传统写法
+
+//     var name = 'smyhvae';
+//     var age = '26';
+// ​
+//     console.log('name:'+name+',age:'+age);   //传统写法
+// ​
+//     console.log(`name:${name},age:${age}`);  //ES6 写法
+
+// let arr1 = [1, 2, 3, 4, 5];
+// ​
+//     for (let value of arr1) {
+//         console.log(value);
+//     }
+    </script>
+</body>
+
+</html>

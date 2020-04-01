@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         var obj1 = {username: 'smyhvae', age: 26};
+//         var obj2 = {address:'shenzhen'};
+// ​
+//         obj2 = Object.create(obj1);
+//         console.log(obj2);
+
+//         var obj1 = {username: 'smyhvae', age: 26};
+//         var obj2 = {address: 'shenzhen'};
+// ​
+//         obj2 = Object.create(obj1, {
+//         sex: {//给obj2添加新的属性`sex`。注意，这一行的冒号不要漏掉
+//             value: '男',  //通过value关键字设置sex的属性值
+//             writable: false,
+//             configurable: true,
+//             enumerable: true
+//              }
+//         });
+​
+    // console.log(obj2);
+
+
+    // Object.defineProperty(obj2, 'sex', {
+    //     value: 'cc',
+    //     writable: true,
+    //     configurable: true,
+    //     enumerable: true,
+    //   });
+
+
+    // var obj2 = {
+    //     firstName : 'smyh',
+    //     lastName : 'vae'
+    // };
+    // Object.defineProperties(obj2, {
+    //     fullName : {
+    //         get : function () {
+    //             return this.firstName + '-' + this.lastName
+    //         },
+    //         set : function (data) {  //监听扩展属性，当扩展属性发生变化的时候自动调用，自动调用后将变化的值作为实参注入到set函数
+    //             var names = data.split('-');
+    //             this.firstName = names[0];
+    //             this.lastName = names[1];
+    //         }
+    //     }
+    // });
+    // console.log(obj2.fullName);
+    // obj2.firstName = 'tim';
+    // obj2.lastName = 'duncan';
+    // console.log(obj2.fullName);
+    // obj2.fullName = 'kobe-bryant';
+    // console.log(obj2.fullName);
+
+
+    // var obj = {
+    //     firstName : 'kobe',
+    //     lastName : 'bryant',
+    //     get fullName(){
+    //         return this.firstName + ' ' + this.lastName
+    //     },
+    //     set fullName(data){
+    //         var names = data.split(' ');
+    //         this.firstName = names[0];
+    //         this.lastName = names[1];
+    //     }
+    // };
+    // console.log(obj.fullName);
+    // obj.fullName = 'curry stephen';
+    // console.log(obj.fullName);
+    </script>
+</body>
+</html>
