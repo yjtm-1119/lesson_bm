@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let promise = new Promise((resolve,reject) => {
+        //     console.log('111');
+        //     if(true){
+        //         console.log('333');
+        //         resolve();
+        //     }else{
+        //         reject();
+        //     }      
+        // })
+        // console.log('222');
+        // promise.then( ()=>{
+        //     console.log('成功了');
+
+        // },()=>{
+        //     console.log('失败了');
+
+        // })
+
+        //         function getNews(url) {
+        //         //创建一个promise对象
+        //         let promise = new Promise((resolve, reject) => {
+        //             //初始化promise状态为pending
+        //             //启动异步任务
+        //             let request = new XMLHttpRequest();
+        //             request.onreadystatechange = function () {
+        //                 if (request.readyState === 4) {
+        //                     if (request.status === 200) {
+        //                         let news = request.response;
+        //                         resolve(news);
+        //                     } else {
+        //                         reject('请求失败了。。。');
+        //                     }
+        //                 }
+        //             };
+        //             request.responseType = 'json';//设置返回的数据类型
+        //             request.open("GET", url);//规定请求的方法，创建链接
+        //             request.send();//发送
+        //         })
+        //         return promise;
+        //     }
+        // ​
+        //     getNews('http://localhost:3000/news?id=2')
+        //         .then((news) => {
+        //             console.log(news);
+        //             document.write(JSON.stringify(news));
+        //             console.log('http://localhost:3000' + news.commentsUrl);
+        //             return getNews('http://localhost:3000' + news.commentsUrl);
+        //         }, (error) => {
+        //             alert(error);
+        //         })
+        //         .then((comments) => {
+        //             console.log(comments);
+        //             document.write('<br><br><br><br><br>' + JSON.stringify(comments));
+        //         }, (error) => {
+        //             alert(error);
+        //         })
+
+        // let p1 = Promise.resolve("这是成功的promise对象");
+        // // let p2 = new Promise(function(resolve,reject){
+        // //     resolve("这是成功的promise对象");
+        // // }) 两种创建方式
+        // console.log(p1);
+        // p1.then((res)=>{//resolve 里的东西会被当成参数传给res
+        //     console.log(res);
+        // },(err)=>{
+        //     console.log('失败了');
+
+        // })
+
+        // let p2 = Promise.reject('这是失败的promise对象');
+        // console.log(p2);
+        // p2.catch(function(err){
+        //     console.log(err);
+
+        // })
+
+        // new Promise(function(resolve, reject) {
+        //     if(true) {
+        //        throw new Error('error!!')
+        //     }
+        // }).catch(v => console.log(v.message)) // error!!
+
+
+        // 同时请求多个数据，并且在多个数据完成后再执行什么操作
+
+
+        // let p1 = new Promise((resolve, reject) => {
+        //     if(true){
+        //         resolve(1);
+        //     }else{
+        //        reject(2); 
+        //     }
+            
+        // })
+        // let p2 = new Promise((resolve, reject) => {
+        //     if(true){
+        //         resolve(2);
+        //     }else{
+        //         reject(3);
+        //     }
+            
+            
+        // })
+        // let p3 = new Promise((resolve, reject) => {
+        //     if(true){
+        //         resolve(3);
+        //     }else{
+        //       reject(4);  
+        //     }
+            
+            
+        // })
+        // let p4 = new Promise((resolve, reject) => {
+        //     if(true){
+        //         resolve(4);
+        //     }else{
+        //        reject(5); 
+        //     }
+            
+            
+        // })
+        // let p5 = new Promise((resolve, reject) => {
+        //     if(true){
+        //         resolve(5);
+        //     }else{
+        //         reject(6);
+        //     }
+            
+            
+        // })
+        // let p6 = new Promise((resolve, reject) => {
+        //     if(true){
+        //         resolve(6);
+        //     }
+            
+        //     reject(7);
+        // })
+        // Promise.all([p1,p2,p3,p4,p5,p6]).then(arr=>{
+        //     console.log(arr);
+        // }).catch((arr1)=>{
+        //     console.log(arr1);
+            
+        // })
+
+        
+        //同时传入多个数据 只要有一个实例resolve 或者reject 就返回该结果，不再执行其他实例
+        var p1 = new Promise((resolve, reject) => {
+            setTimeout(function(){
+                resolve('500毫秒后执行')
+            },500)
+            
+        })
+        var p2 = new Promise((resolve, reject) => {
+            setTimeout(function(){
+                resolve('400毫秒后执行')
+            },400)
+            
+            
+        })
+        var p3 = new Promise((resolve, reject) => {
+            setTimeout(function(){
+                resolve('600毫秒后执行')
+            },600)
+            
+            
+        })
+        var p4 = new Promise((resolve, reject) => {
+            setTimeout(function(){
+                resolve('200毫秒后执行')
+            },200)
+            
+            
+        })
+        var p5 = new Promise((resolve, reject) => {
+            setTimeout(function(){
+                resolve('1000毫秒后执行')
+            },1000)
+            
+            
+        })
+        var p6 = new Promise((resolve, reject) => {
+            setTimeout(function(){
+                resolve('100毫秒后执行')
+            },10)
+        })
+        var arr =[p1,p2,p3,p4,p5,p6];
+        Promise.race(arr).then(value=>{
+            console.log(value);
+        })
+    </script>
+</body>
+
+</html>
