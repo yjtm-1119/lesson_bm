@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+</head>
+
+<body>
+    
+    <script>
+        
+        // function createIterator(item){
+        //     if(item ===1||item==2){
+        //         value =1;
+        //     }
+        //     return {
+        //         next(item){
+        //             var value = next(item-1)+next(item-1);
+
+
+        //         }
+        //     }
+        //     console.log(item);
+
+        // }
+        // createIterator(3);
+
+
+
+        //var arr= [1,1,2,3,5,8,13];
+        // function createIterator(count){
+        //     var num = 0;
+        //     return {
+        //         pre1:0,
+        //         pre2:0,
+        //         next:function(count){
+        //             //console.log(num);
+        //             if(num>count){
+        //                 return{
+        //                     done:true,
+        //                     value:undefined
+        //                 }
+        //             }
+        //             if(num==0){
+        //                 this.pre1=1;
+        //                 num++;
+        //                 return {
+        //                     done:false,
+        //                     value:0
+        //                 }
+        //             }else{
+        //                 num++;
+        //                 res = this.pre1+this.pre2;
+        //                 this.pre2 = this.pre1;
+        //                 this.pre1 = res;
+        //                 return {
+        //                     done:false,
+        //                     value:this.pre1+this.pre2
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        // var a =createIterator(10);
+        //a.next();
+
+
+
+
+        // var user = new Map();
+        // user.set('username','小明');
+        // user.set('passwprd','123456');
+        // user.set('age','18');
+        // console.log(user);
+
+        // var userIterator = user.entries()
+        // console.log(userIterator.next());//
+
+        // for(let s of userIterator){  //let of 输出值
+        //     console.log(s);
+        //     //只循环迭代2次，之前迭代了一次
+        // }
+
+
+
+        //创建迭代器的一个带*的函数叫生成器
+        // function* easy() {//*号表示生成器函数 不需要加new
+        //     yield 1   //next()一下就运行这个函数，运行到yield就中断
+        //     yield 2
+        //     yield 3
+        // }
+        // let easyAterator = easy();//此处不执行
+        // console.log(easyAterator);
+        // easyAterator.next();//1
+        // easyAterator.next();//2
+        // easyAterator.next();//3
+
+        // for (let i of easyAterator) {
+        //     console.log(i);
+
+        // }
+
+        // function *difficult(count=10) {
+        //     var num = 0;
+        //     var pre1 = 0;
+        //     var pre2 = 0;
+        //     if (num == 0) {
+        //         pre1 = 1;
+        //         num++;
+        //         yield  0
+        //     }
+        //     while (true) {
+        //         num++;
+        //         let res = pre1 + pre2;
+        //         pre2 = pre1;
+        //         pre1 = res;
+        //         yield res
+        //         if (num >= count) {
+        //             break;
+        //         }
+
+        //     }
+        // }
+        // var diffAterator = difficult(5);
+        // console.log(diffAterator);
+
+        // var diffAterator1 = difficult(100);
+        // for (let i of diffAterator ){
+        //     console.log(i);
+
+        // }
+        // for (let i of diffAterator1 ){
+        //     console.log(i);
+
+        // }
+
+
+        var priceAll = [1, 2, 3, 4, 5, 6, 7, 8];
+        function *priceGenerator(priceAll) {
+            for (let i = 0; i < priceAll.length; i++) {
+                let res = "$" + priceAll[i];
+                yield res;
+            }
+        }
+        var priceAterator = priceGenerator(priceAll);
+
+        // for(let i of priceAterator){
+        //     console.log(i);
+            
+        // }
+         for (let i =0;i<4;i++){
+             let res = priceAterator.next();
+             $('body').append(`<h1>${res.value}<h1>`);
+         }
+    </script>
+</body>
+
+</html>
