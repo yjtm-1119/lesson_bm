@@ -1,25 +1,249 @@
-<script>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.bootcss.com/weui/2.3.0/style/weui.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="page tabbar js_show">
+      <div class="page__bd">
+        <div class="weui-tab">
+          <div class="weui-tab__panel tab show">
+            <div class="page__bd">
+              <!--<a href="javascript:" class="weui-btn weui-btn_primary">点击展现searchBar</a>-->
+              <div class="weui-search-bar" id="searchBar">
+                <form class="weui-search-bar__form">
+                  <div class="weui-search-bar__box">
+                    <i class="weui-icon-search"></i>
+                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="搜索" required="">
+                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                  </div>
+                  <label class="weui-search-bar__label" id="searchText"
+                    style="transform-origin: 0px 0px; opacity: 1; transform: scale(1, 1);">
+                    <i class="weui-icon-search"></i>
+                    <span>搜索</span>
+                  </label>
+                </form>
+                <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+              </div>
+
+              <div class="goods">
+                <ul class="fruit-items">
+                  <li class="fruit-item">
+                    <div class="pic">
+                      <img src="./images/shuiguo_1.png" alt="">
+                    </div>
+                    <p>苹果￥5</p>
+                  </li>
+                  <li class="fruit-item">
+                    <div class="pic">
+                      <img src="./images/shuiguo_2.png" alt="">
+                    </div>
+                    <p>苹果￥5</p>
+                  </li>
+                  <li class="fruit-item">
+                    <div class="pic">
+                      <img src="./images/shuiguo_3.png" alt="">
+                    </div>
+                    <p>苹果￥5</p>
+                  </li>
+                  <li class="fruit-item">
+                    <div class="pic">
+                      <img src="./images/shuiguo_4.png" alt="">
+                    </div>
+                    <p>苹果￥5</p>
+                  </li>
+                  <li class="fruit-item">
+                    <div class="pic">
+                      <img src="./images/shuiguo_1.png" alt="">
+                    </div>
+                    <p>苹果￥5</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="weui-tab__panel tab">
+            <div class="mine_cart">购物车</div>
+            <!-- 水果 -->
+            <div class="fruit">
+              <div class="weui-panel__bd">
+                <a href="javascript:" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/shuiguo.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">转基因西瓜</h4>
+                    <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                  </div>
+                </a>
+                <a href="javascript:" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/shuiguo_1.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">这是个菠萝</h4>
+                    <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                  </div>
+                </a>
+                <a href="javascript:" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/shuiguo_1.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">这是个菠萝</h4>
+                    <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                  </div>
+                </a>
+                <a href="javascript:" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/shuiguo_1.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">这是个菠萝</h4>
+                    <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                  </div>
+                </a>
+                <a href="javascript:" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/shuiguo_1.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">这是个菠萝</h4>
+                    <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                  </div>
+                </a>
+                <a href="javascript:" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/shuiguo_1.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">这是个菠萝</h4>
+                    <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                  </div>
+                </a>
+                <a href="javascript:" class="weui-media-box weui-media-box_appmsg">
+                  <div class="weui-media-box__hd">
+                    <img class="weui-media-box__thumb" src="./images/shuiguo_1.png" alt="">
+                  </div>
+                  <div class="weui-media-box__bd">
+                    <h4 class="weui-media-box__title">这是个菠萝</h4>
+                    <p class="weui-media-box__desc">由各种物质组成的巨型球状天体，叫做星球。星球有一定的形状，有自己的运行轨道。</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="weui-tab__panel tab">
+            <div class="mine_title">我的</div>
+            <div class="weui-cell">
+              <div class="weui-cell__hd avatar">
+                <img src="./images/avatar.jpg">
+              </div>
+              <div class="weui-cell__bd">
+                <p>联系人名称</p>
+                <p style="font-size: 13px; color: #888;">摘要信息</p>
+              </div>
+            </div>
+            <!--  -->
+            <div class="weui-cells">
+              <a class="weui-cell  weui-cell_access weui-cell_example" href="javascript:">
+                <div class="weui-cell__hd"><img
+                    src="./images/shengnvguo.png"
+                    alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
+                <div class="weui-cell__bd">
+                  <p>便利购余额</p>
+                </div>
+                <div class="weui-cell__ft">100元</div>
+              </a>
+              <a class="weui-cell  weui-cell_access weui-cell_example" href="javascript:">
+                <div class="weui-cell__hd"><img
+                    src="./images/shenqisixia-yinxingnvxia.png"
+                    alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
+                <div class="weui-cell__bd">
+                  <p>优惠券</p>
+                </div>
+                <div class="weui-cell__ft">3张</div>
+              </a>
+            </div>
+            <!--  -->
+            <div class="weui-cells">
+              <a class="weui-cell  weui-cell_access weui-cell_example" href="javascript:">
+                <div class="weui-cell__hd"><img
+                    src="./images/shengnvguo.png"
+                    alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
+                <div class="weui-cell__bd">
+                  <p>便利购余额</p>
+                </div>
+                <div class="weui-cell__ft"></div>
+              </a>
+              <a class="weui-cell  weui-cell_access weui-cell_example" href="javascript:">
+                <div class="weui-cell__hd"><img
+                    src="./images/shenqisixia-yinxingnvxia.png"
+                    alt="" style="width: 20px; margin-right: 16px; display: block;"></div>
+                <div class="weui-cell__bd">
+                  <p>优惠券</p>
+                </div>
+                <div class="weui-cell__ft"></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="weui-tabbar">
+            <div class="weui-tabbar__item weui-bar__item_on">
+              <div style="display: inline-block; position: relative;">
+                <img src="./images/shengnvguo.png" alt="" class="weui-tabbar__icon">
+                <span class="weui-badge" style="position: absolute; top: -2px; right: -13px;">8</span>
+              </div>
+              <p class="weui-tabbar__label">商城</p>
+            </div>
+
+            <div class="weui-tabbar__item">
+              <img src="./images/dangao.png" alt="" class="weui-tabbar__icon">
+              <p class="weui-tabbar__label">购物车</p>
+            </div>
+
+            <div class="weui-tabbar__item">
+              <div style="display: inline-block; position: relative;">
+                <img src="./images/kafei.png" alt="" class="weui-tabbar__icon">
+              </div>
+              <p class="weui-tabbar__label">我的</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
     const choose = document.querySelectorAll('.weui-tabbar__item')
     const tabs = document.querySelectorAll('.weui-tab__panel')
     // console.log(choose.length)
     for (let i = 0; i < choose.length; i++) {
-        choose[i].addEventListener('click', function () {
-            showTab.call(this) // 让showTab里面的this指向此刻的点击事件
-        })
+      choose[i].addEventListener('click', function () {
+        showTab.call(this) // 让showTab里面的this指向此刻的点击事件
+      })
     }
 
     function showTab() {
-        for (let j = 0, len = tabs.length; j < len; j++) {
-            // console.log(choose[j])
-            console.log(this)
-            if (choose[j] === this) {
-                choose[j].classList.add('weui-bar__item_on')
-                tabs[j].classList.add('show')
-            } else {
-                choose[j].classList.remove('weui-bar__item_on')
-                tabs[j].classList.remove('show')
-            }
+      for (let j = 0, len = tabs.length; j < len; j++) {
+        // console.log(choose[j])
+        // console.log(this)
+        if (choose[j] === this) {
+          choose[j].classList.add('weui-bar__item_on')
+          tabs[j].classList.add('show')
+        } else {
+          choose[j].classList.remove('weui-bar__item_on')
+          tabs[j].classList.remove('show')
         }
+      }
     }
 
 
@@ -30,10 +254,13 @@
     const searchCancel = document.getElementById('searchCancel')
 
     searchText.addEventListener('click', function () {
-        searchBar.classList.add('weui-search-bar_focusing')
-        searchInput.focus()
+      searchBar.classList.add('weui-search-bar_focusing')
+      searchInput.focus()
     })
     searchCancel.addEventListener('click', function () {
-        searchBar.classList.remove('weui-search-bar_focusing')
+      searchBar.classList.remove('weui-search-bar_focusing')
     })
-</script>
+  </script>
+</body>
+
+</html>
