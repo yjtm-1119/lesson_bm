@@ -1,0 +1,39 @@
+<script>
+    const choose = document.querySelectorAll('.weui-tabbar__item')
+    const tabs = document.querySelectorAll('.weui-tab__panel')
+    // console.log(choose.length)
+    for (let i = 0; i < choose.length; i++) {
+        choose[i].addEventListener('click', function () {
+            showTab.call(this) // 让showTab里面的this指向此刻的点击事件
+        })
+    }
+
+    function showTab() {
+        for (let j = 0, len = tabs.length; j < len; j++) {
+            // console.log(choose[j])
+            console.log(this)
+            if (choose[j] === this) {
+                choose[j].classList.add('weui-bar__item_on')
+                tabs[j].classList.add('show')
+            } else {
+                choose[j].classList.remove('weui-bar__item_on')
+                tabs[j].classList.remove('show')
+            }
+        }
+    }
+
+
+    // 搜索
+    const searchBar = document.getElementById('searchBar')
+    const searchText = document.getElementById('searchText')
+    const searchInput = document.getElementById('searchInput')
+    const searchCancel = document.getElementById('searchCancel')
+
+    searchText.addEventListener('click', function () {
+        searchBar.classList.add('weui-search-bar_focusing')
+        searchInput.focus()
+    })
+    searchCancel.addEventListener('click', function () {
+        searchBar.classList.remove('weui-search-bar_focusing')
+    })
+</script>
