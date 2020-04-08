@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var fn = new Promise(function (resolve, reject) {
+        //     setTimeout(function () {
+        //         if (true) {
+        //             resolve("成功");
+        //         } else {
+        //             seject("失败");
+        //         }
+        //     }, 1000)
+        // })
+        // var p1 = new Promise(fn)
+        // p1.then(function (res) {
+        //     console.log(res);
+
+        // })
+        // p1.catch(function (res) {
+        //     console.log(res);
+
+        // })
+
+
+
+
+        class ysPromise {
+            constructor(fn) {
+                this.successList = [];
+                this.failList = []
+                //pending fullfilded  rejected
+                this.state = 'pending'
+                fn(this.resolveFn.bind(this), this.rejectFn.bind(this))
+            }
+            then(successfn, failFn) {
+                if (typeof successFn == 'function') {
+                    this.successList.push(successFn)
+                }
+                if (typeof failFn == 'function') {
+                    this.failList.push(failFn)
+                }
+            }
+            catch(failFn) {
+                if (typeof failFn == 'function') {
+                    this.failList.push(failFn)
+                }
+            }
+            resolveFn(res) {
+                this.state = "fullfilled"
+                this.successList.forEach(function (item, index) {
+                    //将成功的事件循环调用
+                    item(res)
+                })
+            }
+            rejectFn(res) {
+                this.state = "rejected"
+                //注册到的失败的所有事件进行调用
+                this.failList.forEach(function (item, index) {
+                    item(res)
+                })
+            }
+        }
+        var fn = function (resolve, reject) {
+            setTimeout(function () {
+                if (true) {
+                    resolve("ys成功");
+                } else {
+                    reject("ys失败");
+                }
+            }, 1000)
+        }
+        var p1 = new ysPromise(fn)
+        p1.then(function (res) {
+            console.log('这是成功做的事');
+            document.body.style.background = "red";
+            console.log(res);
+        })
+        p1.catch(function (res) {
+            console.log('这是失败做的事');
+            document.body.style.background = "pink";
+            console.log(res);
+
+        })
+    </script>
+</body>
+
+</html>

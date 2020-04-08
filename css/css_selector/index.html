@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #app {
+            color: red;
+        }
+
+        .wrapper {
+            color: blue;
+        }
+
+        div::before {
+            content: 1;
+        }
+
+        div::after {
+            content: 2;
+            /* color:yellow !important; */
+        }
+        div::first-line{
+            color:blue;
+        }
+        /* div::first-letter{
+            color:chartreuse;
+            /* 第一个字 */
+        } */
+        .blue{
+            color:blue;
+        }
+        .red{
+            color:red;
+        }
+        /* 同等优先级按照：定义的顺序，后面覆盖前面的 */
+        .parent .children{
+            color:chocolate;
+        }
+        .parent, .children{
+            color:black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="app" class="wrapper wrapper1">
+        abcd
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="red blue">sadffafscq</div> -->
+    <div class="parent">
+        afascfwq
+        <div class="children">
+            fsfvadcaf
+        </div>
+    </div>
+</body>
+
+</html>
