@@ -6,28 +6,33 @@ class Wallet {
         //console.log('欢迎使用支付宝钱包');
         //
         //1.唯一id  autoincremnet  Node ,绝对不会重复
-        this._id = UUID.v1().replace(/-/g,"");//命名规则约定 _变量  （下划线加变量名）表示私有 
-        this._createTime = + new Date();//类型转换  转换成时间戳
+        this._id = UUID.v1().replace(/-/g, "");//命名规则约定 _变量  （下划线加变量名）表示私有 
+        this._createTime = +new Date();//类型转换  转换成时间戳
         this._balance = 0; //余额也设计成私有属性  虽然可以读写 但要遵循一定的规则  要安全
-        this._time
+        this._modifyTime = +new Date();
         //余额
         //如何生成？
         //console.log(this.id);//id 是zzwWallet 的public 属性
-        
+
     }
     getBalance() {
         return this._balance;
     }
     // setBalance() {
-        
+
     // }
     increaseBalance(increasedAmount) {
-        console.log('多了'+ increasedAmount);
-        this._balance += increasedAmount 
+        console.log('多了' + increasedAmount);
+        this._balance += increasedAmount;
+        console.log('修改余额时间：' + zzwWallet.setModifyTime());
+        console.log('当前余额：' + zzwWallet.getBalance().toFixed(2));
+
     }
     decreaseBalance(decreaseAmount) {
-        console.log('少了'+decreaseAmount);
+        console.log('少了' + decreaseAmount);
         this._balance -= decreaseAmount;
+        console.log('修改余额时间：' + zzwWallet.setModifyTime());
+        console.log('当前余额：' + zzwWallet.getBalance().toFixed(2));
     }
     getCreateTime() {   //public
         return this._createTime;
@@ -38,16 +43,18 @@ class Wallet {
     setID() {
         throw new Error('私有属性_id 不可以修改');
     }
+
+    setModifyTime() {
+        return this._modifyTime;
+    }
 }
 
 const zzwWallet = new Wallet();//实例化
 console.log(zzwWallet.getCreateTime());
-console.log(zzwWallet.getBalance());
+//console.log(zzwWallet.getBalance());
 zzwWallet.increaseBalance(10.0);
 zzwWallet.decreaseBalance(8.1);
 console.log(zzwWallet.getBalance());
-
-
 console.log(zzwWallet.getID());
 //zzwWallet.setID();
 // zzwWallet.id = '123412412';//id 属性应该是只读的 不能修改

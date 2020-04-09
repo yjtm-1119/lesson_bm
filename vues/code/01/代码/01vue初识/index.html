@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<!-- VIEW -->
+		<div id="app">
+			{{ title }}
+			<h1>{{msg}}</h1>
+		</div>
+		
+		
+		<script type="text/javascript">
+			//console.log(Vue)
+			
+			let app = new Vue({
+				el:"#app",
+				//Model
+				data:{
+					title:"hello Vue!",
+					msg:"前端VUE框架"
+				}
+			})
+			
+			console.log(app)
+		</script>
+	</body>
+</html>

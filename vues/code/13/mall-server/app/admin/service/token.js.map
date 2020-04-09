@@ -1,0 +1,31 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\admin\\service\\token.js"
+    ],
+    "names": [
+        "jwt",
+        "require",
+        "secret",
+        "module",
+        "exports",
+        "think",
+        "Service",
+        "getUserId",
+        "token",
+        "result",
+        "parse",
+        "isEmpty",
+        "user_id",
+        "create",
+        "userInfo",
+        "sign",
+        "verify",
+        "err"
+    ],
+    "mappings": ";;AAAA,MAAMA,MAAMC,QAAQ,cAAR,CAAZ;AACA,MAAMC,SAAS,uBAAf;;AAEAC,OAAOC,OAAP,GAAiB,cAAcC,MAAMC,OAApB,CAA4B;AAC3C;;;AAGMC,WAAN,CAAgBC,KAAhB,EAAuB;AAAA;;AAAA;AACrB,UAAI,CAACA,KAAL,EAAY;AACV,eAAO,CAAP;AACD;;AAED,YAAMC,SAAS,MAAM,MAAKC,KAAL,CAAWF,KAAX,CAArB;AACA,UAAIH,MAAMM,OAAN,CAAcF,MAAd,KAAyBA,OAAOG,OAAP,IAAkB,CAA/C,EAAkD;AAChD,eAAO,CAAP;AACD;;AAED,aAAOH,OAAOG,OAAd;AAVqB;AAWtB;;AAEKC,QAAN,CAAaC,QAAb,EAAuB;AAAA;AACrB,YAAMN,QAAQR,IAAIe,IAAJ,CAASD,QAAT,EAAmBZ,MAAnB,CAAd;AACA,aAAOM,KAAP;AAFqB;AAGtB;;AAEKE,OAAN,CAAYF,KAAZ,EAAmB;AAAA;AACjB,UAAIA,KAAJ,EAAW;AACT,YAAI;AACF,iBAAOR,IAAIgB,MAAJ,CAAWR,KAAX,EAAkBN,MAAlB,CAAP;AACD,SAFD,CAEE,OAAOe,GAAP,EAAY;AACZ,iBAAO,IAAP;AACD;AACF;AACD,aAAO,IAAP;AARiB;AASlB;;AAEKD,QAAN,CAAaR,KAAb,EAAoB;AAAA;;AAAA;AAClB,YAAMC,SAAS,MAAM,OAAKC,KAAL,CAAWF,KAAX,CAArB;AACA,UAAIH,MAAMM,OAAN,CAAcF,MAAd,CAAJ,EAA2B;AACzB,eAAO,KAAP;AACD;;AAED,aAAO,IAAP;AANkB;AAOnB;AAxC0C,CAA7C",
+    "file": "..\\..\\..\\src\\admin\\service\\token.js",
+    "sourcesContent": [
+        "const jwt = require('jsonwebtoken');\nconst secret = 'SLDLKKDS323ssdd@#@@gf';\n\nmodule.exports = class extends think.Service {\n  /**\n   * 根据header中的X-Nideshop-Token值获取用户id\n   */\n  async getUserId(token) {\n    if (!token) {\n      return 0;\n    }\n\n    const result = await this.parse(token);\n    if (think.isEmpty(result) || result.user_id <= 0) {\n      return 0;\n    }\n\n    return result.user_id;\n  }\n\n  async create(userInfo) {\n    const token = jwt.sign(userInfo, secret);\n    return token;\n  }\n\n  async parse(token) {\n    if (token) {\n      try {\n        return jwt.verify(token, secret);\n      } catch (err) {\n        return null;\n      }\n    }\n    return null;\n  }\n\n  async verify(token) {\n    const result = await this.parse(token);\n    if (think.isEmpty(result)) {\n      return false;\n    }\n\n    return true;\n  }\n};\n"
+    ]
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<ul>
+				<!-- 从父组件传值到子组件 -->
+				<product-com v-for="item,index in proList" :product="item"></product-com>
+			</ul>
+			
+			
+		</div>
+		
+		<script type="text/javascript">
+			//产品组件
+			Vue.component("product-com",{
+				props:['product'],
+				template:`<li>
+							<h3>产品名称：{{product.title}}</h3>
+							<h4>产品描述：{{product.brief}}</h4>
+							<p>产品价格：{{product.price}}</p>
+						</li>`,
+				data:function(){
+					return {
+						title:"三只松鼠"
+					}
+				}
+				
+			})
+			
+			
+			//根组件
+			let app = new Vue({
+				el:"#app",
+				data:{
+					proList:[
+						{
+							title:"产品1",
+							price:"10",
+							brief:"产品描述1"
+						},
+						{
+							title:"产品2",
+							price:"20",
+							brief:"产品描述2"
+						},
+						{
+							title:"产品3",
+							price:"30",
+							brief:"产品描述3"
+						},{
+							title:"产品4",
+							price:"40",
+							brief:"产品描述4"
+						}
+					]
+				}
+			})
+			
+			
+		</script>
+	</body>
+</html>

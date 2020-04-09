@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="msg" name="" id="" value="" />
+			<h1>{{msg}}</h1>
+			<button type="button" @click="changeEvent">修改msg</button>
+		</div>
+		
+		<script type="text/javascript">
+			let app = new Vue({
+				el:"#app",
+				data:{
+					msg:"hello laochen"
+				},
+				methods:{
+					changeEvent:function(){
+						this.msg = "hello vue"
+					}
+				}
+			})
+			
+			console.log(app)
+		</script>
+	</body>
+</html>

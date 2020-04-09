@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<hello-com v-if='isShow'></hello-com>
+			<hello-com v-show='isShow'></hello-com>
+		</div>
+		<script type="text/javascript">
+			let helloCom = Vue.component("hello-com",{
+				template:'<div><h1>{{laochen}} </h1><button @click="changeData">修改数据</button></div>',
+				data:function(){
+					return {
+						laochen:"hello laochen"
+					}
+				},
+				methods:{
+					changeData:function(){
+						this.laochen = "hello 小明"
+					}
+				},
+				beforeCreate() {
+					console.log('beforeCreate')
+					// 此时数据data和事件方法methods还未绑定到app对象上
+				},
+				
+				created() {
+					console.log('created')
+					// 数据data和方法methods绑定到应用对象app上
+					
+				},
+				beforeMount(){
+					//渲染之前,根据数据生成的DOM对象是获取不到的
+					console.log('beforeMount')
+				},
+				mounted(){
+					console.log('mounted')
+					//渲染之后,可以获取数据生成的DOM对象
+					
+				},
+				beforeUpdate() {
+					//数据更改,但内容未更改之前
+					console.log('beforeUpdate')
+				},
+				updated() {
+					//内容已更新完毕
+					console.log('update')
+				},
+				beforeDestroy() {
+					//应用销毁之前
+					console.log("beforeDestory")
+				},
+				destroyed(){
+					//应用销毁之后
+					console.log("Destory")
+				}
+			})
+			let app = new Vue({
+				el:"#app",
+				data:{
+					isShow:true
+				}
+			})
+			
+			
+			
+		</script>
+	</body>
+</html>

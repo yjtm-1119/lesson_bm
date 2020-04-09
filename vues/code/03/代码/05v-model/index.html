@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" v-model="username" value="" />
+			<input type="text"  @input="username = $event.target.value" :value="username" name="" id=""  />
+			<h3>{{username}}</h3>
+		</div>
+		<script type="text/javascript">
+			
+			
+			let app = new Vue({
+				el:"#app",
+				data:{
+					username:""
+				}
+			})
+		</script>
+	</body>
+</html>
