@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <input type="checkbox" id="todo0">
+            <label for="todo0">eat</label>
+        </li>
+        <li>
+            <input type="checkbox" id="todo1">
+            <label for="todo1">sleep</label>
+        </li>
+    </ul>
+    <script>
+        const ul =document.querySelector('ul');
+        let todo = [
+            { text: 'eat', done: false },
+            { text: 'sleep', done: false }
+        ]
+        let step1 = todo.map(function (item, i) {
+            // console.log(item,i);
+            return `
+            <li>
+            <input type="checkbox" id="todo${i}">
+            <label for="todo${i}">${item.text}</label>
+        </li>
+            `
+        })
+        ul.innerHTML = `
+        <h3>h3<h3>
+        <h2>h2<h2>
+        <h1>h1<h1>
+        `
+        //console.log(step1);
+
+    </script>
+</body>
+
+</html>
