@@ -1,0 +1,15 @@
+{
+  "name": "car",
+  "version": "0.0.1",
+  "description": "做汽车的检测项目 ，给任何一张汽车图片，告诉我们什么车 ，型号多少",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ai",
+    "node"
+  ],
+  "author": "徐剑豪",
+  "license": "ISC"
+}
