@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 0 ~ arr.length - 1: forEach 循环
+        const arr = [1, 2, 3, 4, 5];
+        // > 3 的数据
+        // true 的数据 要的
+        // false 不要的
+        let t1 = arr.filter(function (num) {
+            if (num > 3) {
+                return true;
+            }
+            return false;
+        })
+        console.log(t1);
+
+        let arr1 = [{ age: 10, sex: 'n' },
+        { age: 18, sex: 'n' },
+        { age: 19, sex: 'm' },
+        { age: 20, sex: 'n' },
+        ]
+        // age > 9 && sex = n
+        // 
+        let t2 = arr1.filter(function (obj) {
+            if (obj.age > 9 && obj.sex === 'n') {
+                return true;
+            }
+            return false;
+        })
+        console.log(t2)
+
+
+    </script>
+</body>
+
+</html>
