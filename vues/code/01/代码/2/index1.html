@@ -1,11 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .active {
+            border: 1px solid red;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <!-- <div id="app">
+        <img v-show="isShow" src="https://www.baidu.com/img/bd_logo1.png">
+        <button @click=show>切换显示</button>
+        <img v-show="age>=18" src="https://www.baidu.com/img/bd_logo1.png">
+        <button @click=addAge>累加年龄</button>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                isShow: false,
+                age: 16,
+            },
+            methods: {
+                show: function () {
+                    this.isShow = !this.isShow;
+                },
+                addAge: function () {
+                    this.age++;
+                }
+            }
+        })
+    </script> -->
+
+    <!-- <div id="app">
+        <img v-if="isShow" src="https://www.baidu.com/img/bd_logo1.png" alt="">
+        <img v-show="isShow" src="https://www.baidu.com/img/bd_logo1.png" alt="">
+        <input type="button" value="切换显示" @click=toggleIsShow>
+        <h2 v-if="tem>=35">热死了</h2>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                isShow: false,
+                tem:40
+            },
+            methods: {
+                toggleIsShow: function () {
+                    this.isShow = !this.isShow;
+                }
+            }
+        })
+    </script> -->
+    <!-- 
+    <div id="app">
+        <img :src="imgSrc" alt="" :title="imgTitle+'!!!'" :class="isActive?'active':''" @click="toggleActive">
+        <br>
+        <img :src="imgSrc" alt="" :title="imgTitle+'!!!'" :class="{active:isActive}" @click="toggleActive">
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                imgSrc: "https://img.yzcdn.cn/public_files/2017/12/18/fd78cf6bb5d12e2a119d0576bedfd230.png",
+                imgTitle: "Java_logo",
+                isActive: false
+            },
+            methods: {
+                toggleActive: function () {
+                    this.isActive = !this.isActive;
+                },
+            }
+        })
+    </script> -->
+
+    <div id="mask">
+        <div class="center">
+            <img :src="imgArr[index]" alt="">
+            <a href="javascript:void(0)" v-show="index!=0" class=left @click="prev">
+                <input type="button" value="👈">
+            </a>
+            <a href="javascript:void(0)" class="right" v-show="index<imgArr.length-1" @click="next">
+                <input type="button" value="👉">
+            </a>
+        </div>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#mask",
+            data: {
+                imgArr: [
+                    'http://sz.itheima.com/images/school/xyhj/shenxiaoqu/xuexihuanjing-426_273/02.jpg',
+                    'https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2534506313,1688529724&fm=26&gp=0.jpg',
+                    'https://dss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3252521864,872614242&fm=26&gp=0.jpg',
+                    'https://aod-image-material.cdn.bcebos.com/5/pic/2df2e76785383b881939d9d555a014e2.jpg',
+                ],
+                index: 0,
+            },
+            methods: {
+                prev: function () {
+                    this.index--;
+
+                },
+                next: function () {
+                    this.index++;
+                }
+            }
+        })
+    </script>
 </body>
+
 </html>
