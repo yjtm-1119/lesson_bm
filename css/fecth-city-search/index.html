@@ -62,11 +62,12 @@
             transform: perspective(100px) rotateX(3deg);
         }
 
-        li:last-child {
+        /* li:last-child {
             color: red;
-        }
-        .highLight{
-            color: red;
+        } */
+
+        .highLight {
+            background-color: red;
         }
     </style>
 </head>
@@ -91,18 +92,18 @@
                 // 拿到数据了，想要数组，转为数组
                 // 转换也需要时间
                 // return 交给下一步
-                //console.log(res);
+                console.log(res);
                 return res.json();
             })
             .then(function (data) {
-                //console.log(data);
+                console.log(data);
                 cities = data;
             })
         cities.forEach(function (a, b) { })
         const suggest = document.getElementById('suggest');
         function findMatch(e) {
             let v = e.target.value;
-            //console.log(v);
+            console.log(v);
             if (!v) return;
             let suggestCity = cities.filter(function (city) {
                 if (city.city.includes(v) || city.state.includes(v)) {
@@ -114,16 +115,16 @@
             ul.innerHTML = suggestCity.map(function (city) {
                 let cityName = city.city;
                 let stateName = city.state;
-                cityName = cityName.replace(v,`<span class ="hightLight">${v}</span>`);
-                stateName = stateName.replace(v,`<span class ="hightLight">${v}</span>`)
+                cityName = cityName.replace(v, `<span class ="highLight">${v}</span>`);
+                stateName = stateName.replace(v, `<span class ="highLight">${v}</span>`)
                 return `
-                <li>${cityName}${stateName}<li>
+                <li>${cityName}-${stateName}</li>
                 `
             })
-            .join('')
+                .join('')
         }
         suggest.addEventListener('keyup', findMatch);
     </script>
-</body> 
+</body>
 
 </html>
