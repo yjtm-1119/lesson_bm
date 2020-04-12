@@ -80,7 +80,7 @@
         })
     </script> -->
 
-    <div id="mask">
+    <!-- <div id="mask">
         <div class="center">
             <img :src="imgArr[index]" alt="">
             <a href="javascript:void(0)" v-show="index!=0" class=left @click="prev">
@@ -110,6 +110,59 @@
                 },
                 next: function () {
                     this.index++;
+                }
+            }
+        })
+    </script> -->
+
+
+    <!-- <div id="app">
+        <input type="button" value="添加数据" @click="add">
+        <input type="button" value="移除数据" @click="remove">
+        <ul>
+            <li v-for="(itemgvh,index) in arr">
+                {{index+1}}.黑马程序员校区：{{itemgvh}}
+            </li>
+        </ul>
+        <h2 v-for="shucai in vegetables" v-bind:title="shucai.name">
+            {{shucai.name}}
+        </h2>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                arr: ['北京', '上海', '深圳', '广州'],
+                vegetables: [
+                    { name: "西兰花炒蛋" },
+                    { name: "蛋炒西兰花" }
+                ],
+            },
+            methods: {
+                add: function () {
+                    this.vegetables.push({ name: "花菜炒蛋" })
+                },
+                remove: function () {
+                    this.vegetables.shift();
+                }
+            }
+        })
+    </script> -->
+
+
+    <div id="app">
+        <input type="button" value="点击" @click="doIt('老铁',666)">
+        <input type="text" @keyup.enter="sayHi">
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            methods: {
+                doIt: function (p1,p2) {
+                    alert(p1+p2);
+                },
+                sayHi:function(){
+                    alert('吃了没？');
                 }
             }
         })

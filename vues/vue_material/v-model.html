@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="修改message" @click="set">
+        <input type="text" v-model="message" @keyup.enter="get">
+        <h2 v-text="message"></h2>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: "黑马程序员"
+            },
+            methods: {
+                get: function () {
+                    alert(this.message)
+                },
+                set: function () {
+                    this.message = "🐟🐟🐟🐟🐟"
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
