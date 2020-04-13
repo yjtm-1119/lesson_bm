@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 200px;
+            height: 600px;
+            overflow: scroll;
+            border: 1px solid black;
+            
+        }
+        .target{
+            margin-top: 900px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="target"></div>
+    </div>
+    <script>
+        const target = document.querySelector('.target');
+        let observer = new IntersectionObserver(function(nodes){
+            nodes.forEach(function(node){
+                console.log(node);
+                if(node.isIntersecting){
+                    console.log('已经出现了!');
+                    
+                }
+            })
+        },{
+            root:document.querySelector('.container'),
+            rootMargin:'0px 0px 100px 0px',//上右下 左
+            threshold:[0.5]//阈值 超过50% node.isIntersecting 才为true  才是真正的出现
+        })
+        //开始观察
+        //如果出现在视窗之内 ，它就会通知我？？ 怎么通知  用回调的方法通知我
+
+        
+        observer.observe(target);
+    </script>
+</body>
+</html>

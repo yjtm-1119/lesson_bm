@@ -11,54 +11,54 @@
 </head>
 
 <body>
-  <div class = "wrap">
-    <div class="play_wrap" id ="player">
+  <div class="wrap">
+    <div class="play_wrap" id="player">
       <div class="search_bar">
         <img src="images/player_title.png" alt="">
         <input type="text" autocomplete="off" v-model="query" @keyup.enter="searchMusic" placeholder="在此搜索你想要的音乐">
       </div>
       <div class="center_con">
-        <div class="song_wrapper" >
-          <ul class = "song_list">
-            <li v-for = "item in musicList">
+        <div class="song_wrapper">
+          <ul class="song_list">
+            <li v-for="item in musicList">
               <a href="javascript:;" @click="playMusic(item.id)"></a>
               <b>{{ item.name }}</b>
-              <span v-if="item.mvid!=0" @click ="playMV(item.mvid)">
+              <span v-if="item.mvid!=0" @click="playMV(item.mvid)">
                 <i></i>
               </span>
             </li>
           </ul>
-          <img src="images/line.png" class = "switch_btn" alt="">
+          <img src="images/line.png" class="switch_btn" alt="">
         </div>
-        <div class="player_con" :class = "{playing:isPlaying}">
-          <img src="images/player_bar.png" class = "player_bar" >
-          <img src="images/disc.png" class = "disc autoRotate" >
-          <img :src="musicCover" class="cover autoRotate" >
+        <div class="player_con" :class="{playing:isPlaying}">
+          <img src="images/player_bar.png" class="player_bar">
+          <img src="images/disc.png" class="disc autoRotate">
+          <img :src="musicCover" class="cover autoRotate">
         </div>
-        <div class = "comment_wrapper" >
+        <div class="comment_wrapper">
           <h5 class="title">热门留言</h5>
           <div class="comment_list">
             <dl v-for="item in hotComments">
               <dt><img :src="item.user.avatarUrl" alt=""></dt>
-              <dd class = "name">{{item.nickname}}</dd>
-              <dd class = "detail">
-               {{  item.content }}
+              <dd class="name">{{item.nickname}}</dd>
+              <dd class="detail">
+                {{  item.content }}
               </dd>
             </dl>
           </div>
-          <img src="images/line.png" class = "right_line" >
-          </div>
+          <img src="images/line.png" class="right_line">
         </div>
-      <div class= "audio_con">  
-        <audio ref='audio' @play="play" @pause="pause" :src="musicUrl" controls autoplay loop class = "myaudio"></audio>
       </div>
-      <div  class="video_con" v-show="isShow" style="display:none;" >
-      <video :src="mvUrl" controls="controls"></video>
-      <div class="mask" @click="hide"></div>
+      <div class="audio_con">
+        <audio ref='audio' @play="play" @pause="pause" :src="musicUrl" controls autoplay loop class="myaudio"></audio>
+      </div>
+      <div class="video_con" v-show="isShow" style="display:none;">
+        <video :src="mvUrl" controls="controls"></video>
+        <div class="mask" @click="hide"></div>
       </div>
     </div>
   </div>
- 
+  <script type="text/javascript" src="sakura.js"></script>
   <!-- 开发环境版本，包含了有帮助的命令行警告 -->
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <!-- 官网提供的 axios 在线地址 -->
