@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //object 对象字面量
+        let obj = {
+            name: 'xjh',
+            age : 18
+        }
+        delete obj.name;
+        obj.school='ECUT';
+        console.log(obj);
+
+        let obj1=obj
+        obj1.homeTown = 'jx';
+        console.log(obj1);
+        console.log(obj);
+        
+        let arr1 = [0,1,2];
+        let arr2 = arr1;
+        arr2.push(3);
+        console.log(arr1,arr2);
+        
+    </script>
+</body>
+
+</html>
