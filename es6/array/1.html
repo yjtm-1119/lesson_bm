@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var obj = {
+        //     a: 10,
+        //     b: () => {
+        //         console.log(this.a); // undefined
+        //         console.log(this); // Window 
+        //     },
+        //     c: function () {
+        //         console.log(this.a); // 10
+        //         console.log(this); // Object
+        //     }
+        // }
+        // obj.b();
+        // obj.c();
+
+        // var id = 10;
+        // // 箭头函数定义在全局作用域
+        // let fun = () => {
+        //     console.log(this.id)
+        // };
+
+        // fun();     // 10
+        // // this的指向不会改变，永远指向Window对象
+        // fun.call({ id: 20 });     // 10
+        // fun.apply({ id: 20 });    // 10
+        // fun.bind({ id: 20 })();   // 10
+        // let Fun = (name, age) => {
+        //     this.name = name;
+        //     this.age = age;
+        // };
+        // let p = new Fun('张三', 18);
+
+
+        var arrowF = () => { }
+        console.log(arrowF.prototype); //undefined
+        function f() { }
+        console.log(f.prototype);//{constructor:f}
+
+    </script>
+</body>
+
+</html>
