@@ -3,3 +3,8 @@
 //     return w * h;
 // }
 // getArea(5,6)
+
+const getAddNumbers = (a: number, b: number): number => {
+    return a + b;
+}
+getAddNumbers(4, 4.4);
