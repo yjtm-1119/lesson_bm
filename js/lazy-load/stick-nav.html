@@ -6,19 +6,27 @@
     <title>Sticky Nav</title>
     <style>
         * {
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
 
         header {
             text-align: center;
         }
-        .fixed-nav nav{
+
+        /* 正常定位 */
+        nav {
+            background-color: black;
+        }
+
+        /* 滚到顶部 控制 fixed-nav */
+        .fixed-nav nav {
+            /* fixed 元素它就不占据空间 */
+            display: block;
+            /* background-color: transparent; */
+            width: 100%;
             position: fixed;
             top: 0;
-        }
-        nav {
-            background-color: rgba(255,255,255,.3);
         }
     </style>
 </head>
@@ -343,13 +351,19 @@
     </div>
 
     <script>
-        let nav = document.getElementById('nav');
+        let nav = document.querySelector('nav');
         let navTop = nav.offsetTop;
-        function isStick(){
-            if(window.scrollY>=navTop){
-
+        function isStick() {
+            if (window.scrollY >= navTop) {
+                document.body.classList.add('fixed-nav');
+                // 不让他下面文字顶上去 上 下两面 对冲，上面有个 paddingTop 往下面挤
+                document.body.style.paddingTop = `${nav.offsetHeight}px`
+            } else {
+                document.body.classList.remove('fixed-nav');
+                document.body.style.paddingTop = `${0}px`
             }
         }
+        window.addEventListener('scroll', isStick)
     </script>
 
 </body>
