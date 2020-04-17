@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .lazy-load {
+            width: 265px;
+            height: 265px;
+            margin-bottom: 10px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="http://yanxuan.nosdn.127.net/d4786274dc46e7b25b2c506a552c5cb5.png?imageView&type=webp" class="lazy-load"
+        lazyload="true"
+        data-original="https://yanxuan-item.nosdn.127.net/96d044fddd38452d90a8ac4c7035ac12.png?type=webp&quality=95&thumbnail=320x320&imageView" />
+    <img src="http://yanxuan.nosdn.127.net/d4786274dc46e7b25b2c506a552c5cb5.png?imageView&type=webp" class="lazy-load"
+        lazyload="true"
+        data-original="https://yanxuan-item.nosdn.127.net/02dd07dbee4575a71afa30fd680a6ec7.png?type=webp&quality=95&thumbnail=180y180&imageView" />
+    <img src="http://yanxuan.nosdn.127.net/d4786274dc46e7b25b2c506a552c5cb5.png?imageView&type=webp" class="lazy-load"
+        lazyload="true"
+        data-original="https://yanxuan-item.nosdn.127.net/cf6cbe1d80601f109a85fd48cbe27478.png?type=webp&quality=95&thumbnail=180y180&imageView" />
+    <img src="http://yanxuan.nosdn.127.net/d4786274dc46e7b25b2c506a552c5cb5.png?imageView&type=webp" class="lazy-load"
+        lazyload="true"
+        data-original="https://yanxuan-item.nosdn.127.net/eb5aaec3178da93222aeca4b7fcaf757.png?type=webp&quality=95&thumbnail=180y180&imageView" />
+    <img src="http://yanxuan.nosdn.127.net/d4786274dc46e7b25b2c506a552c5cb5.png?imageView&type=webp" class="lazy-load"
+        lazyload="true"
+        data-original="https://yanxuan-item.nosdn.127.net/39e5df244905c79abf947fb4a534699d.png?type=webp&quality=95&thumbnail=180y180&imageView" />
+    <img src="http://yanxuan.nosdn.127.net/d4786274dc46e7b25b2c506a552c5cb5.png?imageView&type=webp" class="lazy-load"
+        lazyload="true"
+        data-original="https://yanxuan-item.nosdn.127.net/cfa998967b3f7be09770e0ff8733a6ba.png?type=webp&quality=95&thumbnail=180y180&imageView" />
+    <img src="http://yanxuan.nosdn.127.net/d4786274dc46e7b25b2c506a552c5cb5.png?imageView&type=webp" class="lazy-load"
+        lazyload="true"
+        data-original="https://yanxuan-item.nosdn.127.net/1e1bf6ed3bed23939d021cfa50f7264d.jpg?type=webp&quality=95&thumbnail=265x265&imageView" />
+    <img src="http://yanxuan.nosdn.127.net/d4786274dc46e7b25b2c506a552c5cb5.png?imageView&type=webp" class="lazy-load"
+        lazyload="true"
+        data-original="https://yanxuan-item.nosdn.127.net/80305ca1364b2ae2114f8b342e22aa77.png?type=webp&quality=95&thumbnail=265x265&imageView" />
+    <img src="http://yanxuan.nosdn.127.net/d4786274dc46e7b25b2c506a552c5cb5.png?imageView&type=webp" class="lazy-load"
+        lazyload="true"
+        data-original="https://yanxuan-item.nosdn.127.net/b8b8402a093be0f1a7313892df89b662.jpg?type=webp&quality=95&thumbnail=265x265&imageView" />
+    <img src="http://yanxuan.nosdn.127.net/d4786274dc46e7b25b2c506a552c5cb5.png?imageView&type=webp" class="lazy-load"
+        lazyload="true"
+        data-original="https://yanxuan-item.nosdn.127.net/43098fcb3cd8e20a70ee72b258670129.png?type=webp&quality=95&thumbnail=265x265&imageView" />
+    <img src="http://yanxuan.nosdn.127.net/d4786274dc46e7b25b2c506a552c5cb5.png?imageView&type=webp" class="lazy-load"
+        lazyload="true"
+        data-original="https://yanxuan-item.nosdn.127.net/d53fba457b516c880ef36616fbc97738.jpg?type=webp&quality=95&thumbnail=265x265&imageView" />
+    <img src="http://yanxuan.nosdn.127.net/d4786274dc46e7b25b2c506a552c5cb5.png?imageView&type=webp" class="lazy-load"
+        lazyload="true"
+        data-original="https://yanxuan-item.nosdn.127.net/7c82e656b0448784aa79e6029cbcbabc.jpg?type=webp&quality=95&thumbnail=265x265&imageView" />
+    <script>
+        function lazyLoad() {
+            const allImages = document.querySelectorAll("img[lazyload]");
+            let viewHeight = window.innerHeight;
+            console.log('需要判断懒加载的图片数量', allImages.length);
+            for (let img of allImages) {
+                // 有没有 出现
+                let size = img.getBoundingClientRect();
+                // 限制超出视窗之下内容  && 限制超出视窗之上的内容 
+                if (size.top < viewHeight && size.bottom > 0) {
+                    // 出现在视窗范围之内
+                    // 开始加载我们的图片。怎么加载？
+                    let originalSrc = img.getAttribute('data-original');
+                    // 只要把 图片 url 会给 image 标签的 src 属性 浏览器就会加载了
+                    const imgObj = new Image();
+                    // 浏览器去加载了
+                    imgObj.src = originalSrc;
+                    // 知道加载完
+                    imgObj.onload = function () {
+                        img.src = originalSrc;
+                        // 已经加载过的图片不用管它了，之后的滚动都不考虑这些元素
+                        img.removeAttribute('lazyload')
+                    }
+                }
+            }
+        }
+        lazyLoad();
+        window.addEventListener('scroll', lazyLoad)
+
+    </script>
+</body>
+
+</html>
