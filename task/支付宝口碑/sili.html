@@ -1,0 +1,579 @@
+<!doctype html>
+<html>
+
+    
+
+<head>
+            
+    <meta charset="UTF-8">
+            <title></title>
+            
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <!--         引入mui的样式文件
+              <link href="css/mui.min.css" rel="stylesheet" />
+              引入mui的js文件
+              <script src="js/mui.min.js"></script>
+             引入支付宝图标的样式文件
+              <link rel="stylesheet" href="css/iconfont.css">
+             自定义的样式文件
+              <link rel="stylesheet" href="css/home.css">
+              <script type="text/javascript">
+                  mui.init() 
+              </script>-->
+    <style>
+        .icon_serch .mui-search .mui-placeholder {
+            text-align: left;
+        }
+
+        .icon_serch .mui-search .mui-placeholder span {
+            color: #ffffff;
+        }
+
+        .icon_serch .mui-search .mui-placeholder span:last-child {
+            font-size: 12px;
+        }
+
+        .mui-input-row .mui-input-clear~.mui-icon-clear.mui-hidden~.mui-icon-speech {
+            font-size: 20px;
+            margin-top: 1px;
+        }
+
+        .icon_serch {
+            height: 50px;
+            background-color: #1b82d2;
+            box-shadow: 0 1px 6px #1b82d2;
+        }
+
+        .icon_serch input {
+            background-color: #1772b9;
+        }
+
+        .icon_serch .mui-search {
+            width: 75%;
+            margin-top: 2px;
+        }
+
+        .icon_add {
+            color: white;
+            float: right;
+            margin-top: -45px;
+            line-height: 50px;
+            margin-right: 10px;
+        }
+
+        .icon_add span {
+            font-size: 20px;
+        }
+
+        .icon_contact {
+            color: white;
+            float: right;
+            line-height: 50px;
+            margin-top: -45px;
+            margin-right: 10px;
+        }
+
+        .icon_contact span {
+            font-size: 20px;
+        }
+
+        .add_popover {
+            width: 150px;
+        }
+
+        #popover ul li a span {
+            display: inline-block;
+        }
+
+
+        .wenzi {
+            display: block;
+            font-size: 13px !important;
+            text-align: center;
+        }
+
+        .grid_background {
+            background-color: #1B82D2;
+            height: 70px;
+        }
+
+        .myicon {
+            margin-top: 3px;
+            display: block;
+            font-size: 30px;
+            color: white;
+        }
+
+        .wenzi {
+            display: block;
+            text-align: center;
+            font-size: 13px !important;
+            margin-top: 5px;
+            color: white;
+        }
+
+        .link_style {
+            text-align: center;
+        }
+
+        .grid_background_white {
+            background: #FFFFFF;
+        }
+
+        .mui-table-view-cell a span:first-child {
+            margin-top: 3px;
+            display: block;
+            font-size: 25px;
+        }
+
+        .myicon_transfer {
+
+            color: #1d8fe1 !important;
+        }
+
+        .wenzi_black {
+            display: block;
+            text-align: center;
+            font-size: 13px !important;
+            margin-top: 5px;
+        }
+
+        .myicon_repayment {
+
+            color: #f39826 !important;
+        }
+
+        .myicon_balance {
+
+            color: #f15a4a !important;
+        }
+
+        .myicon_naughtyticket {
+
+            color: #f15a4a !important;
+        }
+
+        .myicon_logistics {
+
+            color: #f39826 !important;
+        }
+
+        .myicon_life {
+
+            color: #1d8fe1 !important;
+        }
+
+        .myicon_credit {
+
+            color: #3ab29a !important;
+        }
+
+        .myicon_planeticket {
+
+            color: #1d8fe1 !important;
+        }
+
+        .myicon_Invitingmoney {
+
+            color: #1d8fe1 !important;
+        }
+
+        .myicon_taxi {
+
+            color: #1d8fe1 !important;
+        }
+
+        .myicon_tmall {
+            color: #f15a4a !important;
+        }
+
+        .myicon_phone {
+            color: #f39826 !important;
+        }
+
+        .list_style {
+            margin-top: 20px;
+        }
+
+        .dot_style {
+            position: absolute;
+            right: 40px;
+            top: 20px;
+        }
+
+        .loop_pic {
+            margin-top: 20px;
+        }
+
+        .pay_style {
+            margin-top: 20px;
+            background-color: white;
+            border-bottom: 1px solid #eee;
+        }
+
+        .pay_style div {
+            padding-left: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .discountpay_style {
+            margin-top: 20px;
+        }
+
+        .table_cell_style {
+            padding: 5px 0px !important;
+        }
+
+        .right_border {
+            border-right: 1px solid #eee;
+        }
+    </style>
+        
+</head>
+
+    
+
+<body style="background-color:#f5f5f5">
+
+          
+    <!--mui的标题栏-->
+            <header class="mui-bar mui-bar-nav icon_serch ">
+                   
+        <!--搜索图标-->
+                    <div class="mui-input-row mui-search">
+                            <input type="search" class="mui-input-speech mui-input-clear" placeholder="手机充值">
+                        </div>
+                 
+        <!--添加图标-->
+                    <a href="#popover" class="icon_add" id="add">
+                            <span class="icon iconfont icon-tianjia"></span>
+                        </a>
+                    
+        <!--社交图标-->
+                    <a href="#" class="icon_contact">
+                            <span class="icon iconfont icon-shejiao"></span>
+                        </a>
+               </header>
+
+             
+    <!--点击添加图标，出来的mui弹出框(这里的id和添加图标的超链接的连接地址一样，就是使用锚点的方式)-->
+            <div id="popover" class="mui-popover add_popover">
+                    <ul class="mui-table-view">
+                            <li class="mui-table-view-cell">
+                                    <a href="#"><span
+                        class="icon iconfont icon-tianjialeimu"></span>&nbsp;&nbsp;发起群聊</a>
+                                </li>
+                            <li class="mui-table-view-cell">
+                                    <a href="#"><span class="icon iconfont icon-tianjia"></span>&nbsp;&nbsp;添加朋友</a>
+                                </li>
+                            <li class="mui-table-view-cell">
+                                    <a href="#" id="saoyisao1"><span
+                        class="icon iconfont icon-saoyisao"></span>&nbsp;&nbsp;扫一扫</a>
+                                </li>
+                            <li class="mui-table-view-cell">
+                                    <a href="#"><span class="icon iconfont icon-fukuanma"></span>&nbsp;&nbsp;收钱</a>
+                                </li>
+                        </ul>
+                </div>
+
+           
+    <!--这里使用的是mui的栅格UI组件 mui-col-sm-3 mui-col-xs-3（栅格组件一行分为12列，现在设置的是在小屏幕和超小屏幕上每列占3格，就是一列可以放4个，下面从转账到天猫宝使用的都是栅格组件）-->
+            <div class="mui-content ">
+                    <div class="mui-row grid_background" style="list-style: none;">
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span class="icon iconfont icon-saoyisao myicon"></span> 
+                        //这里使用的是支付宝的图标样式
+                                                    <span class="wenzi">扫一扫</span>
+                                                </a>
+                                        </li>
+                                </div>
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span class="icon iconfont icon-fukuanma myicon"></span>
+                                                    <span class="wenzi">付款</span>
+                                                </a>
+                                        </li>
+                                </div>
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span class="icon iconfont icon-saoyisao myicon"></span>
+                                                    <span class="wenzi">收钱</span>
+                                                </a>
+                                        </li>
+                                </div>
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span class="icon iconfont icon-lijin myicon"></span>
+                                                    <span class="wenzi">卡包</span>
+                                                </a>
+                                        </li>
+                                </div>
+                        </div>
+                    <div class="mui-row grid_background_white" style="list-style: none;">
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span class="icon iconfont icon-zhuanzhang myicon_transfer"></span>
+                                                    <span class="wenzi_black">转账</span>
+                                                </a>
+                                        </li>
+                                </div>
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span
+                            class="icon iconfont icon-xinyongqiahuankuan myicon_repayment"></span>
+                                                    <span class="wenzi_black">信用卡还款</span>
+                                                </a>
+                                        </li>
+                                </div>
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span class="icon iconfont icon-shoujichongzhi myicon_phone"></span>
+                                                    <span class="wenzi_black">手机充值</span>
+                                                </a>
+                                        </li>
+                                </div>
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span class="icon iconfont icon-icon myicon_balance"></span>
+                                                    <span class="wenzi_black">余额宝</span>
+                                                </a>
+                                        </li>
+                                </div>
+                        </div>
+                    <div class="mui-row grid_background_white" style="list-style: none;">
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span class="icon iconfont icon-taobao myicon_naughtyticket"></span>
+                                                    <span class="wenzi_black">淘票票</span>
+                                                </a>
+                                        </li>
+                                </div>
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span class="icon iconfont icon-kuaidi myicon_logistics"></span>
+                                                    <span class="wenzi_black">物流</span>
+                                                </a>
+                                        </li>
+                                </div>
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span class="icon iconfont icon-shuidianmei myicon_life"></span>
+                                                    <span class="wenzi_black">生活缴费</span>
+                                                </a>
+                                        </li>
+                                </div>
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span class="icon iconfont icon-logo myicon_credit"></span>
+                                                    <span class="wenzi_black">芝麻信用</span>
+                                                </a>
+                                        </li>
+                                </div>
+                        </div>
+                    <div class="mui-row grid_background_white" style="list-style: none;">
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span class="icon iconfont icon-jipiao myicon_planeticket"></span>
+                                                    <span class="wenzi_black">机票</span>
+                                                </a>
+                                        </li>
+                                </div>
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span
+                            class="icon iconfont icon-zhaocaibao myicon_Invitingmoney"></span>
+                                                    <span class="wenzi_black">招财宝</span>
+                                                </a>
+                                        </li>
+                                </div>
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span class="icon iconfont icon-dache myicon_taxi "></span>
+                                                    <span class="wenzi_black">打车</span>
+                                                </a>
+                                        </li>
+                                </div>
+                            <div class="mui-col-sm-3 mui-col-xs-3">
+                                    <li class="mui-table-view-cell">
+                                            <a class="link_style">
+                                                    <span class="icon iconfont icon-tianmaobao myicon_tmall"></span>
+                                                    <span class="wenzi_black    ">天猫宝</span>
+                                                </a>
+                                        </li>
+                                </div>
+                        </div>
+               
+        <!--这里使用的是mui的图文列表（图片在左的图文列表-->
+                    <ul class="mui-table-view list_style">
+                            <li class="mui-table-view-cell mui-media">
+                                    <a href="javascript:;">
+                                            <img class="mui-media-object mui-pull-left" src="images/ant.png">
+                                            <div class="mui-media-body">
+                                                    幸福
+                                                    <p class='mui-ellipsis mui-navigate-right'>又有好友收取了你的绿色能量</p>
+                                                    <span class="mui-badge mui-badge-danger dot_style">1</span>
+                                                </div>
+                                        </a>
+                                </li>
+                        </ul>
+                  
+        <!--这里使用的mui的轮播组件，需要注意的是，这个组件在第一张图片的前面要加上最后一张图片，在最后一张图片的后面，要加上第一张图片，如果需要组件自动滚动，用js找到组件，再调用组件的slider方式，设置轮播的时间间隔就可以了-->
+                    <div class="mui-slider loop_pic">
+                            <div class="mui-slider-group mui-slider-loop">
+                                    
+                <!--支持循环，需要重复图片节点-->
+                                    <div class="mui-slider-item mui-slider-item-duplicate">
+                                            <a href="#"><img src="images/banner.png" /></a>
+                                        </div>
+                                    <div class="mui-slider-item">
+                                            <a href="#"><img src="images/banner.png" /></a>
+                                        </div>
+                                    <div class="mui-slider-item">
+                                            <a href="#"><img src="images/banner.png" /></a>
+                                        </div>
+                                    <div class="mui-slider-item">
+                                            <a href="#"><img src="images/banner.png" /></a>
+                                        </div>
+                                    <div class="mui-slider-item">
+                                            <a href="#"><img src="images/banner.png" /></a>
+                                        </div>
+                                    
+                <!--支持循环，需要重复图片节点-->
+                                    <div class="mui-slider-item mui-slider-item-duplicate">
+                                            <a href="#"><img src="images/banner.png" /></a>
+                                        </div>
+                                    
+                <!--图片上的小圆点-->
+                                </div>
+                            <div class="mui-slider-indicator">
+                                    <div class="mui-indicator mui-active"></div>
+                                    <div class="mui-indicator"></div>
+                                    <div class="mui-indicator"></div>
+                                    <div class="mui-indicator"></div>
+                                </div>
+                        </div>
+                 
+        <!--栅格组件-->
+                    <div class="mui-row pay_style ">
+                            <div class="mui-col-sm-12 mui-col-xs-12">|惠支付
+                                </div>
+                        </div>
+                 
+        <!--栅格组件加上图片在右侧的图文列表组件-->
+                    <div class="mui-row " style="list-style: none;">
+                            <div class="mui-col-sm-6 mui-col-xs-6 right_border">
+                                    <li class="mui-table-view-cell table_cell_style">
+                                            <a class="link_style">
+                                                    <ul class="mui-table-view">
+                                                            <li class="mui-table-view-cell mui-media">
+                                                                    <a href="javascript:;">
+                                                                            <img class="mui-media-object mui-pull-right"
+                                        src="images/moneychanting.png">
+                                                                            <div class="mui-media-body">
+                                                                                    花唄短信包月
+                                                                                    <p
+                                            class='mui-ellipsis mui-navigate-right'>安全有保障</p>
+                                                                                </div>
+                                                                        </a>
+                                                                </li>
+                                                        </ul>
+                                                </a>
+                                        </li>
+                                </div>
+                            <div class="mui-row">
+                                    <div class="mui-col-sm-6 mui-col-xs-6 ">
+                                            <li class="mui-table-view-cell table_cell_style">
+                                                    <a class="link_style">
+                                                            <ul class="mui-table-view ">
+                                                                    <li class="mui-table-view-cell mui-media">
+                                                                            <a href="javascript:;">
+                                                                                    <img
+                                            class="mui-media-object mui-pull-right" src="images/rewardgold.png">
+                                                                                    <div class="mui-media-body">
+                                                                                            我的奖励金
+                                                                                            <p
+                                                class='mui-ellipsis mui-navigate-right'>立即查看</p>
+                                                                                        </div>
+                                                                                </a>
+                                                                        </li>
+                                                                </ul>
+                                                        </a>
+                                                </li>
+                                        </div>
+                                </div>
+                        </div>
+                            <div class="mui-row pay_style ">
+                            <div class="mui-col-sm-6 mui-col-xs-12">|生活服务
+                                </div>
+                        </div>
+                    <div class="mui-row " style="list-style: none;">
+                            <div class="mui-col-sm-6 mui-col-xs-6 right_border">
+                                    <li class="mui-table-view-cell table_cell_style">
+                                            <a class="link_style">
+                                                    <ul class="mui-table-view">
+                                                            <li class="mui-table-view-cell mui-media">
+                                                                    <a href="javascript:;">
+                                                                            <img class="mui-media-object mui-pull-right"
+                                        src="images/rownumber.png">
+                                                                            <div class="mui-media-body">
+                                                                                    排号难排队久
+                                                                                    <p
+                                            class='mui-ellipsis mui-navigate-right'>一招帮你破解</p>
+                                                                                </div>
+                                                                        </a>
+                                                                </li>
+                                                        </ul>
+                                                </a>
+                                        </li>
+                                </div>
+                            <div class="mui-row">
+                                    <div class="mui-col-sm-6 mui-col-xs-6 ">
+                                            <li class="mui-table-view-cell table_cell_style">
+                                                    <a class="link_style">
+                                                            <ul class="mui-table-view ">
+                                                                    <li class="mui-table-view-cell mui-media">
+                                                                            <a href="javascript:;">
+                                                                                    <img
+                                            class="mui-media-object mui-pull-right" src="images/cash.png">
+                                                                                    <div class="mui-media-body">
+                                                                                            瓜分五亿现金
+                                                                                            <p
+                                                class='mui-ellipsis mui-navigate-right'>快人一步集齐五福</p>
+                                                                                        </div>
+                                                                                </a>
+                                                                        </li>
+                                                                </ul>
+                                                        </a>
+                                                </li>
+                                        </div>
+                                </div>
+                        </div>
+                    
+        <script>
+            //            <!--轮播组件的轮播设置-->
+            var gallery = mui('.mui-slider');
+            gallery.slider({
+                interval: 2000 //自动轮播周期，若为0则不自动播放，默认为0；
+            });
+        </script>
+            </body>
+
+</html>

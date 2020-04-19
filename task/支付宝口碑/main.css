@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+input:focus {
+  outline: none;
+}
+.top {
+  height: 50px;
+  background-color: #1678ff;
+}
+.top.top-city {
+  width: 30px;
+  height: 20px;
+  font-size: 18px;
+}
