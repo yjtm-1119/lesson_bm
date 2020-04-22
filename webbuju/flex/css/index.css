@@ -290,3 +290,36 @@ nav{
     background: url(../images/hot.png) no-repeat 0 -20px;
     background-size: 79px auto;
 }
+.more{
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    background: -webkit-linear-gradient(left,#ff506c,#ff6bc6);
+    border-radius: 15px;
+    padding: 3px 20px 3px 10px;
+    color: #fff;
+}
+.more::after{
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 9px;
+    width: 7px;
+    height: 7px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+}
+.row{
+    display: flex;
+}
+.row a{
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+.row a img{
+    width: 100%;
+}
+.row a:nth-child(1){
+    border-right: 1px solid #eee;
+}
