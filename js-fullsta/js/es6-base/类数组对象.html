@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //类似数组的对象
+        let arr = [0,1];
+        console.log(arr);
+        function foo() {
+            //参数的个数 不确定有几个
+            console.log(arguments[0],arguments)
+            let sum=0;
+            arguments.forEach(num => {
+                sum+=num;
+            });
+            console.log(sum);
+            
+        }
+        //sum(0,1,2,3,4);
+        foo(0, 1, 2, 3)
+        console.log(Math.max(1, 2, 3, 4, 5));
+
+    </script>
+</body>
+
+</html>
