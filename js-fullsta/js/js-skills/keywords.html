@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function test(a,b) {
+            if (!a || !b) {
+                return;
+            }
+            for (let i = 0; i < 10; i++) {
+                if (i > 5) {
+                    return;
+                }
+                console.log(i);
+            }
+            return 'test';
+        }
+        test(1,2);
+        let arr =[0,1,2,3,4,5,6];
+        arr.forEach(function(num){
+            if(num>5) return;
+            console.log(num);
+            
+        })
+    </script>
+</body>
+
+</html>

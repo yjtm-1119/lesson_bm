@@ -1,0 +1,27 @@
+<script>
+    let obj1 ={
+        name:"xjh",
+        age:"18",
+        a:{
+            b:{
+                c:10
+            }
+        }
+    }
+    for(let key in obj1){
+        console.log(key);
+    }
+
+    function deepClone(obj){
+        let res={};
+        for(let key in obj1){
+            // console.log(key);
+            res[key]=obj1[key];
+        }
+        return res;
+    }
+    let obj2 = deepClone(obj1);
+    obj2.name="obj2name";
+    console.log(obj2,obj1);
+    
+</script>
