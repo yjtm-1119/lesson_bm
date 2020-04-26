@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        var fun = function (strs) {
+            var res = '';
+            if (strs.length==0) return res;
+            for (var j = 0; j < strs[0].length; j++) {
+                for (var i = 1; i < strs.length; i++) {
+                    if (strs[i][j] != strs[0][j]) return res
+                }
+                res += strs[0][j];
+            }
+            return res
+        };
+        let arr = ["flower", "flow", "flight"];
+        console.log(fun(["flower", "flow", "flight"]));
+
+    </script>
+</body>
+
+</html>

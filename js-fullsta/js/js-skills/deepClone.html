@@ -14,14 +14,19 @@
 
     function deepClone(obj){
         let res={};
-        for(let key in obj1){
+        for(let key in obj){
             // console.log(key);
-            res[key]=obj1[key];
+            if(typeof obj[key]=='object'){
+                res[key]=deepClone(obj[key])
+            }else{
+                res[key]=obj[key];
+            }
         }
         return res;
     }
     let obj2 = deepClone(obj1);
-    obj2.name="obj2name";
-    console.log(obj2,obj1);
+    // obj2.name="obj2name";
+    // obj2.a.b.c =20;
+    // console.log(obj2,obj1);
     
 </script>

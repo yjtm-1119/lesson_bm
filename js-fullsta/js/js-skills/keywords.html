@@ -14,20 +14,20 @@
                 return;
             }
             for (let i = 0; i < 10; i++) {
-                if (i > 5) {
-                    return;
-                }
+                if (i > 5) {  
+                    // return;终止  输出undefined
+                    // break; 跳出整个循环  继续做其他的事输出test
+                    //continue; 跳出本次循环  本次循环的 console.log(i)  不执行了
+                 }
                 console.log(i);
             }
             return 'test';
         }
-        test(1,2);
-        let arr =[0,1,2,3,4,5,6];
-        arr.forEach(function(num){
-            if(num>5) return;
-            console.log(num);
-            
-        })
+        let res =test(1,2);
+        console.log(res);
+        console.log('---------------------');
+        
+        
     </script>
 </body>
 

@@ -1,0 +1,24 @@
+<script>
+    let arr = [1, 2, 3, [4]];
+    let arr1 = [1, [2, [3, [4, [5]]]]]
+    // [1,2,3,4]
+    //如果是数组 提出里面的数字 循环一下  如果是基本数据类型  直接使用
+    //
+    function flat(arr) {
+        let res = [];
+        for (let i = 0; i < arr.length; i++) {
+            let ele=arr[i];
+            if (Array.isArray(ele)) {
+                res = res.concat(flat(ele));
+            } else {
+                res = res.concat(ele)//数组的拼接;
+            }
+
+
+        }
+        return res;
+    }
+    // console.log(flat(arr));
+    console.log(flat(arr1));
+
+</script>
