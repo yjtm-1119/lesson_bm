@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="input" id="input" placeholder="搜点什么吧" />
+    <button id="btn">立即搜索</button>
+    <ul id="songs">
+
+    </ul>
+    <script>
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', function () {
+            // 输入框内容
+            const val = document.getElementById('input').value;
+            // button 通过 一个 ajax | http 请求，向后端请求数据
+            // 
+            const xhr = new XMLHttpRequest();
+            // 向网易云后端 url：统一资源定位符
+            // 1: 请求的方法 get: http 规定的一个方法
+            // 2：request url
+            // 3: true 异步 false 同步
+            // get：通过 url 把数据传给后端
+            xhr.open('get',
+                `http://neteasecloudmusicapi.zhaoboy.com/search?keywords=${val}`,
+                true);
+            // 请求 处理过程 耗费时间
+            // 异步：不用在这等着 等我拿到资源了 我在回调、通知你 js 单线程：也不会阻塞
+            // 同步：你就得在这等着 等我拿到资源了 我才会往下执行
+            xhr.onreadystatechange = function () {
+                console.log(xhr.readyState, xhr.response)
+                if (xhr.readyState === 4
+                    && xhr.status === 200) {
+                    let res = JSON.parse(xhr.response);
+                    console.log(res);
+                    document.getElementById('songs').innerHTML = res.result
+                        .songs.map(function (song) {
+                            let { artists } = song;
+                            let singers = artists.map(function (artist) { return artist.name }).join('/')
+                            return `
+            <li>
+              ${song.name} 演唱：${singers} 专辑：${song.album.name}
+            </li>
+            `
+                        })
+                        .join('')
+                    // 渲染页面
+                }
+            }
+            xhr.send();
+            // 拿到le
+            // 无阻塞 不等数据回来 立马执行
+            console.log(xhr.response);
+            console.log(123456)
+        })
+
+    </script>
+</body>
+
+</html>
