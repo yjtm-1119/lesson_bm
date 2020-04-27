@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>append child DOM API </title>
+</head>
+
+<body>
+    <ul id="students">
+    </ul>
+    <script>
+        const students = [{
+            id: 1,
+            name: '刘策',
+            github: 'https://github.com/2941187216/lesson-bm'
+        }, {
+            id: 2,
+            name: '黄毅超',
+            github: 'https://github.com/huangyichao0916/lesson_bm'
+        }, {
+            id: 3,
+            name: '刘巧纯',
+            github: 'https://github.com/qiaochunliu77/lesson_bm'
+        }]
+        // students  append #root
+        // arr -> map  ->  html arr -> join   -> url
+        // DOM 动态编程
+        // innerHTML  /   appendChild
+        // html标签还可以用js 来创建
+        // js  跟 html 联系起来 
+        const oUL = document.getElementById('students');
+        oUL.style.fontSize = '20px';
+        // li 没选中  内存中是节点对象了， append html
+        // js 节点对象 -》 html 对象的转化
+        //
+        // console.log(oLi.nodeType);
+
+
+        // ? 
+
+        // console.log(oText.nodeType);
+        // li  加一个 a   href 
+
+        // 节点树
+        for (let student of students) {
+            const oLi = document.createElement('li');
+            oLi.className = 'item';
+            const oA = document.createElement('a');
+            oA.setAttribute('href', student.github);
+            oA.setAttribute('target', "_blank");
+            const oText = document.createTextNode(student.name);
+            oA.appendChild(oText);
+            oLi.appendChild(oA);
+            oUL.appendChild(oLi);
+        }
+
+    </script>
+</body>
+
+</html>
