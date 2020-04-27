@@ -31,6 +31,13 @@
         // html标签还可以用js 来创建
         // js  跟 html 联系起来 
         const oUL = document.getElementById('students');
+
+        oUL.addEventListener('click', function () {
+            // alert('fdfdfdf');
+            // insertBefore 
+            // 如何 只在UL 上点击 ， 把 A 名字打印出来
+        });
+
         oUL.style.fontSize = '20px';
         // li 没选中  内存中是节点对象了， append html
         // js 节点对象 -》 html 对象的转化
@@ -44,6 +51,7 @@
         // li  加一个 a   href 
 
         // 节点树
+        const fragment = document.createDocumentFragment(); // 垫片 文档碎片
         for (let student of students) {
             const oLi = document.createElement('li');
             oLi.className = 'item';
@@ -52,9 +60,35 @@
             oA.setAttribute('target', "_blank");
             const oText = document.createTextNode(student.name);
             oA.appendChild(oText);
+            // oA.addEventListener('click', function(event) {
+            //   event.preventDefault();
+            //   alert(this.innerText);
+            // }, false);
             oLi.appendChild(oA);
-            oUL.appendChild(oLi);
+            fragment.appendChild(oLi); // 内存中，
+            // oUL.appendChild(oLi); // 性能问题   页面的3次重新绘制， 和刷新 appendChild li -> ul
+            // js DOM 性能消耗比较大
         }
+        oUL.appendChild(fragment); // 
+
+
+        // 请在students 节点挂载到 ul 后，li  加上 id值的节点
+        const studentLis = document.querySelectorAll('.item');
+        // console.log(studentLis)
+        studentLis.forEach((li, index) => {
+            // console.log(li);
+            let oA = li.querySelector('a');
+            console.log(oA);
+            const oSpan = document.createElement('span');
+            oSpan.appendChild(document.createTextNode(students[index].id))
+            li.insertBefore(oSpan, oA);
+        })
+  // studentLis 伪数组 for forEach  length 下标访问 仅次而已
+  // 伪数组 变成 真正的数组
+  // console.log(studentLis[0].childNodes[0].innerText);
+  // console.log([...studentLis].filter(li => { //   
+  //   return li.childNodes[0].innerText == '刘策';
+  // }))
 
     </script>
 </body>
