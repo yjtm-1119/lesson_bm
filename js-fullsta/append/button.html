@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- DOM 挂载点 -->
+    <div class="wrapper"></div>
+    <script>
+        // 中央空调
+        const createDOMFromString = (domString) => {
+            const oDiv = document.createElement('div'); // dom 节点
+            oDiv.innerHTML = domString; // 抽象 
+            return oDiv;
+        }
+        // 设计这个类
+        class LikeButton {
+            constructor() {
+                // 申明属性
+                // 状态  喜欢 或不喜欢
+                this.state = { // JSON 
+                    isLiked: false  // bool
+                }
+            }
+            render() {
+                this.el = createDOMFromString(`
+        <button id='like-btn'>
+          <span class='like-text'>${this.state.isLiked ? '取消' : '点赞'}</span>
+        </button>
+      `);
+                this.el.addEventListener('click', this.changeLikeText.bind(this), false);
+                return this.el;
+            }
+            changeLikeText() {
+                this.setState({
+                    isLiked: !this.state.isLiked
+                })
+            }
+            // 做了什么？  灯， 状态函数有了 
+            setState(state) {
+                // insertBefore
+                // console.log(state);
+                // this.el   改变前的节点
+                const oldEl = this.el; //前任
+                const parent = this.el.parentNode; // 找到父节点
+                console.log(parent);
+                this.state = state; // 数据属性
+                this.el = this.render()// 再渲染一下  现任
+                // 灵感， 业务能力
+                parent.insertBefore(this.el, oldEl); // insertBefore 
+                parent.removeChild(oldEl); // react  移除节点
+            }
+        }
+
+        const wrapper = document.querySelector('.wrapper');
+        const likeButton = new LikeButton();
+        wrapper.appendChild(likeButton.render());
+  // 点赞功能组件
+
+    </script>
+</body>
+
+</html>

@@ -8,39 +8,79 @@
 </head>
 
 <body>
-    <!-- 状态  语义化html     -->
+    <!-- 状态  语义化html    挂载点 -->
     <div class="wrapper">
         <!-- <button class="like-btn">
-            <span class="like-text">点赞</span>
-        </button> -->
+      <span class="like-text">点赞</span>
+    </button> -->
     </div>
     <script>
+        // 如何优化这个代码  
         // const button = document.querySelector('.like-btn');
         // const buttonText = document.querySelector('.like-text');
         // let isLiked = false;  // 点 
         // button.addEventListener('click', () => {
-        //     isLiked = !isLiked;
-        //     isLiked ? buttonText.innerHTML = '取消' : buttonText.innerHTML = '点赞'
+        //   isLiked = !isLiked;
+        //   isLiked ? buttonText.innerHTML = '取消' :buttonText.innerHTML = '点赞'
         // }, false)
+        // 封装 
+        // addEventListenter dom 节点上添加， 
+        // 1. html str `` 添加到页面
+        // 2. 还要在他上面添加事件？ 
+        const createDOMFromString = (domString) => {
+            const oDiv = document.createElement('div'); // dom 节点
+            oDiv.innerHTML = domString; // 抽象 
+            return oDiv;
+        }
+
         class LikeButton {
             constructor() {
+                // isLiked
+                this.el = null;
                 this.state = { isLiked: false }
             }
             render() {
-                //事件监听
-                return `
-                <button id='like-btn'>
-                    <span class ='like-text'>赞</span>
-                </button>
-                `
+                // 事件监听 ?????
+                // addEventListener? dom node-type 1 
+                //  dom createElement appendChild 
+                // 一半DOM,   innerHTML
+                console.log(this);
+                
+                this.el = createDOMFromString(`
+        <button id='like-btn'>
+          <span class='like-text'>${this.state.isLiked ? '取消' : '点赞'}</span>
+        </button>
+      `) 
+                //  this 
+                // this  button 对象 
+                //changeLikeText 到外面写是一种优化 代码的职责分离
+                this.el.addEventListener('click', this.changeLikeText.bind(this), false);
+                return this.el
             }
+            // 一个方法就做一件事情 
+            changeLikeText() {
+                // this.state.isLiked改变一下
+                // console.log(this);  //this 被改写了
+                // ? 
+                this.state.isLiked = !this.state.isLiked;
+                // console.log(this.state.isLiked);
+                // 修改按钮文字呢？ 
+                // this.render();
+                const likeText = this.el.querySelector('.like-text');
+                likeText.innerHTML = this.state.isLiked ? '取消' : '点赞';
+            }
+
         }
 
         const wrapper = document.querySelector('.wrapper');
         const likeButton = new LikeButton();
-        wrapper.innerHTML = likeButton.render();
-        const likeButton2 = new LikeButton();
-        wrapper.innerHTML += likeButton2.render()
+        wrapper.appendChild(likeButton.render());
+  // 复用
+  // const likeButton2 = new LikeButton();
+  // wrapper.innerHTML += likeButton2.render();
+
+  // 流程性代码 点赞通用组件， 不方便复用  封装 
+
     </script>
 </body>
 

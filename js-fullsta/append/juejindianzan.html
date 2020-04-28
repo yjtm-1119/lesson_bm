@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrapper"></div>
+    <script>
+        const createDOMFromString = (domString) => {
+            const oDiv = document.createElement('div');
+            oDiv.innerHTML = domString;
+            return oDiv;
+        }
+        class LikeButton {
+            constructor() {
+                this.init = 0;
+            }
+            render() {
+                this.el = createDOMFromString(`
+        <button id='like-btn'>
+          <div class='like-text'>
+                <span>👍</span>
+                <span class='likesNumber'>${this.init}</span>
+           </div>
+        </button>
+      `);
+                this.el.addEventListener('click', this.addLikes.bind(this), false);
+                return this.el;
+            }
+            addLikes() {
+                this.init++;
+                console.log(this.init);
+                const likesNumber = this.el.querySelector('.likesNumber');
+                likesNumber.innerHTML = this.init;
+            }
+        }
+        const wrapper = document.querySelector('.wrapper');
+        const likeButton = new LikeButton();
+        wrapper.appendChild(likeButton.render());
+    </script>
+</body>
+
+</html>
