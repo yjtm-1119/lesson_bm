@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .btn{
+            outline: none;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="file" id="file" hidden>
+    <button class='btn'>文件上传</button>
+    <!-- onchange:输入框的内容改变时触发 -->
+    <img src="" alt="" id='preview' hidden>
+    <img src="./icon.png" alt="" id='flag' hidden>
+    <canvas id="combine" width="290px" height="290px"></canvas>
+    <script>
+        const fileNode = document.getElementById('file');
+        const combine = document.getElementById('combine');
+        const ctx = combine.getContext('2d');
+        fileNode.addEventListener('change', function (event) {
+            //1.拿到内容
+            //2.放到img src
+            let file = event.target.files[0];
+            console.log(file);
+            let fileReader = new FileReader();
+            fileReader.onload = function (e) {
+                console.log(e.target.result);
+                document.getElementById('preview').src = e.target.result;
+                //画头像
+                document.getElementById('preview').onload = function () {
+                    ctx.drawImage(document.getElementById('preview'), 0, 0, 290, 290);
+                    ctx.drawImage(document.getElementById('flag'), 0, 0, 290, 290);
+                }
+            }
+            fileReader.readAsDataURL(file);
+        })
+        document.querySelector('btn').addEventListener('click',function(){
+            fileNode.click();
+        })
+    </script>
+</body>
+
+</html>

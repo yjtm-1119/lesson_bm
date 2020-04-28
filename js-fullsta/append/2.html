@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="warpper">
+        <div class="dianzan" style="display: inline-block;"></div>
+    </div>
+    <script>
+        class LikeButton {
+            constructor() {
+                this.state = { isLiked: true }
+                console.log(this.state.isLiked)
+            }
+            render() {
+                return `
+                 <button id = "like-btn">
+                    <span class="link-text">${this.state.isLiked ? '点赞' : '取消'}</span>
+                    <button>
+                `
+                console.log(this.state.isLiked)
+            }
+        }
+
+        const warpper = document.querySelector('.warpper')
+        const div = document.querySelector('.dianzan')
+        const likeButton = new LikeButton();
+        // const linkText = document.querySelector('.link-text')
+        div.innerHTML = likeButton.render()
+        const a = function (event) {
+            console.log(event)
+            this.state.isLiked = !this.state.isLiked
+            console.log(this.state.isLiked)
+            div.innerHTML = 'none'
+            div.innerHTML = likeButton.render()
+        }
+        div.addEventListener('click', function (event) {
+            // console.log(event.target==span.link-text)
+            // if(event.target==span||event.target==button)
+            a.call(likeButton, 'event')
+
+        }, false)
+    </script>
+</body>
+
+<html>
