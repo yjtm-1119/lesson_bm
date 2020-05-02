@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .swiper-container {
+            width: 600px;
+            height: 300px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+</head>
+
+<body>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img class="focus-item-img"
+                    src="//img13.360buyimg.com/pop/s1180x940_jfs/t1/103784/27/17271/86367/5e84741fEeecea803/a10bf7f15ffa5945.jpg.webp">
+            </div>
+            <div class="swiper-slide">
+                <img class="focus-item-img"
+                    src="//img20.360buyimg.com/babel/s1180x940_jfs/t1/115644/30/3247/80812/5ea6a00dEadedc777/a393fb065419048b.jpg.webp"
+                    alt="4.29大势新品赏-3">
+            </div>
+            <div class="swiper-slide">
+                <img class="focus-item-img"
+                    src="//img20.360buyimg.com/babel/s1180x940_jfs/t1/115644/30/3247/80812/5ea6a00dEadedc777/a393fb065419048b.jpg.webp"
+                    alt="4.29大势新品赏-3">
+            </div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+
+        <!-- 如果需要导航按钮 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-scrollbar"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"> </script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+            direction: 'vertical', // 垂直切换选项
+            loop: true, // 循环模式选项
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // 如果需要滚动条
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        })        
+    </script>
+</body>
+
+</html>
