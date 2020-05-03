@@ -1,0 +1,15 @@
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background: #d44439;
+}
+.top span {
+  line-height: 40px;
+  color: #f1f1f1;
+  font-size: 20px;
+}
+.top span.iconfont {
+  font-size: 25px;
+}
