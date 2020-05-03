@@ -9,4 +9,7 @@
   三个元素  span  通用样式 
   &.iconfont   
   stylus 变量 让设计师修改值的时候，变得非常方便
-  
+
+
+- 移动端 忘记float float可以做的  flex都可以做
+- 接下来的是动态部分  
