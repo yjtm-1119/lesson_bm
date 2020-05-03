@@ -1,11 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .progress-bar {
+            /* margin-top: 100px; */
+            /* 宽度 */
+            /* width: 80%; */
+            height: 4px;
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgba(0, 0, 0, .3);
+        }
+
+        .progress {
+            width: 0%;
+            height: 100%;
+            background-color: red;
+        }
+
+        .progress-button {
+            position: absolute;
+            left: 0;
+            top: -5px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            border: 2px solid black;
+            background-color: red;
+            box-sizing: border-box;
+            margin-left: -7px;
+        }
+
+        .song-play {
+            display: flex;
+            align-items: center;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <!-- 
+    1：拖拽
+    2: 进度
+  -->
+    <!-- 1 -->
+    <div class="progress-bar">
+        <div class="progress"></div>
+        <div class="progress-button"></div>
+    </div>
+    <!-- 2 -->
+    <div class="progress-bar2 progress-bar">
+        <div class="progress"></div>
+        <div class="progress-button"></div>
+    </div>
+    <div class="song-play">
+        <img src="https://b-gold-cdn.xitu.io/v3/static/img/simplify-logo.3e3c253.svg" alt="">
+        <div class="progress-bar3 progress-bar">
+            <div class="progress"></div>
+            <div class="progress-button"></div>
+        </div>
+        <div class="time">
+            3:00/4:00
+        </div>
+    </div>
+    <script>
+        // document.creElement('div')
+        class Progress {
+            constructor(seclector, option) {
+                this.wrap = document.querySelector(seclector);
+                this.progressBtn = this.wrap.querySelector('.progress-button');
+                this.progress = this.wrap.querySelector('.progress');
+                this.initStyle(option.style);
+                this.initEvent();
+            }
+            initStyle(styleObj) {
+                for (let key in styleObj) {
+                    // node.style.width = ''
+                    console.log(key, styleObj[key])
+                    this.wrap.style[key] = styleObj[key];
+                }
+            }
+            initEvent() {
+                let downx = 0;
+                let btnLeft = 0;
+                // 需要宽度
+                const wrapLen = this.wrap.offsetWidth;
+                const progressBtnLen = this.progressBtn.offsetWidth;
+                this.progressBtn.addEventListener('touchstart', (event) => {
+                    // 移动端： 捏 缩放，需要多根手指
+                    // touches：触点 
+                    const touch = event.touches[0];
+                    btnLeft = parseInt(this.progressBtn.style.left || 0);
+                    downx = touch.clientX;
+                })
+                this.progressBtn.addEventListener('touchmove', (event) => {
+                    const touch = event.touches[0];
+                    const diffx = touch.clientX - downx;
+                    let left = diffx + btnLeft;
+                    if (left <= 0) left = 0;
+                    if (left >= (wrapLen)) left = wrapLen;
+                    let percent = left / wrapLen * 100
+                    this.progress.style.width = `${percent}%`;
+                    this.progressBtn.style.left = `${left}px`;
+                })
+            }
+        }
+        new Progress('.progress-bar', {
+            style: {
+                width: '80%'
+            }
+        })
+        // {} 配置
+        new Progress('.progress-bar2', {
+            style: {
+                width: '50%'
+            }
+        })
+        new Progress('.progress-bar3', {
+            style: {
+                width: '100px'
+                // 复合属性
+                // flex-grow: 0 | 1     有剩余空间要不要放大
+                // flex-shink: 0 | 1    没有剩余空间要不要缩小
+                // flex-width:          具体 width：值
+                // flex: '0 0 300'
+            }
+        })
+    </script>
 </body>
+
 </html>
