@@ -11,21 +11,48 @@
     abcfqwf
     <script>
 
-        const xhr = new XMLHttpRequest();
-        xhr.open('POST', '/getPosts', true);
-        xhr.timeout = 2000;
-        //0-4四个状态
-        xhr.addEventListener('timeout', function () {
-            console.log('timeout');
-        })
-        xhr.addEventListener('readstatechange', function () {
-            if (xhr.readyState === 4) {
-                console.log(xhr.response, xhr.status);
+        // const xhr = new XMLHttpRequest();
+        // xhr.open('POST', '/getPosts', true);
+        // xhr.timeout = 2000;
+        // //0-4四个状态
+        // xhr.addEventListener('timeout', function () {
+        //     console.log('timeout');
+        // })
+        // xhr.setRequestHeader('X-Real-IP','211.161.244.70');
+        // xhr.setRequestHeader('Content-type','application/json');
+        // xhr.addEventListener('readstatechange', function () {
+        //     if (xhr.readyState === 4) {
+        //         console.log(xhr.response, xhr.status);
 
+        //     }
+        // })
+        // //xhr.addEventListener('load') 等同于判断readyState 是否处理完成
+        // let obj={
+        //     query:'js',type:'all'
+        // }
+        // // xhr.send(`query=js&type=all`);
+        // xhr.send(JSON.stringify(obj));
+        // //content-type
+        // //xhr.abort()
+
+
+        function axios(method, url, params = {}, headers = {}) {
+            const xhr = new XMLHttpRequest();
+            xhr.open(method, url, true);
+            for (let k in headers) {
+                xhr.setRequestHeader(k, headers[k]);
             }
-        })
-        //xhr.addEventListener('load') 等同于判断readyState 是否处理完成
-        xhr.send();
+            xhr.addEventListener('readstatechange', function () {
+
+            })
+            let data = headers['Content-Type'] && headers['Content-Type'] === 'application/json' ? JSON.stringify(params) : params
+            xhr.send(data)
+        }
+        axios('POST', '/getPosts', { type: 'all', query: 'js' },
+            {
+                'X-Real-IP': '211.161.244.70',
+                'Content-Type': 'application/json'
+            })
     </script>
 </body>
 
