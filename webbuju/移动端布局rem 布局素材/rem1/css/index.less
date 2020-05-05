@@ -1,0 +1,90 @@
+//首页的less文件
+@import "./commom.less";
+body {
+    min-width: 320px;
+    width:15rem;
+    margin: 0 auto;
+    line-height: 1.5;
+    background: #f2f2f2;
+}
+.search-content {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 15rem;
+    height: 88rem/50;
+    background-color: #ffc001;
+    .classify{
+        margin: 11rem/50 25rem/50 7rem/50 24rem/50;
+        width: 44rem / 50;
+        height: 70rem / 50;
+        background:url(../images/classify.png) no-repeat ;
+        background-size: 44rem / 50  70rem / 50;
+    }
+    .search{
+        flex:1;
+        input {
+            outline: none;
+            width: 100%;
+            border:0;
+            height: 66rem / 50;
+            border-radius: 33rem / 50;
+            background-color: #fff2cc;
+            margin-top: 12rem /50;
+            font-size: 25rem / 50;
+            padding-left: 55rem / 50;
+            color:#757575;
+        }
+    }
+    .login{
+        width: 75rem /50;
+        height: 70rem /50;
+        margin: 10rem / 50;
+        font-size: 25rem / 50;
+        text-align: center;
+        line-height: 70rem /50;
+        color:#fff;
+    }
+    
+}
+.banner{
+    width: 15rem;
+    height: 368rem / 50;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.ad {
+    display: flex;
+    a {
+        flex:1;
+        img {
+            width: 100%;
+        }
+    }
+}
+nav {
+    margin-top: -30rem / 50;
+    width: 750rem / 50;
+    a { 
+        float: left;
+        width: 150rem / 50;
+        height: 140rem / 50;
+        text-align: center;
+        margin-top:25rem / 50 ;
+        img {
+            display: block;
+            width: 82rem / 50;
+            height: 82rem / 50;
+            margin: 0 auto ;
+        }
+        span {
+            font-size: 25rem / 50;
+            color:#333333;
+
+        }
+    }
+}
