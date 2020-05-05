@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <!--<link rel="stylesheet" type="text/css" href="swiper-3.3.1.min.css"/>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.0.2/css/swiper.css">
+    <style type="text/css">
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+        }
+
+        .swiper-wrapper {
+            height: 100%;
+        }
+
+        .swiper-slide {
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        ul {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        li {
+            line-height: 40px;
+        }
+
+        li {
+            float: left;
+            text-align: center;
+            width: 33.3%;
+            box-sizing: border-box;
+        }
+
+        li.on {
+            background-color: greenyellow;
+            color: #fff;
+        }
+
+        .more {
+            background: transparent;
+            height: 2px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 33.3%;
+            transition: all .2s linear;
+        }
+
+        .more span {
+            background: blue;
+            height: 2px;
+            position: absolute;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-50%, -50%);
+            width: 22px;
+        }
+    </style>
+    <!--<script type="text/javascript" src="swiper.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.0.2/js/swiper.js"></script>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>推荐音乐</li>
+        <li>热歌榜</li>
+        <li>搜索</li>
+        <div class="more">
+            <span></span>
+        </div>
+    </ul>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-color: red;">内容1</div>
+            <div class="swiper-slide" style="background-color: yellow;">内容2</div>
+            <div class="swiper-slide" style="background-color: green;">内容3</div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            var mySwiper = new Swiper('.swiper-container', {
+                onTransitionEnd: function (swiper) {
+                    //                  $('li').eq(mySwiper.activeIndex).addClass('on').siblings().removeClass('on');
+                    $('.more').css('left', mySwiper.activeIndex * 33.3333 + '%')
+                }
+            })
+            $('li').click(function () {
+                //              $(this).addClass('on').siblings().removeClass('on');
+                $(this).parent().find('.more').css('left', $(this).index() * 33.3333 + '%')
+                mySwiper.slideTo($(this).index(), 10)
+            });
+        })        
+    </script>
+</body>
+
+</html>
