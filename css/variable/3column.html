@@ -10,10 +10,38 @@
             margin: 0;
             padding: 0;
         }
+
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header,
+        footer {
+            /*  flex-grow flex-shrink flex-basis 弹性布局 海绵 */
+            flex: 0 0 50px;
+        }
+
+        .content {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        .main {
+            flex: 1;
+        }
+        .nav,.ads {
+            flex:0 0 100px;
+            background: green;
+        }
+        .nav {
+            order:-1
+        }
     </style>
 </head>
 
-<body>
+<body class="wrap">
     <!-- 三栏布局 面试常考  圣杯布局 传统  猛哥？不用这个怎么做 360学习前端基础 -->
     <!-- 语义化 html5 -->
     <header>头部</header>
@@ -21,7 +49,7 @@
         <!-- main 写在第一个位置？ 阿里 首先看到最主要内容 -->
         <main class="main">内容区</main>
         <nav class="nav">侧边导航</nav>
-        <aside>侧边栏</aside>
+        <aside class="ads">侧边栏</aside>
     </div>
     <footer>底栏</footer>
 </body>
