@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            background-color: black;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <button id="btn">全屏</button>
+    <script>
+        const btn = document.querySelector('#btn')
+        const box = document.querySelector('.box');
+        btn.addEventListener('click',function(event){
+            box.requestFullscreen();
+            //console.log(event);
+        })
+        box.addEventListener('fullscreenchange',function(){
+            console.log(event);
+            
+        })
+    </script>
+</body>
+</html>

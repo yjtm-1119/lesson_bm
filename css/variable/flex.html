@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            /* height: 100%; */
+        }
+
+        .wrap {
+            /* 想快速的实现上中下布局， flex */
+            display: flex;
+            /*css 布局由他来管理 块级*/
+            flex-direction: column;
+            /* height: 100%; */
+            min-height: 100vh;
+            /*相对单位的魅力*/
+        }
+
+        header {
+            line-height: 50px;
+            background-color: red;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        footer {
+            line-height: 50px;
+            background-color: #eeeeee;
+            color: #333333;
+            text-align: center;
+        }
+
+        .main {
+            /* flex: flex-grow flex-shrink flex-basis|auto|initial|inherit; */
+            flex-grow: 1;
+            display: flex;
+            /*grow 相对于其他兄弟元素的增长 移动端， 100vh 相对单位*/
+        }
+
+        .left {
+            background-color: yellow;
+            width: 25%;
+        }
+
+        .center {
+            flex-grow: 1;
+            background: #ffffff;
+        }
+
+        .right {
+            background-color: green;
+            width: 25%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 移动端的经典布局  flex html5 + css3  -->
+    <!-- html标签尽量语义化 -->
+    <div class="wrap">
+        <header>头部</header>
+        <div class="main">
+            <div class="left"></div>
+            <div class="center"></div>
+            <div class="right"></div>
+        </div>
+        <footer>底栏</footer>
+    </div>
+</body>
+
+</html>
