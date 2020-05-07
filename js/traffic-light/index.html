@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul');
+        // setTimeout(() => {
+        //     ul.className = 'stop';
+        //     setTimeout(() => {
+        //         ul.className = 'warn';
+        //         setTimeout(() => {
+        //             ul.className = 'pass';
+        //         }, 1000);
+        //     }, 1000);
+        // }, 1000);
+
+        // let p = new Promise(function(resolve,reject){
+        //     setTimeout(() => {
+        //         resolve();//处理中 pending
+        //         //成功  fulfilled
+        //         //失败  rejected
+        //     }, 1000);
+        // })
+        //1s后 状态变为了fulfilled  每次调用p的时候状态都已经是fulfilled了
+
+
+
+        //现在p是一个函数了  每次调用p都会调用一个全新的Promise 
+
+        let p = function () {
+
+            return new Promise(function (resolve, reject) {
+                setTimeout(() => {
+                    resolve();
+                }, 1000);
+            })
+        }
+        setInterval(() => {
+            light();
+        }, 3000);
+        light();
+        function light() {
+            p().then(function () {
+                ul.className = 'stop';
+                //then 返回了一个Promise 那么还可以在后面链式调用then 后面的then也会等待着这个Promise 看他结果成功还是失败
+                return p();
+            })
+                .then(function () {
+                    ul.className = 'warn';
+                    return p();
+                })
+                .then(function () {
+                    ul.className = 'pass';
+                })
+        }
+
+    </script>
+</body>
+
+</html>
