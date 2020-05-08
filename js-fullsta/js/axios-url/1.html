@@ -1,0 +1,15 @@
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<script>
+    // http://neteasecloudmusicapi.zhaoboy.com/search?keywords=%E6%B5%B7%E9%98%94%E5%A4%A9%E7%A9%BA
+    let obj ={
+        keywords:'海阔天空'
+    }
+    axios({
+        method:'get',
+        url:'http://neteasecloudmusicapi.zhaoboy.com/search',
+        params:obj
+    })
+    .then(function(response){
+        console.log(response);
+    })
+</script>

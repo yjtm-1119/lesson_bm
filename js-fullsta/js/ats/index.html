@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./demo.css">
+    <style>
+        body {
+            perspective:800px;
+            background-color: red;
+        }
+        #root {
+            /* 不会启动GPU */
+           transform-style: preserve-3d;
+            transform: translate3d(100px,100px,100px);
+            background-color: green;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <span class="demo">
+            This is a span.
+        </span>
+        <p>DOM</p>
+    </div>
+</body>
+</html>
+
+

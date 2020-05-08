@@ -1,0 +1,54 @@
+<script>
+    //1.key 和value都要编码以下  encode  
+    //为什么要编码一下  ？？  安全性的考虑 有那么一些特殊字符 对后端SQL 语句有威胁
+    //传输 每个设备 可能编码规则不一样  所以编码成原始码  再去解码
+    //2.向后端传递数组和不合法的值的时候
+    //3.url规则  #后面的东西不会传输给后端  只在前端生效
+    function encode(str) {
+        return encodeURIComponent(str)
+        .replace('%5B','[').replace('%5D',']')//数组是合法的  编码后再转回去
+    }
+    function buildUrl(url, params) {
+        let parts = [];
+        Object.keys(params).forEach(function (key) {
+            let value = params[key]
+            if (value === null || typeof value === 'undefined') {
+                return;
+            }
+            if (Array.isArray(value)) {
+                key += '[]';
+            } else {
+                value = [value];
+            }
+            //到这一步 都是数组了  统一了 都可以循环
+            //把 value 里面的每一项 追加到 key 后面  c[]=1  c[]=2 c[]=3
+            // else = c=123
+            value.forEach(val => {
+                let part = `${encode(key)}=${encode(val)}`
+                parts.push(part);
+                console.log(part);
+            })
+
+
+        })
+        console.log(parts);
+        console.log(parts.join('&'));
+
+        const hashIndex = url.indexOf('#');//存在返回#的位置  不存在返回-1
+        if(hashIndex !==-1) {
+            url=url.slice(0,hashIndex);
+        }
+        url += '?' + parts.join('&');
+        return url;
+    }
+    let url = buildUrl('http://neteasecloudmusicapi.zhaoboy.com/search#cfdqwca', {
+        
+        a: null,
+        b: undefined,
+        c: [1, 2, 3],keywords: '海阔天空',
+        type: 'all',
+        query: 'js',
+    })
+    console.log(url);
+
+</script>
