@@ -6,12 +6,20 @@
     //3.url规则  #后面的东西不会传输给后端  只在前端生效
     function encode(str) {
         return encodeURIComponent(str)
-        .replace('%5B','[').replace('%5D',']')//数组是合法的  编码后再转回去
+            .replace('%5B', '[').replace('%5D', ']')//数组是合法的  编码后再转回去
     }
     function buildUrl(url, params) {
         let parts = [];
         Object.keys(params).forEach(function (key) {
             let value = params[key]
+            // buildUrl 的时候如果拼接的 url，本身已经存在 “？” 了，怎么处理?
+            //url传进来的时候就判断url上是否已经存在"?" 先open这个url 判断这个页面是否是有效页面(是否是通过判断状态码？这个判断没写) 有效则把这个url作为最终的url输出无效的话 通过indexOf和slice截取获得“？”前面的部分再进行params参数的追加处理
+            //或者
+            const existIndex = url.indexOf('?');
+            if (existIndex !== -1) {
+                url = url.slice(0, existIndex);
+            }
+
             if (value === null || typeof value === 'undefined') {
                 return;
             }
@@ -28,24 +36,21 @@
                 parts.push(part);
                 console.log(part);
             })
-
-
         })
         console.log(parts);
         console.log(parts.join('&'));
-
         const hashIndex = url.indexOf('#');//存在返回#的位置  不存在返回-1
-        if(hashIndex !==-1) {
-            url=url.slice(0,hashIndex);
+        if (hashIndex !== -1) {
+            url = url.slice(0, hashIndex);
         }
         url += '?' + parts.join('&');
         return url;
     }
-    let url = buildUrl('http://neteasecloudmusicapi.zhaoboy.com/search#cfdqwca', {
-        
+    let url = buildUrl('http://neteasecloudmusicapi.zhaoboy.com/search?cfdqwca', {
+
         a: null,
         b: undefined,
-        c: [1, 2, 3],keywords: '海阔天空',
+        c: [1, 2, 3], keywords: '海阔天空',
         type: 'all',
         query: 'js',
     })
