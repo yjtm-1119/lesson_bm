@@ -1,0 +1,16 @@
+{
+  "name": "music-download",
+  "version": "1.0.0",
+  "description": "1. ndoe index.js +keywords   拿到keywords\r     node 启动一个文件  启动进程()\r 2. 搜索  发个请求\r   browser：Ajax-js原生的api ：fetch  XmlhttpR\r 3. 展示 要支持键盘上下键\r 3. 回车下载",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "inquirer": "^7.1.0"
+  }
+}
