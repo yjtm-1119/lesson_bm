@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <button type="button" onclick="clickCounter()">点我！</button>
+    <div id="result"></div>
+    </p>
+    <script>
+        // 刷新后保存数据  cookie  localStorage sessionStorage
+        // let count = 0;
+        // function clickCounter() {
+        //     count++;
+        //     document.getElementById('result').innerText = count;
+        // }
+        // Storage 将点击保存到本地  
+        // cookie  浏览器存储的文本   会随着http每次都带上 
+        function clickCounter() {
+            if (typeof Storage !== "underfined") {
+                // 作用  浏览器支持本地Storage   浏览器嗅探  
+                if (sessionStorage.clickCounter) {//设置了没？
+                    sessionStorage.clickCounter = Number(sessionStorage.clickCounter) + 1;
+                } else {
+                    sessionStorage.clickCounter = 1;
+                }
+                result.innerHTML = `你在按钮上已经点击了${sessionStorage.clickCounter}次`
+            } else {
+                result.innerHTML = 'sorry,浏览器不支持'
+            }
+        }
+
+    </script>
+</body>
+
+</html>
