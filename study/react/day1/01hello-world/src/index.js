@@ -20,7 +20,7 @@ class Tab extends React.Component {
     let index = e.target.dataset.index;
     console.log(this);
 
-    if (index=="1") {
+    if (index == "1") {
       this.setState({
         c1: 'content active',
         c2: 'content'
@@ -53,3 +53,6 @@ Reactdom.render(
   <Tab />,
   document.querySelector('#root')
 )
+
+
+
