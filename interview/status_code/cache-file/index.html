@@ -2,41 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>首页</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>首页</title>
 </head>
 
 <body>
-    <ul id="users"></ul>
-    <script>
-        // console.log('localstorage')
-        window.onload = function () {
-            const usersUL = document.getElementById('users');
-            const users = JSON.parse(localStorage.getItem('users'));
-
-            if (users) {
-                console.log('已经缓存了');
-                usersUL.innerHTML = users.map(user => `
+  <ul id="users"></ul>
+  <script>
+    window.onload = function () {
+      let version = 1;
+      const usersUL = document.getElementById('users');
+      const users = JSON.parse(localStorage.getItem('users'));
+      const tag = JSON.parse(localStorage.getItem('ETag'));
+      if (users) {
+        console.log('users.json已经缓存到本地了');
+        usersUL.innerHTML = users.map(user => `
           <li>
             ${user.username} - ${user.hometown}
           </li>
         `).join('')
-                return;
-            }
-            fetch('/users')
-                .then(data => data.json())
-                .then(data => {
-                    localStorage.setItem('users', JSON.stringify(data));
-                    usersUL.innerHTML = data.map(user => `
+        if (tag) {
+          console.log('ETag版本号缓存到本地了');
+        }
+        return;
+      }
+      fetch('/users')
+        .then(data => data.json())
+        .then(data => {
+          localStorage.setItem('users', JSON.stringify(data));
+          localStorage.setItem('ETag', version);
+          usersUL.innerHTML = data.map(user => `
             <li>
               ${user.username} - ${user.hometown}
             </li>
           `).join('')
-                })
-        }
+        })
+    }
 
-    </script>
+  </script>
 </body>
 
 </html>
