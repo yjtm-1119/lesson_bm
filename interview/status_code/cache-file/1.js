@@ -11,17 +11,19 @@ http.createServer((req, res) => {
     } else if (req.url == '/users') {
         res.writeHead(200, { 'Content-Type': 'text/json;charset=utf-8' });
         res.end(JSON.stringify(users));
-        if (res.headers['ETag']) {
-            res.statusCode = 304;
-            res.end('hi');
-            return;
-        } else {
-            res.setHeader('ETag', version);
-            res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
-            console.log('更新了版本');
-            return;
+        if (req.headers['If-Match']) {
+            if (req.headers['if-match'] == 1) {
+                res.statusCode = 304;
+                res.end();
+                return;
+            } else {
+                res.setHeader('ETag', version);
+                res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
+                console.log('更新了版本');
+                return;
+            }
         }
     }
     return;
 })
-    .listen(3000)
+    .listen(3001)

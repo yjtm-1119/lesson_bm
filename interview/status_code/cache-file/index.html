@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>首页</title>
+  <title>Document</title>
 </head>
-
 <body>
   <ul id="users"></ul>
   <script>
-    window.onload = function () {
-      let version = 1;
-      const usersUL = document.getElementById('users');
-      const users = JSON.parse(localStorage.getItem('users'));
-      const tag = JSON.parse(localStorage.getItem('ETag'));
-      if (users) {
-        console.log('users.json已经缓存到本地了');
-        usersUL.innerHTML = users.map(user => `
-          <li>
-            ${user.username} - ${user.hometown}
-          </li>
-        `).join('')
-        if (tag) {
-          console.log('ETag版本号缓存到本地了');
-        }
-        return;
-      }
-      fetch('/users')
-        .then(data => data.json())
-        .then(data => {
-          localStorage.setItem('users', JSON.stringify(data));
-          localStorage.setItem('ETag', version);
-          usersUL.innerHTML = data.map(user => `
-            <li>
-              ${user.username} - ${user.hometown}
-            </li>
-          `).join('')
-        })
+  window.onload = function () {
+    // alert('dddd')
+    const usersUL = document.getElementById('users'); // ULDOM
+    console.log(localStorage.getItem('users'));
+    console.log(JSON.parse(localStorage.getItem('users')));
+    const users = localStorage.getItem('users')?JSON.parse(localStorage.getItem('users')):[];
+    //localstorage取出来的是JSON字符串   用JSON.parse将它转为对象
+    const version = localStorage.getItem('version'); // 版本
+
+    if (users) { // 如果本地有数据, 先快速显示出来, 
+      showUsers(users);// 将显示封装成函数
     }
 
+    fetch('/users')
+      .then(data => data.json()) 
+      .then(data => {
+        if (data) {
+          console.log(data);
+          showUsers(data.users); // 无论200  304 都会有data  
+          if (version != data.version) { // 服务器返回了新版本数据
+            localStorage.setItem('version', JSON.stringify(data.version)); // 更新版本
+            localStorage.setItem('users', JSON.stringify(data.users)); // 更新用户
+          }
+          
+        }
+      })
+
+    function showUsers(users) {
+      usersUL.innerHTML = users.map(user => `
+        <li>
+          ${user.username} - ${user.hometown}
+        </li>
+      `)
+    }
+    
+  }
   </script>
 </body>
-
 </html>
