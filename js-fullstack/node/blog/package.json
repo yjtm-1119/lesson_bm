@@ -1,0 +1,17 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "- 博客网站  我们还欠缺哪些技能\r     React 做 UI  组件化思维\r     - 列表\r     - 详情\r     - 评论\r     node做后端  后台数据库？ mysql  mongodb\r     怎么样向我们的应用提供数据呢？\r     - 爬取  cherrio\r     - MVC  Model(连接Mysql)-View(React)-Controller(Node)\r     可以实现增删改查 但不启用mysql 这么繁琐？",
+  "main": "index.js",
+  "scripts": {
+    "json-server":".\node_modules/.bin/json-server --watch db.json --port 3300",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "json-server": "^0.16.1"
+  }
+}
