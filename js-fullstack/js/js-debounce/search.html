@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="search">
+    <script>
+        // const search = document.getElementById('search');
+        // let timeout;
+        // function handlesearch(event) {
+        //     if (timeout) {
+        //         clearTimeout(timeout);
+        //     }
+        //     timeout = setTimeout(() => {
+        //         console.log(event.target.value);
+        //     }, 300);
+
+        //     // 防抖 jay 这个词  j  a  y  三次请求 
+        //     // 等用户输入完毕了再去请求
+        //     // 用户连续输入就会连续触发input 处于输入中 没必要请求
+        //     // 输完的时候 input  没触发了  等100ms后  用户不触发 input  输完了 之后请求 
+        // }
+        // search.addEventListener('input', handlesearch);
+        // let handlemousemove = function () {
+        //     console.log('鼠标移动了');
+        // }
+        // window.addEventListener('mousemove', handlemousemove)
+
+
+        function debounce(func,waitTime){
+            let timeout;
+            return function(arg){
+                if(timeout){
+                    clearTimeout(timeout);
+                }else{
+                    setTimeout(() => {
+                        
+                    }, waitTime);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

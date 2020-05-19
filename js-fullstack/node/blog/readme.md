@@ -30,4 +30,4 @@ JSON  是前后端交互使用的数据格式
 
     {from:1,to:2,amount:500.00}
 
-    RESTful  是后端URL的国际设计标准
+    RESTful  是后端URL的国际设计标
