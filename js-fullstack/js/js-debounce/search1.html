@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="hello" id="search">
+    <script>
+        const search = document.getElementById('search');
+        search.addEventListener('input', debounce(function (e) {
+            console.log(this);
+            console.log(e.target.value);
+        }, 100))
+        function debounce(func, waitTime) {
+            let timer;//定时器
+            return function (event) {
+                if (timer) {
+                    clearTimeout(timer);
+                } 
+                timer = setTimeout(() => {
+                        func.call(this,event);//把全局的this 指向这个传入的没有防抖功能的函数 使得这个函数中this指向正确
+                }, waitTime);
+                
+                    
+                
+            }
+        }
+    </script>
+</body>
+
+</html>

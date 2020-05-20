@@ -15,6 +15,8 @@ ReactDOM.render(
       <Route exact path="/" component={Main} />
       <Route path="/about" component={About} />
       <Route path="/search/:searchTerm" component={Main} />
+
+    
     </div>
   </BrowserRouter>,
   document.getElementById('root')

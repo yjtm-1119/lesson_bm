@@ -1,50 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
-
 <body>
-    <input type="text" id="search">
-    <script>
-        // const search = document.getElementById('search');
-        // let timeout;
-        // function handlesearch(event) {
-        //     if (timeout) {
-        //         clearTimeout(timeout);
-        //     }
-        //     timeout = setTimeout(() => {
-        //         console.log(event.target.value);
-        //     }, 300);
+  <input type="text" id="search"/>
+  <input type="text" id="search1">
+  <input type="text" id="search2">
+  <script src="https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+  <script>
+    const search = document.getElementById('search');
+    let timeout;
+    function handlesearch(event) {
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+      timeout = setTimeout(() => {
+        console.log(event.target.value)
+      }, 600)
+    }
+    // setTimeout
+    // onChange
+    search.addEventListener('input', handlesearch)
+    // 电梯
+    // 人进去 1m 关起来
+    // 人 人 1m  人 
 
-        //     // 防抖 jay 这个词  j  a  y  三次请求 
-        //     // 等用户输入完毕了再去请求
-        //     // 用户连续输入就会连续触发input 处于输入中 没必要请求
-        //     // 输完的时候 input  没触发了  等100ms后  用户不触发 input  输完了 之后请求 
-        // }
-        // search.addEventListener('input', handlesearch);
-        // let handlemousemove = function () {
-        //     console.log('鼠标移动了');
-        // }
-        // window.addEventListener('mousemove', handlemousemove)
-
-
-        function debounce(func,waitTime){
-            let timeout;
-            return function(arg){
-                if(timeout){
-                    clearTimeout(timeout);
-                }else{
-                    setTimeout(() => {
-                        
-                    }, waitTime);
-                }
-            }
+    // 防抖
+    // let timeout1;
+    // 没有防抖
+    let handlemousemove = function() {
+      // if (timeout1) clearTimeout(timeout1);
+      // timeout1 = setTimeout(() => {
+      console.log('handlemousemove');
+      // }, 600);
+    }
+    // _
+    // 有防抖
+    // 别人 api 这样设计
+    // bind 
+    let hasDebounceedMove = _.debounce(handlemousemove, 600);
+    window.addEventListener('mousemove', hasDebounceedMove);
+    // 封装一下
+    // 大家都要防抖
+    // 箭头函数 this： 写这个函数就确定了的
+    const search1 = document.getElementById('search1');
+    search1.addEventListener('input', debounce(function(e){
+      console.log(this);  // ??
+      console.log(e.target.value);
+    }, 600))
+    // 防抖：
+    // 1： let timeout
+    // 2： if（timeout）clear
+    // 3:  timeout = setTimeout
+    // debounce 之内
+    // func没有防抖功能
+    function debounce(func, wait) {
+      let timeout;
+      // 具有防抖功能
+      // 有 防抖功能函数长什么样
+      return function(event) {
+        if (timeout) {
+          clearTimeout(timeout);
         }
-    </script>
+        timeout = setTimeout(() => {
+          // 写什么
+          // 参数
+          // 在这里调用的
+          // 默认指向 window
+          // bind 
+          func.call(this, event)  // 
+        }, wait)
+      }
+      // return true;
+      // return a + c + b;
+    }
+  </script>
 </body>
-
 </html>
