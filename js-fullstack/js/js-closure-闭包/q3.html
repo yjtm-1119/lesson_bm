@@ -1,0 +1,25 @@
+<script>
+    // for(let i=1;i<5;i++){
+    //     setTimeout(function timer(){
+    //         console.log(i);
+    //     },0);
+    // }
+
+    var name = "The Window";
+
+    var object = {
+        name: "My Object",
+
+        getNameFunc: function () {
+            var that = this;
+            return function () {
+                // console.log(this);
+                return that.name;
+            };
+
+        }
+
+    };
+
+    console.log(object.getNameFunc()());
+</script>

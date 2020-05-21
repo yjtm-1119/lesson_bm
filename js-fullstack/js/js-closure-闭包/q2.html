@@ -1,0 +1,12 @@
+<script>
+    var a = 1;
+    function test() {
+        a = 2
+        return function () {
+            console.log(a);//2
+        }
+        var a = 3
+    }
+    var fn = test()
+    fn();
+</script>
