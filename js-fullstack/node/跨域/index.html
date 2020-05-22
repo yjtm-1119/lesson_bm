@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="">
+<img src="" alt="">
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<script>
+    //接口 api  
+    //xhr fetch
+    //js 写入cookie
+
+    document.cookie ='abc=123';
+    //真实请求；POST/api
+    //1 -> 预检preflight,试探一下我们跨域请求能不能通过   2->再去请求 POST/api
+    //简单请求  不会触发预检
+    axios({
+        withCredentials:true,
+        headers: {'X-Requested-With': 'XMLHttpRequest'},
+        url:'http://localhost:9090/api',
+        method:'POST',//向后端传递前端的数据
+        data:{
+            username:'123',
+            pwd:789
+        }
+    })
+    .then(res=>{
+        console.log(res);
+    })
+</script>
