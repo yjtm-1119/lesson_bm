@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function foo() {
+        //     var a=1
+        //     var b=a
+        //     a=2
+        //     console.log(a);
+        //     console.log(b);
+        // }
+        // foo()
+        function foo() {
+            var a = "极客时间"
+            var b = a
+            var c = { name: "极客时间" }
+            var d = c
+            console.log(a);
+            console.log(b);
+            console.log(c);
+            console.log(d);
+        }
+        foo()
+        //多少个执行上下文
+        //2个
+    </script>
+</body>
+
+</html>
