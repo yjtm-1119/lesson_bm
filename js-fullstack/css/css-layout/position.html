@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*  */
+    /* inner 相对于 谁？ */
+    /*  */
+    .inner {
+      position: fixed;
+      left: 0; top: 0;
+      background-color: red;
+    }
+    /* inner 包含块 就是我们 in
+    inner 相对于 in 定位
+    */
+    .in {
+      /* inner 父级 */
+      transform: translate3d(0, 0, 0);
+      /* will-change: transform; */
+    }
+    .out {
+      position: relative;
+      width: 200px;height: 200px;border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="out">
+    1
+    <div class="in">
+      2
+      <div>
+        <div class="inner">
+          3
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
