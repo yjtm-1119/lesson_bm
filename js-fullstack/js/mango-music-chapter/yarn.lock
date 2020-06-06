@@ -6700,6 +6700,11 @@ react-is@^16.8.1:
   resolved "https://registry.npm.taobao.org/react-is/download/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha1-eJcppNw23imZ3BVt1sHZwYzqVqQ=
 
+react-lazyload@^2.6.7:
+  version "2.6.7"
+  resolved "https://registry.npm.taobao.org/react-lazyload/download/react-lazyload-2.6.7.tgz#9f5df01858ca11780ecf6be39ed9b17d845e7349"
+  integrity sha1-n13wGFjKEXgOz2vjntmxfYRec0k=
+
 react-router-dom@^4.2.2:
   version "4.3.1"
   resolved "https://registry.npm.taobao.org/react-router-dom/download/react-router-dom-4.3.1.tgz#4c2619fc24c4fa87c9fd18f4fb4a43fe63fbd5c6"

@@ -13,3 +13,10 @@ pc端最好用 hashrouter  兼容性更好
 移动端最好用  historyRouter url  更语义化
 
 - 根据界面  可以分析出  头尾不动 中间内容根据Route 匹配
+- Loading  组件
+  哪个目录下创建
+  loading 服务于任何listAPI  列表组件  是一个通用组件
+
+  1. 数据请求阶段显示loading.gif  
+  2. 数据到达后  隐藏他
+  父组件  要给loading  传参  
