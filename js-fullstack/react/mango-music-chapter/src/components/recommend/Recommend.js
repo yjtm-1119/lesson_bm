@@ -56,7 +56,7 @@ class Recommend extends React.Component {
             }
         })
 
-
+        
         // 获取最新专辑 功能的封装
         // fetch  低级的
         getNewAlbum() /**promise */
