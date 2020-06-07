@@ -23,7 +23,7 @@ class Xmlhttprequest {
     console.log(lines);
     this.resStatuLine = lines[0];
     this.statuCode = this.resStatuLine.split(' ')[1];
-    this.resHeaders = lines.slice(1, lines.length - 1);
+    this.resHeaders = lines.slice(1, lines.length - 2);
     this.response = lines[lines.length - 1];
   }
   send(body) {
