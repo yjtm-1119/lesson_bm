@@ -102,31 +102,34 @@ class Recommend extends React.Component {
                 <Scroll
                     refresh={this.state.refreshScroll}
                     onScroll={(e) => {
+                        console.log(e);
                         forceCheck();
                     }}>
-                    <div className="slider-container">
-                        <div className="swiper-wrapper">
-                            {
-                                this.state.sliderList.map(slider => {
-                                    return (
-                                        <div className="swiper-slide" key={slider.id}>
-                                            <a href={slider.linkUrl} className="slider-nav">
-                                                {/* <LazyLoad height={60}> */}
-                                                <img src={slider.picUrl} alt="" width="100%" height="100%" />
-                                                {/* </LazyLoad> */}
-                                            </a>
-                                        </div>
-                                    );
-                                })
-                            }
+                    <div>
+                        <div className="slider-container">
+                            <div className="swiper-wrapper">
+                                {
+                                    this.state.sliderList.map(slider => {
+                                        return (
+                                            <div className="swiper-slide" key={slider.id}>
+                                                <a href={slider.linkUrl} className="slider-nav">
+                                                    {/* <LazyLoad height={60}> */}
+                                                    <img src={slider.picUrl} alt="" width="100%" height="100%" />
+                                                    {/* </LazyLoad> */}
+                                                </a>
+                                            </div>
+                                        );
+                                    })
+                                }
+                            </div>
+                            <div className="swiper-pagination"></div>
                         </div>
-                        <div className="swiper-pagination"></div>
-                    </div>
-
+                  
                     <div className="album-container">
                         <h1 className="title">最新专辑</h1>
                         <div className="album-list">
                             {albums}
+                        </div>
                         </div>
                     </div>
                 </Scroll>
