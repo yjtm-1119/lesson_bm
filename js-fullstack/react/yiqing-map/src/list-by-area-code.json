@@ -1,0 +1,3155 @@
+{
+  "reqId": 15918616176083648,
+  "code": 10000,
+  "msg": "成功",
+  "data": {
+    "list": [
+      {
+        "date": "2020-01-20",
+        "today": {
+          "confirm": 291,
+          "suspect": 27,
+          "heal": 25,
+          "dead": 6,
+          "severe": 0,
+          "storeConfirm": null
+        },
+        "total": {
+          "confirm": 291,
+          "suspect": 54,
+          "heal": 25,
+          "dead": 6,
+          "severe": 0,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-01-21",
+        "today": {
+          "confirm": 149,
+          "suspect": 26,
+          "heal": 0,
+          "dead": 3,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 440,
+          "suspect": 37,
+          "heal": 25,
+          "dead": 9,
+          "severe": 102,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-01-22",
+        "today": {
+          "confirm": 131,
+          "suspect": 257,
+          "heal": 3,
+          "dead": 8,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 571,
+          "suspect": 393,
+          "heal": 28,
+          "dead": 17,
+          "severe": 95,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-01-23",
+        "today": {
+          "confirm": 259,
+          "suspect": 680,
+          "heal": 6,
+          "dead": 8,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 830,
+          "suspect": 1072,
+          "heal": 34,
+          "dead": 25,
+          "severe": 177,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-01-24",
+        "today": {
+          "confirm": 457,
+          "suspect": 1118,
+          "heal": 4,
+          "dead": 16,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 1287,
+          "suspect": 1965,
+          "heal": 38,
+          "dead": 41,
+          "severe": 237,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-01-25",
+        "today": {
+          "confirm": 688,
+          "suspect": 1309,
+          "heal": 11,
+          "dead": 15,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 1975,
+          "suspect": 2684,
+          "heal": 49,
+          "dead": 56,
+          "severe": 324,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-01-26",
+        "today": {
+          "confirm": 769,
+          "suspect": 3806,
+          "heal": 2,
+          "dead": 24,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 2744,
+          "suspect": 5794,
+          "heal": 51,
+          "dead": 80,
+          "severe": 461,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-01-27",
+        "today": {
+          "confirm": 1771,
+          "suspect": 2077,
+          "heal": 9,
+          "dead": 26,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 4515,
+          "suspect": 6973,
+          "heal": 60,
+          "dead": 106,
+          "severe": 976,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-01-28",
+        "today": {
+          "confirm": 1459,
+          "suspect": 3248,
+          "heal": 43,
+          "dead": 26,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 5974,
+          "suspect": 9239,
+          "heal": 103,
+          "dead": 132,
+          "severe": 1239,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-01-29",
+        "today": {
+          "confirm": 1737,
+          "suspect": 4148,
+          "heal": 21,
+          "dead": 38,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 7711,
+          "suspect": 12167,
+          "heal": 124,
+          "dead": 170,
+          "severe": 1370,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-01-30",
+        "today": {
+          "confirm": 1981,
+          "suspect": 4812,
+          "heal": 47,
+          "dead": 43,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 9692,
+          "suspect": 15238,
+          "heal": 171,
+          "dead": 213,
+          "severe": 1527,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-01-31",
+        "today": {
+          "confirm": 2099,
+          "suspect": 5019,
+          "heal": 72,
+          "dead": 46,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 11791,
+          "suspect": 17988,
+          "heal": 243,
+          "dead": 259,
+          "severe": 1795,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-01",
+        "today": {
+          "confirm": 2589,
+          "suspect": 4562,
+          "heal": 85,
+          "dead": 45,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 14380,
+          "suspect": 19544,
+          "heal": 328,
+          "dead": 304,
+          "severe": 2110,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-02",
+        "today": {
+          "confirm": 2825,
+          "suspect": 5173,
+          "heal": 147,
+          "dead": 57,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 17205,
+          "suspect": 21558,
+          "heal": 475,
+          "dead": 361,
+          "severe": 2296,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-03",
+        "today": {
+          "confirm": 3233,
+          "suspect": 5072,
+          "heal": 157,
+          "dead": 64,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 20438,
+          "suspect": 23214,
+          "heal": 632,
+          "dead": 425,
+          "severe": 2788,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-04",
+        "today": {
+          "confirm": 3886,
+          "suspect": 3971,
+          "heal": 260,
+          "dead": 65,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 24324,
+          "suspect": 23260,
+          "heal": 892,
+          "dead": 490,
+          "severe": 3219,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-05",
+        "today": {
+          "confirm": 3694,
+          "suspect": 5328,
+          "heal": 261,
+          "dead": 73,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 28018,
+          "suspect": 24702,
+          "heal": 1153,
+          "dead": 563,
+          "severe": 3859,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-06",
+        "today": {
+          "confirm": 3143,
+          "suspect": 4833,
+          "heal": 387,
+          "dead": 73,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 31161,
+          "suspect": 26359,
+          "heal": 1540,
+          "dead": 636,
+          "severe": 4821,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-07",
+        "today": {
+          "confirm": 3385,
+          "suspect": 4214,
+          "heal": 510,
+          "dead": 86,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 34546,
+          "suspect": 27657,
+          "heal": 2050,
+          "dead": 722,
+          "severe": 6101,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-08",
+        "today": {
+          "confirm": 2652,
+          "suspect": 3916,
+          "heal": 599,
+          "dead": 89,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 37198,
+          "suspect": 28942,
+          "heal": 2649,
+          "dead": 811,
+          "severe": 6188,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-09",
+        "today": {
+          "confirm": 2973,
+          "suspect": 4008,
+          "heal": 632,
+          "dead": 97,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 40171,
+          "suspect": 23589,
+          "heal": 3281,
+          "dead": 908,
+          "severe": 6484,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-10",
+        "today": {
+          "confirm": 2467,
+          "suspect": 3536,
+          "heal": 715,
+          "dead": 108,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 42638,
+          "suspect": 21675,
+          "heal": 3996,
+          "dead": 1016,
+          "severe": 7333,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-11",
+        "today": {
+          "confirm": 2015,
+          "suspect": 3342,
+          "heal": 744,
+          "dead": 97,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 44653,
+          "suspect": 16067,
+          "heal": 4740,
+          "dead": 1113,
+          "severe": 8204,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-12",
+        "today": {
+          "confirm": 14108,
+          "suspect": 2807,
+          "heal": 902,
+          "dead": 146,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 58761,
+          "suspect": 13435,
+          "heal": 5642,
+          "dead": 1259,
+          "severe": 8030,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-13",
+        "today": {
+          "confirm": 5090,
+          "suspect": 2450,
+          "heal": 1081,
+          "dead": 121,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 63851,
+          "suspect": 10109,
+          "heal": 6723,
+          "dead": 1380,
+          "severe": 10204,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-14",
+        "today": {
+          "confirm": 2641,
+          "suspect": 2277,
+          "heal": 1373,
+          "dead": 143,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 66492,
+          "suspect": 8969,
+          "heal": 8096,
+          "dead": 1523,
+          "severe": 11053,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-15",
+        "today": {
+          "confirm": 2008,
+          "suspect": 1918,
+          "heal": 1323,
+          "dead": 142,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 68500,
+          "suspect": 8228,
+          "heal": 9419,
+          "dead": 1665,
+          "severe": 11272,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-16",
+        "today": {
+          "confirm": 2048,
+          "suspect": 1563,
+          "heal": 1425,
+          "dead": 105,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 70548,
+          "suspect": 7264,
+          "heal": 10844,
+          "dead": 1770,
+          "severe": 10644,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-17",
+        "today": {
+          "confirm": 1888,
+          "suspect": 1432,
+          "heal": 1708,
+          "dead": 98,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 72436,
+          "suspect": 6242,
+          "heal": 12552,
+          "dead": 1868,
+          "severe": 11741,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-18",
+        "today": {
+          "confirm": 1749,
+          "suspect": 1185,
+          "heal": 1824,
+          "dead": 136,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 74185,
+          "suspect": 5248,
+          "heal": 14376,
+          "dead": 2004,
+          "severe": 11977,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-19",
+        "today": {
+          "confirm": 817,
+          "suspect": 1277,
+          "heal": 1781,
+          "dead": 114,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 75002,
+          "suspect": 4922,
+          "heal": 16157,
+          "dead": 2118,
+          "severe": 11864,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-20",
+        "today": {
+          "confirm": 889,
+          "suspect": 1614,
+          "heal": 2109,
+          "dead": 118,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 75891,
+          "suspect": 5206,
+          "heal": 18266,
+          "dead": 2236,
+          "severe": 11633,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-21",
+        "today": {
+          "confirm": 397,
+          "suspect": 1361,
+          "heal": 2393,
+          "dead": 109,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 76288,
+          "suspect": 5365,
+          "heal": 20659,
+          "dead": 2345,
+          "severe": 11477,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-22",
+        "today": {
+          "confirm": 453,
+          "suspect": 882,
+          "heal": 2229,
+          "dead": 97,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 76741,
+          "suspect": 4148,
+          "heal": 22888,
+          "dead": 2442,
+          "severe": 10968,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-23",
+        "today": {
+          "confirm": 409,
+          "suspect": 620,
+          "heal": 1846,
+          "dead": 150,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 77150,
+          "suspect": 3434,
+          "heal": 24734,
+          "dead": 2592,
+          "severe": 9915,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-24",
+        "today": {
+          "confirm": 508,
+          "suspect": 530,
+          "heal": 2589,
+          "dead": 71,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 77658,
+          "suspect": 2824,
+          "heal": 27323,
+          "dead": 2663,
+          "severe": 9126,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-25",
+        "today": {
+          "confirm": 406,
+          "suspect": 439,
+          "heal": 2422,
+          "dead": 52,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 78064,
+          "suspect": 2491,
+          "heal": 29745,
+          "dead": 2715,
+          "severe": 8752,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-26",
+        "today": {
+          "confirm": 433,
+          "suspect": 508,
+          "heal": 2750,
+          "dead": 29,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 78497,
+          "suspect": 2358,
+          "heal": 32495,
+          "dead": 2744,
+          "severe": 8346,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-27",
+        "today": {
+          "confirm": 327,
+          "suspect": 452,
+          "heal": 3622,
+          "dead": 44,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 78824,
+          "suspect": 2308,
+          "heal": 36117,
+          "dead": 2788,
+          "severe": 7952,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-28",
+        "today": {
+          "confirm": 427,
+          "suspect": 248,
+          "heal": 2885,
+          "dead": 47,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 79251,
+          "suspect": 1418,
+          "heal": 39002,
+          "dead": 2835,
+          "severe": 7664,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-02-29",
+        "today": {
+          "confirm": 573,
+          "suspect": 132,
+          "heal": 2623,
+          "dead": 35,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 79824,
+          "suspect": 851,
+          "heal": 41625,
+          "dead": 2870,
+          "severe": 7365,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-01",
+        "today": {
+          "confirm": 202,
+          "suspect": 141,
+          "heal": 2837,
+          "dead": 42,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 80026,
+          "suspect": 715,
+          "heal": 44462,
+          "dead": 2912,
+          "severe": 7110,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-02",
+        "today": {
+          "confirm": 125,
+          "suspect": 129,
+          "heal": 2742,
+          "dead": 31,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 80151,
+          "suspect": 587,
+          "heal": 47204,
+          "dead": 2943,
+          "severe": 6806,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-03",
+        "today": {
+          "confirm": 119,
+          "suspect": 143,
+          "heal": 2652,
+          "dead": 38,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 80270,
+          "suspect": 520,
+          "heal": 49856,
+          "dead": 2981,
+          "severe": 6416,
+          "input": 0
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-04",
+        "today": {
+          "confirm": 139,
+          "suspect": 143,
+          "heal": 2189,
+          "dead": 31,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 20
+        },
+        "total": {
+          "confirm": 80409,
+          "suspect": 522,
+          "heal": 52045,
+          "dead": 3012,
+          "severe": 5952,
+          "input": 20
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-05",
+        "today": {
+          "confirm": 143,
+          "suspect": 102,
+          "heal": 1681,
+          "dead": 30,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 16
+        },
+        "total": {
+          "confirm": 80552,
+          "suspect": 482,
+          "heal": 53726,
+          "dead": 3042,
+          "severe": 5737,
+          "input": 36
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-06",
+        "today": {
+          "confirm": 99,
+          "suspect": 99,
+          "heal": 1678,
+          "dead": 28,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 24
+        },
+        "total": {
+          "confirm": 80651,
+          "suspect": 502,
+          "heal": 55404,
+          "dead": 3070,
+          "severe": 5489,
+          "input": 60
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-07",
+        "today": {
+          "confirm": 44,
+          "suspect": 84,
+          "heal": 1661,
+          "dead": 27,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 3
+        },
+        "total": {
+          "confirm": 80695,
+          "suspect": 458,
+          "heal": 57065,
+          "dead": 3097,
+          "severe": 5264,
+          "input": 63
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-08",
+        "today": {
+          "confirm": 40,
+          "suspect": 60,
+          "heal": 1535,
+          "dead": 22,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 4
+        },
+        "total": {
+          "confirm": 80735,
+          "suspect": 421,
+          "heal": 58600,
+          "dead": 3119,
+          "severe": 5111,
+          "input": 67
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-09",
+        "today": {
+          "confirm": 19,
+          "suspect": 36,
+          "heal": 1297,
+          "dead": 17,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 2
+        },
+        "total": {
+          "confirm": 80754,
+          "suspect": 349,
+          "heal": 59897,
+          "dead": 3136,
+          "severe": 4794,
+          "input": 69
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-10",
+        "today": {
+          "confirm": 24,
+          "suspect": 31,
+          "heal": 1578,
+          "dead": 22,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 10
+        },
+        "total": {
+          "confirm": 80778,
+          "suspect": 285,
+          "heal": 61475,
+          "dead": 3158,
+          "severe": 4492,
+          "input": 79
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-11",
+        "today": {
+          "confirm": 15,
+          "suspect": 33,
+          "heal": 1318,
+          "dead": 11,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 6
+        },
+        "total": {
+          "confirm": 80793,
+          "suspect": 253,
+          "heal": 62793,
+          "dead": 3169,
+          "severe": 4257,
+          "input": 85
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-12",
+        "today": {
+          "confirm": 20,
+          "suspect": 33,
+          "heal": 1318,
+          "dead": 7,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 3
+        },
+        "total": {
+          "confirm": 80813,
+          "suspect": 147,
+          "heal": 64111,
+          "dead": 3176,
+          "severe": 4020,
+          "input": 88
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-13",
+        "today": {
+          "confirm": 11,
+          "suspect": 17,
+          "heal": 1430,
+          "dead": 13,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 7
+        },
+        "total": {
+          "confirm": 80824,
+          "suspect": 115,
+          "heal": 65541,
+          "dead": 3189,
+          "severe": 3610,
+          "input": 95
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-14",
+        "today": {
+          "confirm": 20,
+          "suspect": 39,
+          "heal": 1370,
+          "dead": 10,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 16
+        },
+        "total": {
+          "confirm": 80844,
+          "suspect": 113,
+          "heal": 66911,
+          "dead": 3199,
+          "severe": 3226,
+          "input": 111
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-15",
+        "today": {
+          "confirm": 16,
+          "suspect": 41,
+          "heal": 838,
+          "dead": 14,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 12
+        },
+        "total": {
+          "confirm": 80860,
+          "suspect": 134,
+          "heal": 67749,
+          "dead": 3213,
+          "severe": 3032,
+          "input": 123
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-16",
+        "today": {
+          "confirm": 21,
+          "suspect": 45,
+          "heal": 930,
+          "dead": 13,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 20
+        },
+        "total": {
+          "confirm": 80881,
+          "suspect": 128,
+          "heal": 68679,
+          "dead": 3226,
+          "severe": 2830,
+          "input": 143
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-17",
+        "today": {
+          "confirm": 13,
+          "suspect": 21,
+          "heal": 922,
+          "dead": 11,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 12
+        },
+        "total": {
+          "confirm": 80894,
+          "suspect": 119,
+          "heal": 69601,
+          "dead": 3237,
+          "severe": 2622,
+          "input": 155
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-18",
+        "today": {
+          "confirm": 34,
+          "suspect": 23,
+          "heal": 819,
+          "dead": 8,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 34
+        },
+        "total": {
+          "confirm": 80928,
+          "suspect": 105,
+          "heal": 70420,
+          "dead": 3245,
+          "severe": 2314,
+          "input": 189
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-19",
+        "today": {
+          "confirm": 39,
+          "suspect": 31,
+          "heal": 730,
+          "dead": 3,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 39
+        },
+        "total": {
+          "confirm": 80967,
+          "suspect": 104,
+          "heal": 71150,
+          "dead": 3248,
+          "severe": 2136,
+          "input": 228
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-20",
+        "today": {
+          "confirm": 41,
+          "suspect": 36,
+          "heal": 590,
+          "dead": 7,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 41
+        },
+        "total": {
+          "confirm": 81008,
+          "suspect": 106,
+          "heal": 71740,
+          "dead": 3255,
+          "severe": 1963,
+          "input": 269
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-21",
+        "today": {
+          "confirm": 46,
+          "suspect": 45,
+          "heal": 504,
+          "dead": 6,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 45
+        },
+        "total": {
+          "confirm": 81054,
+          "suspect": 118,
+          "heal": 72244,
+          "dead": 3261,
+          "severe": 1845,
+          "input": 314
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-22",
+        "today": {
+          "confirm": 39,
+          "suspect": 47,
+          "heal": 459,
+          "dead": 9,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 39
+        },
+        "total": {
+          "confirm": 81093,
+          "suspect": 136,
+          "heal": 72703,
+          "dead": 3270,
+          "severe": 1749,
+          "input": 353
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-23",
+        "today": {
+          "confirm": 78,
+          "suspect": 35,
+          "heal": 456,
+          "dead": 7,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 74
+        },
+        "total": {
+          "confirm": 81171,
+          "suspect": 132,
+          "heal": 73159,
+          "dead": 3277,
+          "severe": 1573,
+          "input": 427
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-24",
+        "today": {
+          "confirm": 47,
+          "suspect": 33,
+          "heal": 491,
+          "dead": 4,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 47
+        },
+        "total": {
+          "confirm": 81218,
+          "suspect": 134,
+          "heal": 73650,
+          "dead": 3281,
+          "severe": 1399,
+          "input": 474
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-25",
+        "today": {
+          "confirm": 67,
+          "suspect": 58,
+          "heal": 401,
+          "dead": 6,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 67
+        },
+        "total": {
+          "confirm": 81285,
+          "suspect": 159,
+          "heal": 74051,
+          "dead": 3287,
+          "severe": 1235,
+          "input": 541
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-26",
+        "today": {
+          "confirm": 55,
+          "suspect": 49,
+          "heal": 537,
+          "dead": 5,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 54
+        },
+        "total": {
+          "confirm": 81340,
+          "suspect": 189,
+          "heal": 74588,
+          "dead": 3292,
+          "severe": 1034,
+          "input": 595
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-27",
+        "today": {
+          "confirm": 54,
+          "suspect": 29,
+          "heal": 383,
+          "dead": 3,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 54
+        },
+        "total": {
+          "confirm": 81394,
+          "suspect": 184,
+          "heal": 74971,
+          "dead": 3295,
+          "severe": 921,
+          "input": 649
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-28",
+        "today": {
+          "confirm": 45,
+          "suspect": 28,
+          "heal": 477,
+          "dead": 5,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 44
+        },
+        "total": {
+          "confirm": 81439,
+          "suspect": 174,
+          "heal": 75448,
+          "dead": 3300,
+          "severe": 742,
+          "input": 693
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-29",
+        "today": {
+          "confirm": 31,
+          "suspect": 17,
+          "heal": 322,
+          "dead": 4,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 30
+        },
+        "total": {
+          "confirm": 81470,
+          "suspect": 168,
+          "heal": 75770,
+          "dead": 3304,
+          "severe": 633,
+          "input": 723
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-30",
+        "today": {
+          "confirm": 48,
+          "suspect": 44,
+          "heal": 282,
+          "dead": 1,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 48
+        },
+        "total": {
+          "confirm": 81518,
+          "suspect": 183,
+          "heal": 76052,
+          "dead": 3305,
+          "severe": 528,
+          "input": 771
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-03-31",
+        "today": {
+          "confirm": 36,
+          "suspect": 26,
+          "heal": 186,
+          "dead": 7,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 35
+        },
+        "total": {
+          "confirm": 81554,
+          "suspect": 172,
+          "heal": 76238,
+          "dead": 3312,
+          "severe": 466,
+          "input": 806
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-01",
+        "today": {
+          "confirm": 35,
+          "suspect": 20,
+          "heal": 170,
+          "dead": 6,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 35
+        },
+        "total": {
+          "confirm": 81589,
+          "suspect": 153,
+          "heal": 76408,
+          "dead": 3318,
+          "severe": 429,
+          "input": 841
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-02",
+        "today": {
+          "confirm": 31,
+          "suspect": 12,
+          "heal": 163,
+          "dead": 4,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 29
+        },
+        "total": {
+          "confirm": 81620,
+          "suspect": 135,
+          "heal": 76571,
+          "dead": 3322,
+          "severe": 379,
+          "input": 870
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-03",
+        "today": {
+          "confirm": 19,
+          "suspect": 11,
+          "heal": 180,
+          "dead": 4,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 18
+        },
+        "total": {
+          "confirm": 81639,
+          "suspect": 114,
+          "heal": 76751,
+          "dead": 3326,
+          "severe": 331,
+          "input": 888
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-04",
+        "today": {
+          "confirm": 30,
+          "suspect": 11,
+          "heal": 213,
+          "dead": 4,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 25
+        },
+        "total": {
+          "confirm": 81669,
+          "suspect": 107,
+          "heal": 76964,
+          "dead": 3330,
+          "severe": 295,
+          "input": 913
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-05",
+        "today": {
+          "confirm": 39,
+          "suspect": 10,
+          "heal": 114,
+          "dead": 1,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 38
+        },
+        "total": {
+          "confirm": 81708,
+          "suspect": 88,
+          "heal": 77078,
+          "dead": 3331,
+          "severe": 265,
+          "input": 951
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-06",
+        "today": {
+          "confirm": 32,
+          "suspect": 12,
+          "heal": 89,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 32
+        },
+        "total": {
+          "confirm": 81740,
+          "suspect": 89,
+          "heal": 77167,
+          "dead": 3331,
+          "severe": 211,
+          "input": 983
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-07",
+        "today": {
+          "confirm": 62,
+          "suspect": 12,
+          "heal": 112,
+          "dead": 2,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 59
+        },
+        "total": {
+          "confirm": 81802,
+          "suspect": 83,
+          "heal": 77279,
+          "dead": 3333,
+          "severe": 189,
+          "input": 1042
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-08",
+        "today": {
+          "confirm": 63,
+          "suspect": 17,
+          "heal": 91,
+          "dead": 2,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 61
+        },
+        "total": {
+          "confirm": 81865,
+          "suspect": 73,
+          "heal": 77370,
+          "dead": 3335,
+          "severe": 176,
+          "input": 1103
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-09",
+        "today": {
+          "confirm": 42,
+          "suspect": 3,
+          "heal": 85,
+          "dead": 1,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 38
+        },
+        "total": {
+          "confirm": 81907,
+          "suspect": 53,
+          "heal": 77455,
+          "dead": 3336,
+          "severe": 144,
+          "input": 1141
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-10",
+        "today": {
+          "confirm": 46,
+          "suspect": 8,
+          "heal": 70,
+          "dead": 3,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 42
+        },
+        "total": {
+          "confirm": 81953,
+          "suspect": 44,
+          "heal": 77525,
+          "dead": 3339,
+          "severe": 141,
+          "input": 1183
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-11",
+        "today": {
+          "confirm": 99,
+          "suspect": 49,
+          "heal": 50,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 97
+        },
+        "total": {
+          "confirm": 82052,
+          "suspect": 82,
+          "heal": 77575,
+          "dead": 3339,
+          "severe": 139,
+          "input": 1280
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-12",
+        "today": {
+          "confirm": 108,
+          "suspect": 6,
+          "heal": 88,
+          "dead": 2,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 98
+        },
+        "total": {
+          "confirm": 82160,
+          "suspect": 72,
+          "heal": 77663,
+          "dead": 3341,
+          "severe": 121,
+          "input": 1378
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-13",
+        "today": {
+          "confirm": 89,
+          "suspect": 3,
+          "heal": 75,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 86
+        },
+        "total": {
+          "confirm": 82249,
+          "suspect": 72,
+          "heal": 77738,
+          "dead": 3341,
+          "severe": 116,
+          "input": 1464
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-14",
+        "today": {
+          "confirm": 46,
+          "suspect": 11,
+          "heal": 78,
+          "dead": 1,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 36
+        },
+        "total": {
+          "confirm": 82295,
+          "suspect": 73,
+          "heal": 77816,
+          "dead": 3342,
+          "severe": 113,
+          "input": 1500
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-15",
+        "today": {
+          "confirm": 46,
+          "suspect": 4,
+          "heal": 76,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 34
+        },
+        "total": {
+          "confirm": 82341,
+          "suspect": 63,
+          "heal": 77892,
+          "dead": 3342,
+          "severe": 95,
+          "input": 1534
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-16",
+        "today": {
+          "confirm": 351,
+          "suspect": 3,
+          "heal": -913,
+          "dead": 1290,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 15
+        },
+        "total": {
+          "confirm": 82692,
+          "suspect": 62,
+          "heal": 76979,
+          "dead": 4632,
+          "severe": 89,
+          "input": 1549
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-17",
+        "today": {
+          "confirm": 27,
+          "suspect": 5,
+          "heal": 50,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 17
+        },
+        "total": {
+          "confirm": 82719,
+          "suspect": 63,
+          "heal": 77029,
+          "dead": 4632,
+          "severe": 85,
+          "input": 1566
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-18",
+        "today": {
+          "confirm": 16,
+          "suspect": 2,
+          "heal": 33,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 9
+        },
+        "total": {
+          "confirm": 82735,
+          "suspect": 48,
+          "heal": 77062,
+          "dead": 4632,
+          "severe": 85,
+          "input": 1575
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-19",
+        "today": {
+          "confirm": 12,
+          "suspect": 2,
+          "heal": 22,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 8
+        },
+        "total": {
+          "confirm": 82747,
+          "suspect": 43,
+          "heal": 77084,
+          "dead": 4632,
+          "severe": 81,
+          "input": 1583
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-20",
+        "today": {
+          "confirm": 11,
+          "suspect": 3,
+          "heal": 39,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 4
+        },
+        "total": {
+          "confirm": 82758,
+          "suspect": 37,
+          "heal": 77123,
+          "dead": 4632,
+          "severe": 82,
+          "input": 1587
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-21",
+        "today": {
+          "confirm": 30,
+          "suspect": 3,
+          "heal": 28,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 23
+        },
+        "total": {
+          "confirm": 82788,
+          "suspect": 35,
+          "heal": 77151,
+          "dead": 4632,
+          "severe": 78,
+          "input": 1610
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-22",
+        "today": {
+          "confirm": 10,
+          "suspect": 0,
+          "heal": 56,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 6
+        },
+        "total": {
+          "confirm": 82798,
+          "suspect": 20,
+          "heal": 77207,
+          "dead": 4632,
+          "severe": 63,
+          "input": 1616
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-23",
+        "today": {
+          "confirm": 6,
+          "suspect": 2,
+          "heal": 50,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 2
+        },
+        "total": {
+          "confirm": 82804,
+          "suspect": 20,
+          "heal": 77257,
+          "dead": 4632,
+          "severe": 57,
+          "input": 1618
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-24",
+        "today": {
+          "confirm": 12,
+          "suspect": 3,
+          "heal": 89,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 11
+        },
+        "total": {
+          "confirm": 82816,
+          "suspect": 17,
+          "heal": 77346,
+          "dead": 4632,
+          "severe": 49,
+          "input": 1629
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-25",
+        "today": {
+          "confirm": 11,
+          "suspect": 0,
+          "heal": 48,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 5
+        },
+        "total": {
+          "confirm": 82827,
+          "suspect": 15,
+          "heal": 77394,
+          "dead": 4632,
+          "severe": 51,
+          "input": 1634
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-26",
+        "today": {
+          "confirm": 3,
+          "suspect": 5,
+          "heal": 80,
+          "dead": 1,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 2
+        },
+        "total": {
+          "confirm": 82830,
+          "suspect": 10,
+          "heal": 77474,
+          "dead": 4633,
+          "severe": 52,
+          "input": 1636
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-27",
+        "today": {
+          "confirm": 6,
+          "suspect": 1,
+          "heal": 81,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 3
+        },
+        "total": {
+          "confirm": 82836,
+          "suspect": 9,
+          "heal": 77555,
+          "dead": 4633,
+          "severe": 50,
+          "input": 1639
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-28",
+        "today": {
+          "confirm": 22,
+          "suspect": 2,
+          "heal": 23,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 21
+        },
+        "total": {
+          "confirm": 82858,
+          "suspect": 10,
+          "heal": 77578,
+          "dead": 4633,
+          "severe": 22,
+          "input": 1660
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-29",
+        "today": {
+          "confirm": 4,
+          "suspect": 3,
+          "heal": 32,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 4
+        },
+        "total": {
+          "confirm": 82862,
+          "suspect": 10,
+          "heal": 77610,
+          "dead": 4633,
+          "severe": 41,
+          "input": 1664
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-04-30",
+        "today": {
+          "confirm": 12,
+          "suspect": 3,
+          "heal": 32,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 6
+        },
+        "total": {
+          "confirm": 82874,
+          "suspect": 9,
+          "heal": 77642,
+          "dead": 4633,
+          "severe": 38,
+          "input": 1670
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-01",
+        "today": {
+          "confirm": 1,
+          "suspect": 2,
+          "heal": 43,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 1
+        },
+        "total": {
+          "confirm": 82875,
+          "suspect": 11,
+          "heal": 77685,
+          "dead": 4633,
+          "severe": 37,
+          "input": 1671
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-02",
+        "today": {
+          "confirm": 2,
+          "suspect": 0,
+          "heal": 28,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 1
+        },
+        "total": {
+          "confirm": 82877,
+          "suspect": 10,
+          "heal": 77713,
+          "dead": 4633,
+          "severe": 34,
+          "input": 1672
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-03",
+        "today": {
+          "confirm": 3,
+          "suspect": 1,
+          "heal": 53,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 3
+        },
+        "total": {
+          "confirm": 82880,
+          "suspect": 3,
+          "heal": 77766,
+          "dead": 4633,
+          "severe": 33,
+          "input": 1675
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-04",
+        "today": {
+          "confirm": 1,
+          "suspect": 0,
+          "heal": 87,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 1
+        },
+        "total": {
+          "confirm": 82881,
+          "suspect": 2,
+          "heal": 77853,
+          "dead": 4633,
+          "severe": 29,
+          "input": 1676
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-05",
+        "today": {
+          "confirm": 2,
+          "suspect": 3,
+          "heal": 58,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 2
+        },
+        "total": {
+          "confirm": 82883,
+          "suspect": 5,
+          "heal": 77911,
+          "dead": 4633,
+          "severe": 26,
+          "input": 1678
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-06",
+        "today": {
+          "confirm": 2,
+          "suspect": 2,
+          "heal": 46,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 2
+        },
+        "total": {
+          "confirm": 82885,
+          "suspect": 4,
+          "heal": 77957,
+          "dead": 4633,
+          "severe": 23,
+          "input": 1680
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-07",
+        "today": {
+          "confirm": 1,
+          "suspect": 3,
+          "heal": 36,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 82886,
+          "suspect": 6,
+          "heal": 77993,
+          "dead": 4633,
+          "severe": 18,
+          "input": 1680
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-08",
+        "today": {
+          "confirm": 1,
+          "suspect": 2,
+          "heal": 53,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 1
+        },
+        "total": {
+          "confirm": 82887,
+          "suspect": 8,
+          "heal": 78046,
+          "dead": 4633,
+          "severe": 15,
+          "input": 1681
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-09",
+        "today": {
+          "confirm": 14,
+          "suspect": 1,
+          "heal": 74,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 2
+        },
+        "total": {
+          "confirm": 82901,
+          "suspect": 4,
+          "heal": 78120,
+          "dead": 4633,
+          "severe": 13,
+          "input": 1683
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-10",
+        "today": {
+          "confirm": 17,
+          "suspect": 0,
+          "heal": 24,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 7
+        },
+        "total": {
+          "confirm": 82918,
+          "suspect": 3,
+          "heal": 78144,
+          "dead": 4633,
+          "severe": 9,
+          "input": 1690
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-11",
+        "today": {
+          "confirm": 1,
+          "suspect": 1,
+          "heal": 27,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 1
+        },
+        "total": {
+          "confirm": 82919,
+          "suspect": 3,
+          "heal": 78171,
+          "dead": 4633,
+          "severe": 10,
+          "input": 1691
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-12",
+        "today": {
+          "confirm": 7,
+          "suspect": 1,
+          "heal": 18,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 1
+        },
+        "total": {
+          "confirm": 82926,
+          "suspect": 4,
+          "heal": 78189,
+          "dead": 4633,
+          "severe": 10,
+          "input": 1692
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-13",
+        "today": {
+          "confirm": 3,
+          "suspect": 0,
+          "heal": 6,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 82929,
+          "suspect": 4,
+          "heal": 78195,
+          "dead": 4633,
+          "severe": 9,
+          "input": 1692
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-14",
+        "today": {
+          "confirm": 4,
+          "suspect": 1,
+          "heal": 14,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 82933,
+          "suspect": 4,
+          "heal": 78209,
+          "dead": 4633,
+          "severe": 11,
+          "input": 1692
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-15",
+        "today": {
+          "confirm": 8,
+          "suspect": 2,
+          "heal": 10,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 6
+        },
+        "total": {
+          "confirm": 82941,
+          "suspect": 3,
+          "heal": 78219,
+          "dead": 4633,
+          "severe": 11,
+          "input": 1698
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-16",
+        "today": {
+          "confirm": 6,
+          "suspect": 2,
+          "heal": 8,
+          "dead": 1,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 2
+        },
+        "total": {
+          "confirm": 82947,
+          "suspect": 4,
+          "heal": 78227,
+          "dead": 4634,
+          "severe": 10,
+          "input": 1700
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-17",
+        "today": {
+          "confirm": 7,
+          "suspect": 1,
+          "heal": 11,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 4
+        },
+        "total": {
+          "confirm": 82954,
+          "suspect": 4,
+          "heal": 78238,
+          "dead": 4634,
+          "severe": 8,
+          "input": 1704
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-18",
+        "today": {
+          "confirm": 6,
+          "suspect": 1,
+          "heal": 3,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 3
+        },
+        "total": {
+          "confirm": 82960,
+          "suspect": 3,
+          "heal": 78241,
+          "dead": 4634,
+          "severe": 10,
+          "input": 1707
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-19",
+        "today": {
+          "confirm": 5,
+          "suspect": 3,
+          "heal": 3,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 1
+        },
+        "total": {
+          "confirm": 82965,
+          "suspect": 7,
+          "heal": 78244,
+          "dead": 4634,
+          "severe": 9,
+          "input": 1708
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-20",
+        "today": {
+          "confirm": 2,
+          "suspect": 0,
+          "heal": 5,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 1
+        },
+        "total": {
+          "confirm": 82967,
+          "suspect": 7,
+          "heal": 78249,
+          "dead": 4634,
+          "severe": 8,
+          "input": 1709
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-21",
+        "today": {
+          "confirm": 4,
+          "suspect": 1,
+          "heal": 6,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 2
+        },
+        "total": {
+          "confirm": 82971,
+          "suspect": 7,
+          "heal": 78255,
+          "dead": 4634,
+          "severe": 8,
+          "input": 1711
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-22",
+        "today": {
+          "confirm": 0,
+          "suspect": 2,
+          "heal": 3,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 82971,
+          "suspect": 6,
+          "heal": 78258,
+          "dead": 4634,
+          "severe": 9,
+          "input": 1711
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-23",
+        "today": {
+          "confirm": 3,
+          "suspect": 3,
+          "heal": 3,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 2
+        },
+        "total": {
+          "confirm": 82974,
+          "suspect": 9,
+          "heal": 78261,
+          "dead": 4634,
+          "severe": 8,
+          "input": 1713
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-24",
+        "today": {
+          "confirm": 11,
+          "suspect": 0,
+          "heal": 7,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 11
+        },
+        "total": {
+          "confirm": 82985,
+          "suspect": 6,
+          "heal": 78268,
+          "dead": 4634,
+          "severe": 7,
+          "input": 1724
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-25",
+        "today": {
+          "confirm": 7,
+          "suspect": 0,
+          "heal": 9,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 7
+        },
+        "total": {
+          "confirm": 82992,
+          "suspect": 5,
+          "heal": 78277,
+          "dead": 4634,
+          "severe": 7,
+          "input": 1731
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-26",
+        "today": {
+          "confirm": 1,
+          "suspect": 1,
+          "heal": 3,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 1
+        },
+        "total": {
+          "confirm": 82993,
+          "suspect": 6,
+          "heal": 78280,
+          "dead": 4634,
+          "severe": 5,
+          "input": 1732
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-27",
+        "today": {
+          "confirm": 2,
+          "suspect": 0,
+          "heal": 8,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 2
+        },
+        "total": {
+          "confirm": 82995,
+          "suspect": 5,
+          "heal": 78288,
+          "dead": 4634,
+          "severe": 4,
+          "input": 1734
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-28",
+        "today": {
+          "confirm": 0,
+          "suspect": 0,
+          "heal": 3,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 0
+        },
+        "total": {
+          "confirm": 82995,
+          "suspect": 5,
+          "heal": 78291,
+          "dead": 4634,
+          "severe": 4,
+          "input": 1734
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-29",
+        "today": {
+          "confirm": 4,
+          "suspect": 1,
+          "heal": 11,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 4
+        },
+        "total": {
+          "confirm": 82999,
+          "suspect": 5,
+          "heal": 78302,
+          "dead": 4634,
+          "severe": 3,
+          "input": 1738
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-30",
+        "today": {
+          "confirm": 2,
+          "suspect": 0,
+          "heal": 2,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 2
+        },
+        "total": {
+          "confirm": 83001,
+          "suspect": 4,
+          "heal": 78304,
+          "dead": 4634,
+          "severe": 3,
+          "input": 1740
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-05-31",
+        "today": {
+          "confirm": 16,
+          "suspect": 0,
+          "heal": 3,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 16
+        },
+        "total": {
+          "confirm": 83017,
+          "suspect": 3,
+          "heal": 78307,
+          "dead": 4634,
+          "severe": 3,
+          "input": 1756
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-06-01",
+        "today": {
+          "confirm": 5,
+          "suspect": 0,
+          "heal": 8,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 5
+        },
+        "total": {
+          "confirm": 83022,
+          "suspect": 2,
+          "heal": 78315,
+          "dead": 4634,
+          "severe": 3,
+          "input": 1761
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-06-02",
+        "today": {
+          "confirm": -1,
+          "suspect": 1,
+          "heal": -1,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 1
+        },
+        "total": {
+          "confirm": 83021,
+          "suspect": 3,
+          "heal": 78314,
+          "dead": 4634,
+          "severe": 2,
+          "input": 1762
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-06-03",
+        "today": {
+          "confirm": 1,
+          "suspect": 0,
+          "heal": 5,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 1
+        },
+        "total": {
+          "confirm": 83022,
+          "suspect": 3,
+          "heal": 78319,
+          "dead": 4634,
+          "severe": 2,
+          "input": 1763
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-06-04",
+        "today": {
+          "confirm": 5,
+          "suspect": 0,
+          "heal": 8,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 5
+        },
+        "total": {
+          "confirm": 83027,
+          "suspect": 2,
+          "heal": 78327,
+          "dead": 4634,
+          "severe": 1,
+          "input": 1768
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-06-05",
+        "today": {
+          "confirm": 3,
+          "suspect": 1,
+          "heal": 2,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 3
+        },
+        "total": {
+          "confirm": 83030,
+          "suspect": 2,
+          "heal": 78329,
+          "dead": 4634,
+          "severe": 1,
+          "input": 1771
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-06-06",
+        "today": {
+          "confirm": 6,
+          "suspect": 2,
+          "heal": 3,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 5
+        },
+        "total": {
+          "confirm": 83036,
+          "suspect": 3,
+          "heal": 78332,
+          "dead": 4634,
+          "severe": 0,
+          "input": 1776
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-06-07",
+        "today": {
+          "confirm": 4,
+          "suspect": 1,
+          "heal": 9,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 4
+        },
+        "total": {
+          "confirm": 83040,
+          "suspect": 4,
+          "heal": 78341,
+          "dead": 4634,
+          "severe": 0,
+          "input": 1780
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-06-08",
+        "today": {
+          "confirm": 3,
+          "suspect": 0,
+          "heal": 10,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 3
+        },
+        "total": {
+          "confirm": 83043,
+          "suspect": 1,
+          "heal": 78351,
+          "dead": 4634,
+          "severe": 0,
+          "input": 1783
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-06-09",
+        "today": {
+          "confirm": 3,
+          "suspect": 1,
+          "heal": 6,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 3
+        },
+        "total": {
+          "confirm": 83046,
+          "suspect": 2,
+          "heal": 78357,
+          "dead": 4634,
+          "severe": 0,
+          "input": 1786
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      },
+      {
+        "date": "2020-06-10",
+        "today": {
+          "confirm": 11,
+          "suspect": 0,
+          "heal": 4,
+          "dead": 0,
+          "severe": 0,
+          "storeConfirm": null,
+          "input": 11
+        },
+        "total": {
+          "confirm": 83057,
+          "suspect": 1,
+          "heal": 78361,
+          "dead": 4634,
+          "severe": 0,
+          "input": 1797
+        },
+        "extData": null,
+        "lastUpdateTime": null
+      }
+    ]
+  },
+  "timestamp": 1591861617608
+}

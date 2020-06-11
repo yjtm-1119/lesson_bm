@@ -1,0 +1,12 @@
+li{
+  display: flex;
+}
+span{
+  flex:1;
+}
+ul,li{
+  list-style: none;
+}
+li:nth-child(odd){
+  background-color: #efefef;
+}
