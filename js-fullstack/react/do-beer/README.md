@@ -9,4 +9,8 @@ beer  搜索   -> 得到列表  点进去   创建路由
 详情   /beer/
 
 1. 把应用架构搭好   路由
-2. 
+2. 组件化思维
+3. list列表的编写流程
+4. router  this.props.match.params
+5. / -> Main.js  -> loadBeers   ->  loading   ->list
+6. / ->/search
