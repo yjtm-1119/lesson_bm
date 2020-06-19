@@ -3,8 +3,9 @@ import React, { Component } from 'react';
 // import { Input, Button, List } from 'antd'
 import store from './store/index.js';
 // import { CHANGE_INPUT, ADD_ITEM, DELETE_ITEM } from './store/actionTypes';
-import { changeInputAction,addItemAction,deleteItemAction } from './store/actionCreators';
+import { changeInputAction,addItemAction,deleteItemAction, getListAction} from './store/actionCreators';
 import TodoListUI from './TodoListUI.js';
+import axios from 'axios';
 
 class TodoList extends Component {
   constructor(props) {
@@ -23,6 +24,15 @@ class TodoList extends Component {
         deleteItem={this.deleteItem}
       />
     );
+  }
+  componentDidMount() {
+    axios.get('http://rap2.taobao.org:38080/app/mock/258495/get/api/v1/something')
+      .then((res) => {
+        console.log(res);
+        const data = res.data
+        const action = getListAction(data)
+        store.dispatch(action)
+      })
   }
   changeInputValue = (e) => {
     // const action = {
