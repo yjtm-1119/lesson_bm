@@ -1,0 +1,56 @@
+<script>
+  // let a = [1, 2, 3, 4, 5]
+  // a.name = 'aaa';
+  // for (let key in a) {
+  //   console.log(key);
+  //   console.log(a)
+  // }
+  // var person = {
+  //   name: 'June',
+  //   age: 17,
+  //   city: 'guangzhou'
+  // }
+  // console.log(Object.keys(person))
+  // function sortArr(arr) {
+  //   var goNext = true;
+  //   var entries = arr.entries();
+  //   while (goNext) {
+  //     var result = entries.next();
+  //     if (result.done !== true) {
+  //       result.value[1].sort((a, b) => a-b);
+  //       console.log(result.value);
+  //       goNext = true;
+  //     } else {
+  //       goNext = false;
+  //     }
+  //   }
+  //   return arr;
+  // }
+
+  var arr = ['456', '2', '3', '44', '234'];
+  console.log(arr.entries());
+  var entries = arr.entries();
+  console.log(entries.next().value);
+  console.log(entries.next().value);
+  console.log(entries.next().value);
+  console.log(entries.next().value);
+  console.log(sortArr(arr));
+
+  /*(4) [Array(2), Array(5), Array(5), Array(4)]
+      0:(2) [1, 34]
+      1:(5) [2, 3, 44, 234, 456]
+      2:(5) [1, 4, 5, 6, 4567]
+      3:(4) [1, 23, 34, 78]
+      length:4
+      __proto__:Array(0)
+  */
+  var kvArray = [{ key: 1, value: 10 },
+  { key: 2, value: 20 },
+  { key: 3, value: 30 }];
+
+  var reformattedArray = kvArray.map(function (obj) {
+    var rObj = {};
+    rObj[obj.key] = obj.value;
+    return rObj;
+  });
+</script>

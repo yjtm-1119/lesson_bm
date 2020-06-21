@@ -1,0 +1,29 @@
+<script>
+  // const NOP=()=>{}
+
+  // this指向函数调用的位置而不是函数书写的位置
+  function foo() {
+    console.log(this);
+  }
+  foo();
+  //1. 默认指向window 
+  //2. obj.  的方式调用， this 指向这个obj
+  //3.
+  let obj = {
+    name: 'lihua',
+    foo: foo
+  }
+  obj.foo();
+  //注意！
+  let fn = obj.foo();
+  fn();
+
+  let newObj = {}
+  //3. call/apply 和 bind 改变this
+  // call/apply 指定this  会马上调用函数  
+  foo.apply(newObj);
+  foo.call(newObj);
+  //  绑定this,给这个函数绑定部分参数  不调用 
+  foo.bind(newObj);
+  
+</script>
