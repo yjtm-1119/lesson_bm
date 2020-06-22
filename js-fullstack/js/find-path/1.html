@@ -1,0 +1,66 @@
+<style>
+  #container1 {
+    width: 700px;
+  }
+
+  .cell {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: gray;
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+    /* vertical-align: middle; */
+  }
+</style>
+<div id="container1"></div>
+<script>
+  const container1 = document.getElementById('container1');
+  let arr = new Array(10000).fill(0);
+  arr.forEach(() => {
+    const cell = document.createElement('div');
+    cell.classList.add('cell');
+    container1.appendChild(cell);
+    cell.addEventListener('mousemove', () => {
+      if (mouse) {
+        cell.style.backgroundColor = 'black';
+      }
+    })
+  })
+  let mouse = false;
+  document.addEventListener('mousedown', () => {
+    mouse = true;
+  })
+  document.addEventListener('mouseup', () => {
+    mouse = false;
+  })
+  // document.addEventListener('contextmenu',(e)=>e.preventDefault());
+  function findPath(map, start, end) {
+    // 搜索的入口
+    // 所有的选择
+    let queue = [start];
+    function insert(x, y) {
+      // map 一维数组
+      // x, y 是一个坐标点 
+      // y * 100 跳到当前这个行 
+      if (map[y * 100 + x] !== 0) return;
+      if (x <= 0 || x >= 100 || y <= 0 || y >= 100) return;
+      // container.children[y * 100 + x].style.backgroundColor = 'green';
+      queue.push(x, y);
+    }
+    while (queue.length) {
+      let [x, y] = queue.shift();
+      // 上下左右四个方向
+      // 匹配
+      if (x === end[0] && y === end[1]) {
+        return true
+      }
+      insert(x + 1, y);
+      insert(x - 1, y);
+      insert(x, y + 1);
+      insert(x, y - 1);
+    }
+    return false;
+  }
+  findPath(arr, [0, 0], [50, 50])
+</script>
