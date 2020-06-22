@@ -1,0 +1,60 @@
+<script>
+
+  // 方法
+  function Animal() {
+    this.live = 'land';
+    this.eat = []
+  }
+  Animal.prototype.run = () => {
+    console.log(0);
+  } 
+  // let ani = new Animal();
+  // new：  ani 有 live eat 两个属性？是因为 Animal this 指向 ani
+  // 假如 this 指向 c1 c1 上面是不是也能有 live eat 两个属性
+  // 假如 this 指向 c2 c2 上面是不是也能有 live eat 两个属性
+  // 假如 this 指向 c3 c3 上面是不是也能有 live eat 两个属性
+  // 假如 this 指向 obj obj 上面是不是也能有 live eat 两个属性
+  // 共享问题
+  // Animal.prototype = 
+  
+  function Cat() {
+    // new + this
+    Animal.call(this);    // 继承属性的：父类有的属性，我放到自己的内部属性上面
+    this.sound = 'miaomiao';
+  }
+  Cat.prototype = new Animal();  // 有用 方法  对于属性来说 鸡肋
+  Cat.prototype.jump = () => {
+    console.log(40);
+  }
+  // let ani = new Animal();
+  // let ani1 = new Animal();
+  // let ani2 = new Animal();
+  // ani 包含了 Animal 内部的属性以及 Animal.prototype
+  /*
+  ani = {
+    live: land,
+    __proto__: Animal.prototype
+  }
+  */
+  // Cat.prototype = ani;
+
+  /*
+  Cat.prototype = {
+    live: land,
+    __proto__: Animal.prototype
+  };
+  */
+
+
+  let c1 = new Cat();   // eat = ['fish']
+  let c2 = new Cat();   // eat = ['meat']
+  let c3 = new Cat();
+  let c4 = new Cat();
+  c1.eat.push('fish');
+  c2.eat.push('meat');
+  // 每一个实例之间都是独立
+  // c1 c2 ... __proto__ 都会指向同一个地方
+  // c1 有 Cat 的属性，也有 Cat.prototype 的属性
+  console.log(c1, c1.live);
+  console.log(c2)
+</script>

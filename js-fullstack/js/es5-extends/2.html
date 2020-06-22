@@ -1,0 +1,49 @@
+<script>
+  function Animal() {
+    this.live = 'land';
+    this.eat = []
+  }
+  Animal.prototype.run = () => {
+    console.log(0);
+  } 
+  function Cat() {
+    Animal.call(this);   // super()
+    this.sound = 'miaomiao';
+  }
+  // Cat.prototype = new Animal();  //
+  // Cat.prototype 没有 但是我能 找到 Animal.prototype
+  // 继承方法的写法：目的 让子类的 Cat.prototype 能够在原型链查找找到 Animal.prototype
+  // 1
+  // 1.1 Object.setPrototypeOf(Cat.prototype, Animal.prototype);
+  // Cat.prototype Animal.prototype 指向同一个地方
+  // 1.2 Cat.prototype.__proto__ = Animal.prototype
+
+  // 2
+  // function create(obj) {
+  //   // let o = {};
+  //   // Object.setPrototypeOf(o, obj);
+  //   // return o;
+  //   function f() {}
+  //   f.prototype = obj;
+  //   // 产生一个新对象
+  //   // 这个对象 继承了 f.prototype 继承了 obj
+  //   return new f();
+  // }
+  // Cat.prototype = create(Animal.prototype);
+  // Object.create() 接受一个对象（obj）,会返回一个 继承自obj的新对象
+  // 3
+  // Cat.prototype = Object.create(Animal.prototype);
+  // Cat.prototype.jump = () => {
+  //   console.log(40);
+  // }
+  // Cat.prototype 本身就是一个对象 constructor
+
+  let c1 = new Cat();  
+  let c2 = new Cat();
+  let c3 = new Cat();
+  let c4 = new Cat();
+  c1.eat.push('fish');
+  c2.eat.push('meat');
+  console.log(c1, c1.live);
+  console.log(c2)
+</script>
