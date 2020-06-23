@@ -1,0 +1,71 @@
+@import './../../style/default.less';
+.header {
+  background-color: @colorM;
+  .header-top {
+    height: 60px;
+    line-height: 60px;
+    text-align: right;
+    padding: 0 20px;
+    .logos {
+      line-height: 55px;
+      text-align: left;
+      img {
+        height: 55px;
+        vertical-align: middle;
+        margin-right: 10px;
+        margin-top: 2px;
+      }
+    }
+    a {
+      margin-left: 20px;
+    }
+  }
+  .breadcrumb {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border-top: 1px solid #f9c700;
+    .breadcrumb-title {
+      text-align: center;
+      &:after{
+        position: absolute;
+        content: '';
+        left: 50px;
+        top: 39px;
+        font-size: 18px;
+        left: 90px;
+        border-top: 9px solid @colorM;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+      }
+    }
+    .weather {
+      text-align: right;
+      font-size: 14px;
+      .date {
+        margin-right: 10px;
+      }
+      .weather-img {
+        img {
+          height: 15px;
+        }
+      }
+      .weather-detail {
+        margin-left: 5px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.simple-page {
+  .header-top {
+    background: #1890ff;
+    color: @colorM;
+  }
+  .ant-form,
+  .ant-col-12,
+  .weather {
+    display: none;
+  }
+}

@@ -1,0 +1,29 @@
+<script>
+  // Promise.resolve(1)
+  //   .then((res) => {
+  //     console.log(res)
+  //     return 2
+  //   })
+  //   .catch((err) => {
+  //     // console.log(3)
+  //     return 3
+  //   })
+  //   .then((res) => {
+  //     console.log(res)
+  //   })
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log('once')
+      resolve('success')
+    }, 1000)
+  })
+
+  const start = Date.now()
+  promise.then((res) => {
+    console.log(res, Date.now() - start)
+  })
+  promise.then((res) => {
+    console.log(res, Date.now() - start)
+  })
+
+</script>

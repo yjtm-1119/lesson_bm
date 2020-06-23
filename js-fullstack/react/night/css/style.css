@@ -1,0 +1,128 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  overflow: hidden;
+}
+
+.sky {
+  background-image: radial-gradient(ellipse 85% 60% at 50% 70%, #c7166f 0%, #140a33 100%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+.hill {
+  background-color: transparent;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  z-index: 100;
+  overflow: hidden;
+}
+.tree {
+  text-align: right;
+}
+
+@-webkit-keyframes twinkle {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+
+@-webkit-keyframes twinkle1 {
+  0% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.05;
+  }
+}
+
+@keyframes twinkle1 {
+  0% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.05;
+  }
+}
+
+@-webkit-keyframes twinkleBigStars {
+  0% {
+    -webkit-transform:  translate(10%, 10%, 0);
+            transform:  translate(10%, 10%, 0);
+  }
+  10% {
+     -webkit-transform: translate(20%, 15%, 0);
+             transform: translate(20%, 15%, 0);
+  }
+  25% {
+     -webkit-transform:  translate(30%, 20%, 0);
+             transform:  translate(30%, 20%, 0);
+  }
+  50% {
+     -webkit-transform: translate(50%, 25%, 0);
+             transform: translate(50%, 25%, 0);
+  }
+  75% {
+    -webkit-transform: translate(75%, 30%, 0);
+            transform: translate(75%, 30%, 0);
+  }
+  100% {
+     -webkit-transform: translateX(100%);
+             transform: translateX(100%)
+  }
+}
+
+@keyframes twinkleBigStars {
+  0% {
+    -webkit-transform:  translate(10%, 10%, 0);
+            transform:  translate(10%, 10%, 0);
+  }
+  10% {
+     -webkit-transform: translate(20%, 15%, 0);
+             transform: translate(20%, 15%, 0);
+  }
+  25% {
+     -webkit-transform:  translate(30%, 20%, 0);
+             transform:  translate(30%, 20%, 0);
+  }
+  50% {
+     -webkit-transform: translate(50%, 25%, 0);
+             transform: translate(50%, 25%, 0);
+  }
+  75% {
+    -webkit-transform: translate(75%, 30%, 0);
+            transform: translate(75%, 30%, 0);
+  }
+  100% {
+     -webkit-transform: translateX(100%);
+             transform: translateX(100%)
+  }
+}
