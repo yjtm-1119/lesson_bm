@@ -1,0 +1,41 @@
+@import '~@/styles/mixin.scss';
+@import '~@/styles/var.scss';
+
+$classPrefix: row;
+.#{$classPrefix}-wrapper {
+  .#{$classPrefix}-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0 10px 20px;
+    &:not(:last-child) {
+      border-bottom: 1px solid $rowList-line;
+    }
+    .#{$classPrefix}-hd {
+      width: 160px;
+      height: 160px;
+      margin-right: 30px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .#{$classPrefix}-bd {
+      flex: 1;
+      min-width: 0;
+      padding: 25px 15px 25px 0;
+      h2 {
+        height: 50px;
+        margin-bottom: 20px;
+        line-height: 50px;
+        font-size: 46px;
+        color: $rowList-title-color;
+        @include no-wrap;
+      }
+      p {
+        height: 50px;
+        line-height: 50px;
+        font-size: 34px;
+        color: $rowList-desc-color;
+        @include no-wrap;
+      }
+    }
+  }
+}

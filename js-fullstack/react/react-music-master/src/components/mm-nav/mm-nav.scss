@@ -1,0 +1,34 @@
+@import '~@/styles/var.scss';
+@import '~@/styles/mixin.scss';
+
+.mm-nav {
+  position: relative;
+  height: 120px;
+  padding: 20px 170px;
+  line-height: 120px;
+  color: $nav-color;
+  background-color: $nav-bg;
+  overflow: hidden;
+  &-left {
+    position: absolute;
+    top: 44px;
+    left: 44px;
+    z-index: 1;
+    display: block;
+    width: 72px;
+    height: 72px;
+    @include bg-url('~@/assets/images/oq.png');
+    @include bg-full;
+  }
+  &-title {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    font-size: $font-size-medium-x;
+  }
+  &-right {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+}

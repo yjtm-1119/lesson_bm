@@ -1,0 +1,62 @@
+//颜色定义规范
+// $theme: #e5473c; // 网易红
+//$theme: #31c27c; // 企鹅绿
+//$theme: #0c8ed9; // 酷狗蓝
+//$theme: #f60; // 虾米橙
+
+/**
+ * 主题色
+ *  后缀说明：
+ *    color为文字颜色
+ *    bg为背景颜色
+ * 若不带color或者bg后缀均为背景颜色（特殊说明除外）
+ */
+$theme-color: var(--THEME);
+$theme-bg: var(--THEME);
+$theme-main-color: #f3f4f6;
+$theme-sub-bg: #fff;
+$theme-sub-color: #fff;
+
+//header组件（一级导航栏）
+$header-bg: $theme-bg;
+
+//nav组件（二级导航栏）
+$nav-color: $theme-sub-color;
+$nav-bg: $theme-bg;
+
+//loading组件
+$loading-color: #666;
+
+//slide组件（轮播）
+$slide-dot: #fff;
+$slide-dot-active: $theme-bg;
+
+//进度条组件
+$mmProgress-bar: rgba(255, 255, 255, 0.15);
+$mmProgress-outer: rgba(255, 255, 255, 0.2);
+$mmProgress-dot-outer: $theme-sub-bg;
+$mmProgress-dot-inner: $theme-bg;
+
+//歌单列表组件——行
+$rowList-title-color: #333;
+$rowList-desc-color: #777;
+$rowList-line: #ddd;
+
+//歌单列表组件——列
+$columnList-title-color: #333;
+
+//歌单详情列表
+$songist-title-color: #333;
+$songist-desc-color: #777;
+$songList-line: #ddd;
+
+//字体大小定义规范
+$font-size-small-ss: 30px;
+$font-size-small-s: 32px;
+$font-size-small: 34px;
+$font-size-small-x: 36px;
+$font-size-medium: 38px;
+$font-size-medium-x: 40px;
+$font-size-large-s: 42px;
+$font-size-large: 48px;
+$font-size-large-x: 50px;

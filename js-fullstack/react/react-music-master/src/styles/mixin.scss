@@ -1,0 +1,43 @@
+// 省略号
+@mixin no-wrap($line: 1) {
+  overflow: hidden;
+  @if $line == 1 {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+  }
+}
+
+// 图片
+@mixin img-full($attr: cover) {
+  width: 100%;
+  height: 100%;
+  object-fit: $attr;
+}
+
+// 背景图
+@mixin bg-full($p: center, $s: contain, $r: no-repeat) {
+  background-position: $p;
+  background-size: $s;
+  background-repeat: $r;
+}
+
+@mixin bg-url($url) {
+  background-image: url($url);
+}
+
+// 滚动
+@mixin scroll($type: y) {
+  @if $type == x {
+    overflow-x: auto;
+    overflow-y: hidden;
+  } @else {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  -webkit-overflow-scrolling: touch;
+}

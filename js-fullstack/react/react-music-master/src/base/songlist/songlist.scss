@@ -1,0 +1,50 @@
+@import '~@/styles/mixin.scss';
+@import '~@/styles/var.scss';
+
+.song-wrapper {
+  .song-item {
+    display: flex;
+    padding-left: 20px;
+    &:not(:last-child) .song-info {
+      border-bottom: 1px solid $songList-line;
+    }
+    .song-num {
+      width: 160px;
+      height: 160px;
+      margin-left: -20px;
+      text-align: center;
+      line-height: 160px;
+    }
+    .song-info {
+      flex: 1;
+      min-width: 0;
+      padding: 25px 15px 25px 0;
+      h2 {
+        height: 50px;
+        margin-bottom: 20px;
+        line-height: 50px;
+        font-size: 46px;
+        color: $songist-title-color;
+        @include no-wrap;
+      }
+      p {
+        height: 50px;
+        line-height: 50px;
+        font-size: 34px;
+        color: $songist-desc-color;
+        @include no-wrap;
+      }
+    }
+    .song-btn {
+    }
+    &.active {
+      .song-num {
+        color: $theme-color;
+      }
+      h2,
+      p {
+        color: $theme-color;
+      }
+    }
+  }
+}
