@@ -1,0 +1,55 @@
+html{
+  color:#111;
+}
+body, div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote{
+  margin: 0;
+  padding: 0;
+}
+body,td,th{
+  font:12px Helvetica,Arial,sans-serif;
+  line-height:1.62;
+}
+body{
+  padding-top: 30px;
+}
+#anony-nav{
+  width: 1080px;
+  margin: 0 auto 25px;
+}
+#anony-nav .anony-nav-links{
+  float: right;
+  margin-top: 6px;
+}
+ul, ol{
+  list-style: none;
+}
+#anony-nav .anony-nav-links li {
+  display: inline-block;
+  zoom:1;
+  margin: 0 14px 0 0px;
+}
+a{
+  cursor:pointer;
+}
+a:link{
+  color: #37a;
+  text-decoration: none;
+}
+a:visited{
+  color:#669;
+  text-decoration: none;
+}
+#anony-nav .anony-nav-links li a {
+  display: inline-block;
+  zoom:1;
+  width: 40px;
+  height: 20px;
+  overflow: hidden;
+  margin: 0;
+  line-height: 20em;
+  outline: none;
+  vertical-align: middle;
+  background: transparent 
+  url(https://img3.doubanio.com/f/sns/8536084688879cb1137e8efdff30e59614ff2f86/pics/sns/anony_home/anony_nav_logo.png)
+  no-repeat 100% 100%;
+}

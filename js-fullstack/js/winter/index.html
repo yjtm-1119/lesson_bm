@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {}
+  </style>
+</head>
+
+<body>
+  <div class="box">
+
+  </div>
+  <script>
+    const box = document.querySelector('.box');
+    // object.length
+    function length(obj) {
+      var count = 0;
+      for (var i in obj) {
+        count++;
+      }
+      return count;
+    };
+    console.log(box.style);
+  </script>
+  <script>
+    //渲染页面的入口 是一个node节点
+    console.log(Object.keys(document.body.style).filter(e => !e.match(/^webkit/)).length);
+  </script>
+</body>
+
+</html>
