@@ -155,6 +155,7 @@ form{
 input {
   margin-right: 3px;
   vertical-align: middle;
+  outline: none; 
 }
 #anony-nav .anony-srh .bn{
   position: absolute;
