@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class='content'>
+    lafnalncalskdjaiofhbansaklsx
+  </div>
+  <script>
+    let con = prompt('请输入要匹配的字符串，支持正则表达式');
+    console.log(con);
+    let reg = new RegExp(con,'g');
+    let div = document.querySelector('div');
+    div.innerHTML=div.innerHTML.replace(reg,search=>{
+      return `<span style="color:green">${search}</span>`
+    })
+  </script>
+</body>
+</html>
