@@ -1,0 +1,37 @@
+<script>
+  let p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(1);
+    }, 1000);
+  });
+  let p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(2);
+    }, 2000);
+  });
+  let p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(3);
+    }, 3000);
+  });
+  Promise.myAll = function (promiseArr) {
+    return new Promise((resolve, reject) => {
+      let total = 0;//成功的个数
+      let res = [];
+      promiseArr.forEach((pro, i) => {
+        pro.then((r) => {
+          // res.push(r);
+          res[i] = r
+          total++
+          if (total === promiseArr.length) {
+            //此时所有的promise都成功了
+            resolve(res)
+          }
+        })
+          .catch(reject)
+      })
+    })
+  }
+  Promise.myAll([p,p2,p1])
+  .then(console.log)
+</script>

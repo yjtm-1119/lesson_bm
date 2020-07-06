@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li data-uid="1">
+      <div>
+        2
+        <span>
+          3
+        </span>
+      </div>
+    </li>
+    <li data-uid="2">
+      <div>
+        4
+        <span>
+          5
+        </span>
+      </div>
+    </li>
+    <li data-uid="3">
+      <div>
+        6
+        <span>
+          7
+        </span>
+      </div>
+    </li>
+  </ul>
+  <script>
+    // const lis = document.querySelectorAll('ul li');
+    // for (let node of list) {
+    //   node.addEventListener('click', () => {
+      
+    //   })
+    // }
+    let ul = document.querySelector('ul');
+    ul.addEventListener('click', (event) => {
+      //处理点击li的子盒子 都默认为点击了li
+      const target =event.path.find(x=>x.tagName==='LI'&& x.getAttribute('data-uid'));
+      console.log(target);
+      // console.log(event);
+      // console.log(event.currentTarget);
+      let nickName = event.target.innerHTML;
+      let uid = event.target.getAttribute('data-uid');
+      // console.log('clicked!!', nickName, uid)
+    })
+    const lis1 =document.querySelectorAll('li')
+  </script>
+</body>
+
+</html>

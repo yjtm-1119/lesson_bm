@@ -1,0 +1,28 @@
+<script>
+  class myArr {
+    static a = 1;
+    static [Symbol.hasInstance]() {
+      return false;
+    }
+  }
+  let r = 2312313
+  let obj = {
+    r: 123,
+    'r': 456,
+    [r]: 789
+  }
+  console.log(obj[r], obj['r'], obj.r);
+  let arr = new myArr();
+  console.log(arr instanceof myArr);
+
+  function myInstance(obj, Constructor) {
+    // if (Constructor[Symbol.hasInstance])
+    let proto = obj.__proto__;
+    if (proto === Constructor.prototype) {
+      return true;
+    }
+    if (proto === null) return false
+    return myInstance(proto, Constructor);
+  }
+  console.log(myInstance([], Array))
+</script>
