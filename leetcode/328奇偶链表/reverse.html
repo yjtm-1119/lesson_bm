@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <p>p1</p>
+    <span>span2</span>
+    <li>li3</li>
+  </div>
+  <script>
+    const childs = document.querySelector('.wrapper');
+    const eles = childs.children
+    console.log(childs.children)
+    // childs.innerHTML='';
+    //同一个dom节点，只能有一个父节点,(同一个dom节点，不能从属于两个父节点)
+    for(let len=eles.length-1;len>=0;len--){
+      console.log(eles[len])
+      childs.appendChild(eles[len]);
+    }
+       console.log(document.querySelector('.wrapper').children)
+    document.querySelector('.wrapper').appendChild(eles[0]);
+    // console.log(document.querySelector('.wrapper').children)
+    // console.log(childs.children)
+  </script>
+</body>
+
+</html>
