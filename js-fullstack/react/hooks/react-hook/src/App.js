@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react';
-import './App.css';
 
 function App() {
   const [nowTime, setNowTime] = useState(new Date());

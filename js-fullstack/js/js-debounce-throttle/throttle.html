@@ -16,18 +16,28 @@
 <body>
   <script>
     const body = document.body;
-    body.onmousemove = throtted2(getUserInfo, 2000)
+    body.onmousemove = throtted(getUserInfo, 500)
     function getUserInfo() {
       console.log('发出请求')
     }
     //scroll
     ///resize
     //时间戳
+    // function throtted(func, wait) {
+    //   var previous = 0;
+    //   // console.log('外面');
+    //   return function () {
+    //     // console.log('里面');
+    //     var now = new Date().getTime();
+    //     if (now - previous > wait) {
+    //       func();
+    //       previous = now;
+    //     }
+    //   }
+    // }
     function throtted(func, wait) {
-      var previous = 0;
-      // console.log('外面');
+      var previous = 0
       return function () {
-        // console.log('里面');
         var now = new Date().getTime();
         if (now - previous > wait) {
           func();
@@ -35,19 +45,32 @@
         }
       }
     }
+
+
     //定时器实现节流
     //定时器实现 没有头事件 有尾事件
+    // function throtted2(func, wait) {
+    //   var timeout = null
+    //   return function () {
+    //     if (!timeout) {
+    //       timeout = setTimeout(() => {
+    //         func();
+    //         timeout = null;
+    //       }, wait)
+    //     }
+    //   }
+
     function throtted2(func, wait) {
-      var timeout = null
+      var timeout = null;
       return function () {
         if (!timeout) {
           timeout = setTimeout(() => {
             func();
-            timeout=null; 
+            timeout = null;
           }, wait)
         }
       }
-    }
+    } 
   </script>
 </body>
 

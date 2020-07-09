@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    body{
+    body {
       width: 100vw;
       height: 100vw;
     }
   </style>
 </head>
+
 <body>
   <script>
+    // const body = document.body;
+    // body.onmousemove = debounce(getUserInfo, 1500);
+    // function getUserInfo() {
+    //   console.log('电梯门关了');
+    // }
+    // function debounce(func, wait) {
+    //   console.log('电梯门开了')
+    //   let timeout = null;
+    //   return function () {
+    //     if (timeout) clearTimeout(timeout);
+    //     timeout = setTimeout(() => {
+    //       func();
+    //     }, wait)
+    //   }
+    // }
+
+
     const body = document.body;
-    body.onmousemove=debounce(getUserInfo,3000);
-    
+    body.onmousemove = debounce(getUserInfo, 500)
+    function getUserInfo() {
+      console.log('电梯门关了');
+    }
+    function debounce(func, wait) {
+      var time = null;
+      return function () {
+        if (time) clearTimeout(time);
+        time = setTimeout(() => {
+          func();
+        }, wait)
+      }
+    }
   </script>
 </body>
+
 </html>

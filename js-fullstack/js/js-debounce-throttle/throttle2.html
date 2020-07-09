@@ -16,28 +16,49 @@
 <body>
   <script>
     const body = document.body;
-    body.onmousemove = throtted(getUserInfo, 2000)
+    body.onmousemove = throtted(getUserInfo, 500)
     function getUserInfo() {
       console.log('发出请求')
-      console.log(new Date().getTime( ))
+      // console.log(new Date().getTime( ))
     }
-    function throtted(func, wait) {
-      var previous = 0;
-      var time = null;
+    // function throtted(func, wait) {
+    //   var previous = 0;
+    //   var time = null;
 
+    //   return function () {
+    //     var now = new Date().getTime();
+    //     const remain = wait - (now - previous);
+    //     if (now - previous > wait) {
+    //       // console.log(now - previous);
+    //       func();
+    //       previous = now;
+    //     } else if (!time) {
+    //       time = setTimeout(() => {
+    //         func();
+    //         time = null;
+    //         //让if里的条件失效
+    //         previous= new Date().getTime();
+    //       }, remain)
+    //     }
+    //   }
+    // }
+
+
+
+    function throtted(func, wait) {
+      var time = null;
+      var previous = 0;
       return function () {
-        var now = new Date().getTime();
-        const remain = wait - (now - previous);
+        var now = new Date().getTime()
+        var remain = wait - (now - previous);
         if (now - previous > wait) {
-          // console.log(now - previous);
           func();
           previous = now;
         } else if (!time) {
           time = setTimeout(() => {
             func();
             time = null;
-            //让if里的条件失效
-            previous= new Date().getTime();
+            previous = new Date().getTime();
           }, remain)
         }
       }
