@@ -3,13 +3,13 @@ import 'antd/dist/antd.css';
 import { Tabs, Row, Col, Button } from 'antd';
 import Listdata from './mock/Listdata.js';
 import axios from 'axios';
-
 const { TabPane } = Tabs;
-
-
 // function callback(key) {
 //   console.log(key);
 // }
+
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -71,7 +71,7 @@ class App extends Component {
                     </div>
                   </TabPane>
                   <TabPane tab="专栏" key="22">
-                  <div>
+                    <div>
                       {list.filter(item => {
                         return item.type === "专栏"
                       }).map((item, index) => {
