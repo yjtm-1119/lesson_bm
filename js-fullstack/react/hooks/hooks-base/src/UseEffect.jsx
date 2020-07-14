@@ -9,7 +9,8 @@ import React, {
 // }
 // this.setState()
 let arr = [1, 2]
-let set = new Set();
+//缓存的时候检查依赖 只有依赖没有变化 才会使用上次的值
+let set = new Set();//无重复的数据集  类似数组
 function Demo() {
   console.log('render');
   const [inputVal, setVal] = useState('海阔天空');

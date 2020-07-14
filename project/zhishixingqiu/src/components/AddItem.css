@@ -1,0 +1,16 @@
+#addstar{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.addPagetupian{
+  margin-top:10rem;
+  width:25rem
+}
+#addInput{
+  width: 20rem;
+  margin-top: 3rem;
+  height: 5rem;
+  border-radius: 2rem;
+  padding-left: 10rem;
+}
