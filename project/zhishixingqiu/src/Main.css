@@ -1,0 +1,37 @@
+html{
+  font-size: 16px;
+  font-size:62.5%;
+} 
+.content{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.card{
+  /* display: inline-block; */
+  /* margin-left: 2rem; */
+  background-color: #FAFBFF;
+  margin-top: 2rem;
+  width: 15rem;
+  height: 25rem;
+  border:1px solid #ECEDEF
+  
+  /* background-color: ; */
+}
+img{
+  width: 100%;
+  height: 15rem;
+}
+h4{
+  font-size: 1.5rem;
+  text-align: center;
+}
+#hengxian{
+  text-align: center;
+  margin-top:-1.5rem;
+}
+#author{
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top:-0.5rem;
+}

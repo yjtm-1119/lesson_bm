@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Lesson from './Lesson';
+import Demo from './UseEffect';
+
 
 ReactDOM.render(
-    <Lesson />,
+    <Demo />,
   document.getElementById('root')
 );

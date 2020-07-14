@@ -1,0 +1,53 @@
+html{
+  font-size:62.5%;
+} 
+@media only screen and (min-width: 320px){
+  html {
+    font-size: 62.5% !important;
+  }
+}
+@media only screen and (min-width: 640px){
+  html {
+    font-size: 125% !important;
+  }
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 1941493 */
+  src: url('//at.alicdn.com/t/font_1941493_mvb47etzp5l.eot');
+  src: url('//at.alicdn.com/t/font_1941493_mvb47etzp5l.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1941493_mvb47etzp5l.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1941493_mvb47etzp5l.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1941493_mvb47etzp5l.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1941493_mvb47etzp5l.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;}
+input{  
+	background:none;  
+	outline:none;  
+	border:1px solid #ccc;
+}
+:-ms-input-placeholder{
+  color:#B8BAB9
+}
+.title{
+  height: 4rem;
+  text-align: center;
+  color:#1AB798;
+  line-height:4rem
+  
+}
+.search{
+  height: 3rem;
+  width: 80%;
+  margin-left: 5%;
+  border-radius: 1.4rem;
+  background-color: #EAECEB;
+  padding-left: 3rem;
+}
+
+

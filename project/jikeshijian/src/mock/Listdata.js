@@ -7,17 +7,17 @@ export default Mock.mock('/lessons/', 'get', {
       {
         'id|+1': 1,
         'key|+1': 1,
-          // 'iamge': "@image('75*75','#FFC0CB','Lesson')",
+          'iamge': "@image('75×75')",
           'title': '@title',
           "type|1": [
               "专栏",
               "视频课",
               "微课",
-            "每日一课",
+              "每日一课",
               "其他"
           ],
-          'total|100': 80,
-          'studied|1-100': (1,100),
+          'total|80-100': 1,
+          'studied|1-80': (1,80),
           // 'finished|0-100': 100
       }
   ]

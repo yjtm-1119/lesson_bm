@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Lesson from './Lesson';
+import './index.css';
+import App from './App';
+// import font from '../public/font'
 
 ReactDOM.render(
-    <Lesson />,
+    <App />,
   document.getElementById('root')
 );
