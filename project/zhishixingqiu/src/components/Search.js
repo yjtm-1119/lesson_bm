@@ -5,9 +5,10 @@ class Search extends Component {
   render() {
     return (
       <div id="searchInput">
-        <span id="search">
+        <div id="search">
           <input type="text" className="search" placeholder="搜索用户、星球或内容" />
-        </span>
+          <span className="iconfont">&#xe625;</span>
+        </div>
       </div>
     );
   }

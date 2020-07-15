@@ -1,6 +1,12 @@
 html{
   font-size:62.5%;
 } 
+button{
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+  outline: none; 
+}
 @media only screen and (min-width: 320px){
   html {
     font-size: 62.5% !important;
@@ -19,6 +25,14 @@ html{
   url('//at.alicdn.com/t/font_1941493_mvb47etzp5l.woff') format('woff'),
   url('//at.alicdn.com/t/font_1941493_mvb47etzp5l.ttf') format('truetype'),
   url('//at.alicdn.com/t/font_1941493_mvb47etzp5l.svg#iconfont') format('svg');
+}
+.header{
+  position: relative;
+}
+.header .iconfont{
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
 }
 .iconfont{
   font-family:"iconfont" !important;
@@ -41,13 +55,21 @@ input{
   line-height:4rem
   
 }
+#search{
+  position: relative;
+}
+#search .iconfont{
+  position: absolute;
+  left: 1.8rem;
+  top:.8rem;
+}
 .search{
   height: 3rem;
-  width: 80%;
-  margin-left: 5%;
-  border-radius: 1.4rem;
+  width: 86%;
+  margin-left: 2%;
+  border-radius: 2rem;
   background-color: #EAECEB;
-  padding-left: 3rem;
+  padding-left: 3.2rem;
 }
 
 
