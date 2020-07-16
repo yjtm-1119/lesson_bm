@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var reg2=new RegExp(/^\d{4}-(0?[1-9]|1[0-2])-((0?[1-9])|((1|2)[0-9])|30|31)$/)
+    
+    class Tire {
+      root = {}
+      insert(str) {
+        let currentNode = this.root;
+        for (let c of str) {
+          if (!currentNode[c]) {
+            currentNode[c] = {}
+          }
+          currentNode = currentNode[c]
+        }
+        if (!('$' in currentNode)) {
+          currentNode['$'] = 0;
+        }
+        currentNode['$']++;
+      }
+    }
+    t = new Tire();
+    t.insert('flow');
+    t.insert('flower');
+    t.insert('flower');
+    t.insert('dog');
+    console.log(t.root)
+  </script>
+</body>
+
+</html>
+
