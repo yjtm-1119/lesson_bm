@@ -9,32 +9,39 @@
 
 <body>
   <script>
-    var reg2=new RegExp(/^\d{4}-(0?[1-9]|1[0-2])-((0?[1-9])|((1|2)[0-9])|30|31)$/)
-    
-    class Tire {
-      root = {}
-      insert(str) {
-        let currentNode = this.root;
-        for (let c of str) {
-          if (!currentNode[c]) {
-            currentNode[c] = {}
-          }
-          currentNode = currentNode[c]
-        }
-        if (!('$' in currentNode)) {
-          currentNode['$'] = 0;
-        }
-        currentNode['$']++;
-      }
+    // var reg2 = new RegExp(/^\d{4}-(0?[1-9]|1[0-2])-((0?[1-9])|((1|2)[0-9])|30|31)$/)
+
+    // class Tire {
+    //   root = {}
+    //   insert(str) {
+    //     let currentNode = this.root;
+    //     for (let c of str) {
+    //       if (!currentNode[c]) {
+    //         currentNode[c] = {}
+    //       }
+    //       currentNode = currentNode[c]
+    //     }
+    //     if (!('$' in currentNode)) {
+    //       currentNode['$'] = 0;
+    //     }
+    //     currentNode['$']++;
+    //   }
+    // }
+    // t = new Tire();
+    // t.insert('flow');
+    // t.insert('flower');
+    // t.insert('flower');
+    // t.insert('dog');
+    // console.log(t.root)
+    let state = {
+      name: 'lihua',
+      age: 18
     }
-    t = new Tire();
-    t.insert('flow');
-    t.insert('flower');
-    t.insert('flower');
-    t.insert('dog');
-    console.log(t.root)
+    let str = 'my name is {name},age is {age}';
+    var reg1 = /{name}/
+    var reg2 = /{age}/
+    console.log(str.replace(reg1, state.name).replace(reg2, state.age))
   </script>
 </body>
 
 </html>
-
