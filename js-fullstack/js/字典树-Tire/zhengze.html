@@ -1,0 +1,25 @@
+<script>
+  // let str = 'my name is {name},my age is {age}';
+  // str.replace('{name}', 'lilei');
+  // let obj ={
+  //   name:'lilei',
+  //   age:18
+  // }
+  // let reg = /\{(\w+)\}/g;
+  // let newStr = str.replace(reg, (...arg) => {
+  //   console.log(arg);
+  //   let key=arg[1]
+  //   // return 'lilei'
+  //   return obj[key]
+  // })
+  // console.log(newStr);
+  // YYYY-MM-DD
+  //  '2017-11-11'  11-11.2017
+  function format(str) {
+    let reg = /(\-\w{1})/g
+    return str.replace(reg,(...arg)=>{
+      return arg[1].split('-')[1].toUpperCase()
+    })
+  }
+  console.log(format('bacg-hada-caksd-sad'))
+</script>
