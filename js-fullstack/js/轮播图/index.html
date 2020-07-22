@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      height: 919.5px;
+      height: 345px;
+      outline: 1px solid blue;
+      white-space: nowrap;
+      font-size: 0;
+    }
+
+    .container>img {
+      display: inline-block;
+      height: 100%;
+      height: 100%;
+      transition: transform ease 1s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/5ade887b241d057d81e2de96590a1a6f.jpg?w=2452&h=920" alt="">
+    <img
+      src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3a82846d975204e12923de52add19339.jpg?thumb=1&w=1839&h=690&f=webp&q=90"
+      alt="">
+    <img
+      src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/be3a556e9cd1896f049c122a8bab3ce2.jpg?thumb=1&w=1839&h=690&f=webp&q=90"
+      alt="">
+    <img
+      src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/88c951d33781f19fe90f6fc20411378b.jpg?thumb=1&w=1839&h=690&f=webp&q=90"
+      alt="">
+    <img
+      src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6ef43cf9f138a7fc3a39273d7e3d13b6.jpg?thumb=1&w=1839&h=690&f=webp&q=90"
+      alt="">
+  </div>
+  <script>
+    const container = document.querySelector('.container');
+    let children = container.children;//五张图片
+    console.log(children);
+    let position = 0;
+    let nextPic = () => {
+      let nextPosition = (position + 1) % children.length;
+      let current = children[position];//当前图片
+      let next = children[nextPosition];//下一张图片
+      //position=0 初始位置
+      current.style.transition = 'none'; next.style.transition = 'none';
+      current.style.transform = `translateX(${-100 * position}%)`;
+      next.style.transform = `translateX(${100 - 100 * nextPosition}%)`;
+      //
+
+      setTimeout(() => {
+        current.style.transition = '';
+        next.style.transition = '';
+        current.style.transform = `translateX(${-100 * position - 100}%)`;
+        next.style.transform = `translateX(${100 - 100 * nextPosition - 100}%)`;
+        position = nextPosition
+      }, 15);
+      
+    }
+    // console.log(new Date());
+    //   setInterval(() => {
+    //   console.log(new Date());
+    //   nextPic()
+    // }, 1000)
+    container.addEventListener('mousedown', () => {
+      let startX = event.clientX, startY = event.clientY
+      function move(e) {
+
+      }
+      function up(e) {
+        let offset = 0;
+        if (event.clientX - startX > 250) {
+          //
+          offset = 1;
+        } else if (event.clientX - startX < -250) {
+          offset = -1
+        }
+        console.log(offset);
+        document.removeEventListener('mousemove', move);
+        document.removeEventListener('mouseup', up);
+      }
+      document.addEventListener('mousemove', move);
+      document.addEventListener('mouseup', up)
+    })
+  </script>
+</body>
+
+</html>
