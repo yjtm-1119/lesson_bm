@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.linkage{
+  display: flex;
+}
+nav{  
+  width: 50px;
+  background-color: green;
+}
+dd{
+  height: 60px;
+
+}
+dt{
+  height: 36px;
+  position: sticky;
+  left: 0;
+  top: 0;
+}
+.tab_detail{
+  flex:1;
+  /* flex-grow flex-shrink flex-basic */
+  background-color: pink;
+  word-break: break-all;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.active{
+  color:red;
+}

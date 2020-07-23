@@ -1,41 +1,16 @@
-<!-- <script>
-  var me = {
-    name: 'xiuyan',
-    hello: function () {
-      console.log(`你好，我是${this.name}`)
+<script>
+  var test = (function () {
+    var num = 0
+    console.log(num);
+    return () => {
+      console.log(num)
+      return num++
     }
-  }
-  var you = {
-    name: 'xiaoming',
-    hello: function () {
-      var targetFunc = me.hello
-      // targetFunc()
-    }
-  }
-  var name = 'BigBear'
-  // 调用位置
-  you.hello()
-</script> -->
+  }())
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    div{
-      display: flex;
-      justify-content: space-between;
-      background-color: blue;
-    }
-  </style>
-</head>
-<body>
-  <div>
-    <span class="q">1</span>
-    <span class="w">2</span>
-    <span class="e">3</span>
-  </div>
-</body>
-</html>
+  for (var i = 0; i < 10; i++) {
+    test()
+  }
+
+  console.log(test())
+</script>

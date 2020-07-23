@@ -36,16 +36,16 @@ export default [
           // },
         ]
       },
-      {
-        path: '/recommend',
-        component: Recommend,
-        // routes: [
-        //   {
-        //     path: '/recommend/:id',
-        //     component: AlbumComponent
-        //   }
-        // ]
-      }
+      // {
+      //   path: '/recommend',
+      //   component: Recommend,
+      //   // routes: [
+      //   //   {
+      //   //     path: '/recommend/:id',
+      //   //     component: AlbumComponent
+      //   //   }
+      //   // ]
+      // }
     ]
   }
 ]
