@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const Top = styled.div`
   display:flex;
@@ -18,6 +18,7 @@ export const Top = styled.div`
 
 
 export const Tab = styled.div`
+
   height:44px;
   display:flex;
   flex-direction:row;
