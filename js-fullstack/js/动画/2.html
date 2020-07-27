@@ -1,0 +1,53 @@
+<style>
+  #el {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    animation: move 5s linear;
+    ;
+  }
+
+  /* @keyframes move {
+    to {
+      transform: translate3d(400px, 400px, 0);
+    }
+  } */
+</style>
+<div id="el"></div>
+<button id="pause" onclick="pause();">pause</button>
+<button onclick="resume();">resume</button>
+<script>
+  const el = document.getElementById('el');
+  // const pause = document.getElementById('id')
+  let end = 400, duration = 1500, start = 0;
+  let startTime = Date.now();
+  //frame 帧
+  function tick() {
+    // console.log(1);
+    let hasPassed = Date.now() - startTime;
+    // console.log(hasPassed);
+    let progress = hasPassed / duration
+
+    // console.log(progress);
+    let x = progress * (end - start);
+    if (progress >= 1) {
+      el.style.transform = `translate3d(${x}px,0,0)`;
+    }
+    el.style.transform = `translate3d(${x}px,0,0)`;
+    refId = requestAnimationFrame(tick)
+  }
+  var refId = null;
+  refId = requestAnimationFrame(tick)
+  var pauseTime = null;
+  function pause() {
+    pauseTime = Date.now();
+    cancelAnimationFrame(refId);
+  }
+  function resume() {
+    startTime += Date.now() - pauseTime
+    refId = requestAnimationFrame(tick);
+  }
+  // requestAnimationFrame(tick)//在每一帧请求执行一个方法
+  //requestAnimationFrame 能够确保回调在每一帧调用 回调函数执行次数通常与浏览器屏幕刷新次数相匹配
+
+</script>

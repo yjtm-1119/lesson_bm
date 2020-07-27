@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #el {
+      width: 30px;
+      height: 30px;
+      background-color: red;
+      animation: move 5s linear;
+      ;
+    }
+
+    @keyframes move {
+      to {
+        transform: translate3d(400px, 400px, 0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="el"></div>
+  <button id="pause">pause</button>
+  <script>
+    const el = document.querySelector('#el');
+    const pause = document.querySelector('#pause');
+    pause.addEventListener('click', () => {
+      const style = window.getComputedStyle(el).transform;
+      console.log(style);
+      const { x, y } = el.getBoundingClientRect();
+      el.style.animation = 'none';
+      el.style.transform = `translated3d(${x}px,${y}px,0)`
+    })
+  </script>
+</body>
+
+</html>
