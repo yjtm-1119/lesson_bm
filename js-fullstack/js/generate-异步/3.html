@@ -1,0 +1,16 @@
+<script>
+  // repeat 实现，使用JS实现一个repeat方法，调用这个 repeatedFunc("hellworld") ，会console4次 helloworld, 每次间隔3秒
+
+  function repeat(func, times, wait) {
+    return (arg) => {
+      for (let i = 0; i < times; i++) {
+        setTimeout(() => {
+          console.log(i)
+          func(arg);
+        }, i * wait)
+      }
+    }
+  }
+  const repeatFunc = repeat(console.log, 4, 1000)
+  repeatFunc('helloworld')
+</script>

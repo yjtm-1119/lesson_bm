@@ -1,0 +1,31 @@
+<script>
+  // async await
+  // 协(纤)程： 意为比 线程/进程更细的
+  function* foo() {
+    let a = yield 1   // yield 不是返回1  如果需要返回值  放到next(返回值)
+    // console.log('1', a);
+    let b = yield 2
+    // console.log('2', b);
+    let c = yield 3
+    // console.log('3', c);
+  }
+  // let a = foo();
+  // console.log(foo().next());
+  // console.log(foo().next());
+  // console.log(foo().next());
+  // console.log(foo().next()); 
+  
+  // foo().next()
+  // foo().next()
+  // for (let i of a ){
+  //   console.log(i);
+  // }
+  // console.log([...a])
+
+  // function autoRun(iteratorObj) {
+  //   let { done } = iteratorObj.next();
+  //   if (done) return
+  //   autoRun(iteratorObj);
+  // }
+  // autoRun(a);
+</script>

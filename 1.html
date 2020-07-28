@@ -1,16 +1,21 @@
 <script>
-  var test = (function () {
-    var num = 0
-    console.log(num);
-    return () => {
-      console.log(num)
-      return num++
-    }
-  }())
+  // var test = (function () {
+  //   var num = 0
+  //   console.log(num);
+  //   return () => {
+  //     console.log(num)
+  //     return num++
+  //   }
+  // }())
 
-  for (var i = 0; i < 10; i++) {
-    test()
-  }
+  // for (var i = 0; i < 10; i++) {
+  //   test()
+  // }
 
-  console.log(test())
+  // console.log(test())
+
+
+  let map1 = { a: 1, b: 1, c: 1 };
+  let map2 = { a: 1, b: 1, c: 1 };
+  map1 === map2;   
 </script>
