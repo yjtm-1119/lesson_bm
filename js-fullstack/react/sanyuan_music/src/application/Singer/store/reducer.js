@@ -1,20 +1,12 @@
 import * as actionTypes from './constants';
-// import { fromJS } from 'immutable';
-
-const defaultState = ({
-  artist: {},
-  songsOfArtist: [],
-  loading: true
-});
+const defaultState = {
+  artist: {}
+};
 
 export default (state = defaultState, action) => {
-  switch (action.type) {
+  switch(action.type) {
     case actionTypes.CHANGE_ARTIST:
-      return state.set('artist', action.data);
-    case actionTypes.CHANGE_SONGS_OF_ARTIST:
-      return state.set('songsOfArtist', action.data);
-    case actionTypes.CHANGE_ENTER_LOADING:
-      return state.set('loading', action.data);
+      return {...state, artist: action.data}
     default:
       return state;
   }

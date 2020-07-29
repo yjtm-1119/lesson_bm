@@ -1,23 +1,25 @@
 import React, { useEffect, useState, memo } from 'react';
-import { connect } from 'react-redux';
+import { connect } from 
+'react-redux';
 import * as actionTypes from './store/actionCreators';
 function Recommend(props) {
   const { recommendList, banners, enterLoading } = props
-  const { getRecommendListDataDispatch ,getBannersDataDisoatch} = props
+  const { getRecommendListDataDispatch, getBannersDataDispatch } = props
   useEffect(() => {
     if (!recommendList.length) {
       getRecommendListDataDispatch();
     }
+    if (!banners.length) {
+      getBannersDataDispatch();
+    }
   }, [])
-
-  console.log(recommendList, banners, enterLoading, '---------');
+  console.log(recommendList,banners,enterLoading, '---------',);
   return (
     <>
-      Recommend
+    Recommend
     </>
   )
 }
-
 const mapStateToProps = (state) => ({
   recommendList: state.recommend.recommendList,
   banners: state.recommend.banners,
@@ -28,7 +30,7 @@ const mapDispatchToProps = (dispatch) => {
     getRecommendListDataDispatch() {
       dispatch(actionTypes.getRecommendList());
     },
-    getBannersDataDisoatch() {
+    getBannersDataDispatch() {
       dispatch(actionTypes.getBanners());
     }
   }

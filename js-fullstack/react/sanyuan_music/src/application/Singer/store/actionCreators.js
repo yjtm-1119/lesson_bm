@@ -1,27 +1,18 @@
-import { CHANGE_SONGS_OF_ARTIST, CHANGE_ARTIST, CHANGE_ENTER_LOADING } from './constants';
-// import { fromJS } from 'immutable';
 import { getSingerInfoRequest } from './../../../api/request';
+import { CHANGE_ARTIST } from './constants';
 
 const changeArtist = (data) => ({
   type: CHANGE_ARTIST,
-  data
+  data: data
 });
-
-const changeSongs = (data) => ({
-  type: CHANGE_SONGS_OF_ARTIST,
-  data
-})
-export const changeEnterLoading = (data) => ({
-  type: CHANGE_ENTER_LOADING,
-  data
-})
 
 export const getSingerInfo = (id) => {
   return dispatch => {
-    getSingerInfoRequest(id).then(data => {
-      dispatch(changeArtist(data.artist));
-      dispatch(changeSongs(data.hotSongs));
-      dispatch(changeEnterLoading(false));
-    })
+    console.log(id, '----------')
+    getSingerInfoRequest(id)
+      .then(data => {
+        // console.log(data);
+        dispatch(changeArtist(data.data.artist));
+      })
   }
 }

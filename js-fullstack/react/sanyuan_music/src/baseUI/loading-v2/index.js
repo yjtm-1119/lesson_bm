@@ -1,8 +1,7 @@
 import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import style from '../../assets/global-style'
 
-// 全局主题
 const dance = keyframes`
     0%, 40%, 100%{
       transform: scaleY(0.4);
@@ -52,5 +51,5 @@ function LoadingV2() {
     </Loading>
   );
 }
-
+ 
 export default React.memo(LoadingV2);

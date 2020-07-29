@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect, memo } from 'react';
-import styled from 'styled-components';
 import Scroll from '../scroll/index'
-import { PropTypes } from 'prop-types';
+import styled from 'styled-components';
 import style from '../../assets/global-style';
+import { PropTypes } from 'prop-types';
 
 
 const List = styled.div`
@@ -20,6 +20,7 @@ const List = styled.div`
     vertical-align: middle;
   }
 `
+
 const ListItem = styled.span`
   flex: 0 0 auto;
   font-size: ${style["font-size-m"]};
@@ -37,9 +38,7 @@ function Horizen(props) {
   const Category = useRef(null);
   const { list, oldVal, title } = props;
   const { handleClick } = props;
-  const clickHandle = (item) => {
-    handleClick(item.key);
-  }
+
   useEffect(() => {
     let categoryDOM = Category.current;
     let tagElems = categoryDOM.querySelectorAll("span");
@@ -51,6 +50,11 @@ function Horizen(props) {
     categoryDOM.style.width = `${totalWidth}px`;
     setRefreshCategoryScroll(true);
   }, [refreshCategoryScroll]);
+
+  const clickHandle = (item) => {
+    handleClick(item.key);
+  }
+
   return (
     <Scroll direction={"horizental"} refresh={true}>
       <div ref={Category}>
@@ -59,10 +63,7 @@ function Horizen(props) {
           {
             list.map((item) => {
               return (
-                <ListItem
-                  key={item.key}
-                  className={oldVal === item.key ? 'selected' : ''}
-                  onClick={() => clickHandle(item)}>
+                <ListItem key={item.key} className={oldVal === item.key ? 'selected' : ''} onClick={() => clickHandle(item)}>
                   {item.name}
                 </ListItem>
               )
@@ -70,18 +71,18 @@ function Horizen(props) {
           }
         </List>
       </div>
-    </Scroll>
+    </Scroll>  
   )
 }
+
 Horizen.defaultProps = {
-  title: "",
   list: [],
   handleClick: null
 };
 
 Horizen.propTypes = {
-  title: PropTypes.string,
   list: PropTypes.array,
   handleClick: PropTypes.func
 };
+
 export default memo(Horizen);

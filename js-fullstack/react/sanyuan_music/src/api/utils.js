@@ -1,7 +1,7 @@
 const debounce = (func, delay) => {
   let timer;
   return function (...args) {
-    if (timer) {
+    if(timer) {
       clearTimeout(timer);
     }
     timer = setTimeout(() => {
@@ -10,5 +10,3 @@ const debounce = (func, delay) => {
     }, delay);
   };
 };
-
-export { debounce };

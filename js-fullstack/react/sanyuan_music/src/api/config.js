@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const baseUrl = 'http://neteasecloudmusicapi.zhaoboy.com';//全局的后端api前缀
+export const baseUrl = 'http://neteasecloudmusicapi.zhaoboy.com'; //全局的后端API前缀
 const axiosInstance = axios.create({
   baseURL: baseUrl
 })
@@ -68,7 +68,8 @@ export const categoryTypes = [
     name: "其他组合",
     key: "4003"
   }
-]
+];
+
 export const alphaTypes = [
   {
     key: "A",

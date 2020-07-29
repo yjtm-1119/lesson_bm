@@ -1,49 +1,47 @@
-import styled from 'styled-components';
-
+import styled from "styled-components";
+// 专门解决切页面， 不用过于组件化的语法 
 export const Top = styled.div`
-  display:flex;
-  /* flex-direation:row; */
-  justify-content:space-between;
-  padding:5px 10px;
-  background:#d44439;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background: #d44439;
   & > span {
-    line-height:40px;
-    color:#f1f1f1;
-    font-size:20px;
-    &.iconfont{
-      font-size:25px;
+    line-height: 40px;
+    color: #f1f1f1;
+    font-size: 20px;
+    &.iconfont {
+      font-size: 25px;
     }
   }
-`
-
+`;
 
 export const Tab = styled.div`
-
-  height:44px;
-  display:flex;
-  flex-direction:row;
-  justify-content:space-around;
-  background:#d44439;
+  height: 44px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background: #d44439;
   a {
-    flex:1;
-    padding:2px 0;
-    font-size:14px;
-    color:#e4e4e4;
-    &.selected{
-      span{
-        border-bottom:2px solid #f1f1f1;
-        padding:3px 0 ;
-        font-weight:700;
-        color:#f1f1f1
+    flex: 1;
+    padding: 2px 0;
+    font-size: 14px;
+    color: #e4e4e4;
+    &.selected {
+      span {
+        border-bottom: 2px solid #f1f1f1;
+        padding: 3px 0;
+        font-weight: 700;
+        color: #f1f1f1;
       }
     }
   }
 `
 
 export const TabItem = styled.div`
-  height:100%;
-  display:flex;
-  flex-direction:row;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
   align-items:center;
-  justify-content:center;
+  justify-content: center;
 `

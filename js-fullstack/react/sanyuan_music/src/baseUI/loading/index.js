@@ -27,7 +27,7 @@ const LoadingWrapper = styled.div`
     }
 `
 
-function Loading() {
+function Loading()  {
   return (
     <LoadingWrapper>
       <div></div>
@@ -35,5 +35,5 @@ function Loading() {
     </LoadingWrapper>
   );
 }
-
+ 
 export default React.memo(Loading);
