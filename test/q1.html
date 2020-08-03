@@ -1,0 +1,64 @@
+<style>
+  .progress {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+  .right,
+  .left {
+    width: 100px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+  }
+  .left {
+    left: 0;
+    overflow: hidden;
+  }
+  .right {
+    right: 0;
+    overflow: hidden;
+  }
+  .circle-50 {
+    width: 160px;
+    height: 160px;
+    border: 20px solid transparent;
+    border-radius: 50%;
+    transform: rotate(-135deg);
+    position: absolute;
+
+  }
+  .right-circle {
+    border-top-color: blue;
+    border-right-color: blue;
+    right: 0;
+    animation: rotate linear;
+    animation-duration: 5s;   
+    animation-fill-mode: forwards;
+  }
+  .left-circle {
+    border-left-color: blue;  
+    border-bottom-color: blue;
+    left: 0;
+    animation: rotate linear;
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes rotate {
+    from {
+      transform: rotate(-135deg);
+    }
+    to {
+      transform: rotate(45deg);
+    }
+  }
+</style>
+<div class="progress">
+  <div class="left">
+    <div class="circle-50 left-circle"></div>
+  </div>
+  <div class="right">
+    <div class="circle-50 right-circle"></div>
+  </div>
+</div>

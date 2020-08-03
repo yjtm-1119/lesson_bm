@@ -1,0 +1,22 @@
+<script>
+  // var twoSum = function (nums, target) {
+  //   for (var i = 0; i < nums.length; i++) {
+  //     let disc = target - nums[i]
+  //     if (nums.includes(disc) && nums.indexOf(disc) !== i) {
+  //       return ([i, nums.indexOf(disc)]);
+  //     }
+
+  //   }
+  // }
+  const twoSum = function (nums, target) {
+    const diffs = {};
+    const len = nums.length;
+    for (let i = 0; i < len; i++) {
+      if (diffs[target - nums[i]] !== undefined) {
+        return [diffs[target - nums[i]], i]
+      }
+      diffs[nums[i]] = i
+    }
+  }
+  twoSum([2, 7, 11, 15], 9)
+</script>

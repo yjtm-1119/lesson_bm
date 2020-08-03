@@ -1,21 +1,22 @@
+<style>
+  .box {
+    width: 100px;
+    height: 100px;
+    padding-top: 20px;
+    margin-top: 20px;
+    border: 2px solid aqua;
+  }
+
+  .box1 {
+    box-sizing: border-box;
+  }
+</style>
+
+<body>
+  <div class="box box1"></div>
+  <div class="box box2"></div>
+</body>
 <script>
-  // var test = (function () {
-  //   var num = 0
-  //   console.log(num);
-  //   return () => {
-  //     console.log(num)
-  //     return num++
-  //   }
-  // }())
-
-  // for (var i = 0; i < 10; i++) {
-  //   test()
-  // }
-
-  // console.log(test())
-
-
-  let map1 = { a: 1, b: 1, c: 1 };
-  let map2 = { a: 1, b: 1, c: 1 };
-  map1 === map2;   
+  document.querySelector('.box1').getBoundingClientRect()  // w h
+  document.querySelector('.box2').getBoundingClientRect()  // w h
 </script>

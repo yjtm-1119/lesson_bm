@@ -1,0 +1,33 @@
+<script>
+  // function ajax({  url: string,  method: string,  data?: object,  timeout?: number, … }): promise;
+  function ajax(url, method, data, timeout) {
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest()
+      xhr.timeout = timeout;
+      xhr.open(method, url, true);
+      xhr.ontimeout = function () {
+        reject('timeout');
+      }
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4) {
+          if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
+            resolve(xhr.response);
+          } else {
+            reject('response error');
+          }
+        }
+      }
+      //xhr.onload
+      //数据？？ 
+      // GET 数据拼接到url后面
+      // POST　要看 Content-type;
+      xhr.send()
+    });
+  }
+  ajax({
+    methods:"GET"
+  })
+
+
+
+</script>

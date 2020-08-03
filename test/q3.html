@@ -1,0 +1,27 @@
+<script>
+  const chapterTree = {
+    name: '总章节',
+    children: [
+      { name: '章节一', children: [{ name: '第一节', children: [{ name: '第一小节' }, { name: '第二小节' }] }, { name: '第二节' }] },
+      { name: '章节二', children: [{ name: '第三节' }, { name: '第四节' }] }]
+  };
+  var res = [];
+  function serialize(tree) {
+    // if (tree.name) {
+    //   res.push(tree.name)
+    //   if (tree.children) {
+    //     tree.children.map((item) => {
+    //       serialize(item);
+    //     })
+    //   }
+    // }
+    // return res;
+    if (tree.children) {
+      return [tree.name, tree.children.flatMap((item) => { return serialize(item) })].flat()
+    }
+  } 
+  // 测试
+  const result = serialize(chapterTree);
+  console.log(result);
+// ["总章节", "章节一", "第一节", "第一小节", "第二小节", "第二节", "章节二", "第三节", "第四节"]
+</script>
